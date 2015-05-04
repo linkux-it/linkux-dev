@@ -27,9 +27,7 @@
   " Note: You don't set neobundle setting in .gvimrc!
 
   NeoBundle 'Shougo/vimproc.vim', {'build': {'unix': g:make}}
-  NeoBundle 'chriskempson/base16-vim', "{{{
-    colorscheme base16-default
-  "}}}
+  NeoBundle 'chriskempson/base16-vim'
 
   NeoBundle 'Lokaltog/vim-easymotion'
   NeoBundle 'tpope/vim-surround'
@@ -200,3 +198,5 @@
   " If there are uninstalled bundles found on startup,
   " this will conveniently prompt you to install them.
   NeoBundleCheck
+
+  colorscheme base16-default
