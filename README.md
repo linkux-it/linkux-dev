@@ -8,7 +8,7 @@ Vim
 You have to read each plugin for docs and how to use each features
 
 Plugins used:
- . Common
+ - Common
    1. [Neobundle](https://github.com/Shougo/neobundle.vim) Plugin Manager for vim/neovim
    2. [vimproc](https://github.com/Shougo/vimproc.vim) Recommended by neobundle
    3. [unite](https://github.com/Shougo/unite.vim)
@@ -20,17 +20,17 @@ Plugins used:
    9. [Base16 Theme](https://github.com/chriskempson/base16-vim)
   10. [Figitive](https://github.com/tpope/vim-fugitive) it is a git integration... maybe useful?
 
- . HTML, CSS, Javascript
+ - HTML, CSS, Javascript
    1. [Emmet](https://github.com/mattn/emmet-vim) Really cool for this
 
- . Node
+ - Node
    1. [Nodejs](https://github.com/moll/vim-node) Syntax and other tools for node
 
- . Python
+ - Python
    1. [Jedi](https://github.com/davidhalter/jedi-vim) autcomplete, refactor and more
    2. [Snnippeds](https://github.com/SirVer/ultisnips)
    
 
- . For later?
+ - For later?
    1. [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
 
