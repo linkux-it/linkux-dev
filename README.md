@@ -14,32 +14,43 @@ Install
 
 To install neovim, only install on OSX and ubuntu
 
-> export INSTALL_NEOVIM=1
+```bash
+export INSTALL_NEOVIM=1
+```
 
 To config neovim instead of vim (config files setup this), be sure you have it
 installed. You can run installer for both running twice one setting up this
 and the other without it, use whichever you want!
 
-> export CONFIG_NEOVIM=1
+```bash
+export CONFIG_NEOVIM=1
+```
 
 To install just for vim
 
-> curl https://raw.githubusercontent.com/linkux-it/linkux-dev/master/install.sh | bash
+```bash
+curl https://raw.githubusercontent.com/linkux-it/linkux-dev/master/install.sh | bash
+```
 
 If you want alternatives on Ubuntu
 
-> Set alternatives
-> sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
-> sudo update-alternatives --config vi
-> sudo update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60
-> sudo update-alternatives --config vim
-> sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
-> sudo update-alternatives --config editor
-
+```bash
+sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
+sudo update-alternatives --config vi
+sudo update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60
+sudo update-alternatives --config vim
+sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
+sudo update-alternatives --config editor
+```
 Update
 ======
 
-> cd ~/.linkux-dev && git pull
+Just update configs, if you want to install missed apps or plugins (without running
+commands on vim) run installer again.
+
+```bash
+cd ~/.linkux-dev && git pull
+```
 
 Vim
 ===

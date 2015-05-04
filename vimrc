@@ -1,7 +1,7 @@
 " Note: Skip initialization for vim-tiny or vim-small.
 let g:make = 'gmake'
 if system('uname -o') =~ '^GNU/'
-        let g:make = 'make'
+  let g:make = 'make'
 endif
 
 if !1 | finish | endif
