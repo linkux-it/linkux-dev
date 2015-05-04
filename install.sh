@@ -80,11 +80,14 @@ else
 fi
 
 # create symlinks for setups
-if [ ! -f ~/.vimrc ]; then
-  echo "Linkux IT :: Install: Linking Linkut IT config for vim and nvim"
-  if [ -n "$CONFIG_NEOVIM" ]; then
+if [ -n "$CONFIG_NEOVIM" ]; then
+  if [ ! -f ~/.nvimrc ]; then
+    echo "Linkux IT :: Install: Linking Linkut IT config for nvim"
     ln -s ~/.linkux-dev/vimrc ~/.nvimrc
-  else
+  fi
+else
+  if [ ! -f ~/.nvimrc ]; then
+    echo "Linkux IT :: Install: Linking Linkut IT config for vim"
     ln -s ~/.linkux-dev/vimrc ~/.vimrc
   fi
 fi
@@ -92,11 +95,7 @@ fi
 # Setting up neobundle
 if [ ! -d ~/.vim/bundle ]; then
   echo "Linkux IT :: Install: Creating bundle directory for NeoBundle"
-  if [ -n "$CONFIG_NEOVIM" ]; then
-    mkdir -p ~/.nvim/bundle
-  else
-    mkdir -p ~/.vim/bundle
-  fi
+  mkdir -p ~/.vim/bundle
 fi
 
 if [ ! -d ~/.vim/bundle/neobundle.vim ]; then
