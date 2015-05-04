@@ -62,8 +62,8 @@ Plugins used:
    - [Neobundle](https://github.com/Shougo/neobundle.vim) Plugin Manager for vim/neovim
    - [Base16 Theme](https://github.com/chriskempson/base16-vim) Just use another theme than the default.
    - [vimproc](https://github.com/Shougo/vimproc.vim) Recommended by neobundle
-   - [unite](https://github.com/Shougo/unite.vim)
-   - [NerdTree](https://github.com/scrooloose/nerdtree) This is useful?
+   - [unite](https://github.com/Shougo/unite.vim) Really cool features for fuzzy searches, previews, switches
+   - [NerdTree](https://github.com/scrooloose/nerdtree) Filesystem view, ctrl-n to open
    - [Easymotion](https://github.com/Lokaltog/vim-easymotion)
    - [Surround](https://github.com/tpope/vim-surround)
    - [ESLint](https://github.com/scrooloose/syntastic/tree/master/syntax_checkers)  need all syntaxs?
