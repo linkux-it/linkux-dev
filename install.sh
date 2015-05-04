@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # We need to ensure that brew is intalled
 # install:
 #  . git
@@ -16,7 +18,7 @@ echo "****************************************************************"
 echo
 
 echo "Neo Installer only can install for OSX and Ubuntu - Sorry :("
-read -r -p "Do you want to use neovim?" useNeoVim
+read -p "Do you want to use neovim?" -r useNeoVim
 echo
 
 echo $useNeoVim
