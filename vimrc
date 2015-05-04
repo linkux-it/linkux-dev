@@ -61,13 +61,6 @@ set incsearch
     let g:syntastic_style_warning_symbol = '≈'
   "}}}
 
-  NeoBundle 'mhinz/vim-startify' "{{{
-    " let g:startify_session_dir = s:get_cache_dir('sessions')
-    let g:startify_change_to_vcs_root = 1
-    let g:startify_show_sessions = 1
-    nnoremap <F1> :Startify<cr>
-  "}}}
-
   NeoBundle 'tpope/vim-fugitive' "{{{
     nnoremap <silent> <leader>gs :Gstatus<CR>
     nnoremap <silent> <leader>gd :Gdiff<CR>
