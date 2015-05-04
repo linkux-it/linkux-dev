@@ -105,8 +105,10 @@ fi
 
 echo "Linkux IT :: Install vim plugins"
 if [ -n "$CONFIG_NEOVIM" ]; then
+  nvim +VimProcInstall
   nvim +NeoBundleInstall +qall
 else
+  vim +VimProcInstall
   vim +NeoBundleInstall +qall
 fi
 
