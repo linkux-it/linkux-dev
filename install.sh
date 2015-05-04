@@ -17,6 +17,15 @@ echo "*                    Starting installation                     *"
 echo "****************************************************************"
 echo
 
+read -p "Do you want to use neovim? (Installer only can install for OSX and Ubuntu - Sorry) " -n 1 -r
+echo
+
+useNeoVim = $REPLY =~ ^[Yy]$
+
+echo $useNeoVim
+
+exit 1
+
 if [[ "$unamestr" == 'Darwin' ]]; then
     which -s brew
     if [[ $? != 0 ]] ; then
@@ -63,8 +72,10 @@ fi
 
 # create symlinks for setups
 if [ ! -f ~/.vimrc ]; then
-  echo "Linkux IT :: Install: Linking Linkut IT config for vim"
+  echo "Linkux IT :: Install: Linking Linkut IT config for vim and nvim"
   ln -s ~/.linkux-dev/vimrc ~/.vimrc
+  ln -s ~/.linkux-dev/vimrc ~/.nvimrc
+  ln -s .vim .nvim
 fi
 
 # Setting up neobundle
