@@ -9,6 +9,10 @@ set -e
 #  . tmux
 #  . taskwarrior
 
+echo "Starting installation"
+echo
+echo
+
 if [[ "$unamestr" == 'Darwin' ]]; then
     which -s brew
     if [[ $? != 0 ]] ; then
@@ -34,7 +38,7 @@ if [[ "$unamestr" == 'Darwin' ]]; then
 else
     sudo add-apt-repository ppa:neovim-ppa/unstable
     sudo apt-get update
-    sudo apt-get --assume-yes install git python-dev python-pip python3-dev python3-pip neovim tmux task
+    sudo apt-get --assume-yes install git git-core python-dev python-pip python3-dev python3-pip neovim tmux task
 
     # Set alternatives
     sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
@@ -47,30 +51,38 @@ fi
 
 # First clone or update our dotfiles
 if [ ! -d ~/.linkux-dev ]; then
+  echo "Install: Cloning Repository"
   git clone https://github.com/linkux-it/linkux-dev.git ~/.linkux-dev
 else
+  echo "Update: Updating repository"
   cd ~/.linkux-dev && git pull
+  cd
 fi
 
 # if exists and is not symlinks
 if [ -f ~/.vimrc ] && [ ! -L ~/.vimrc ]; then
+  echo "Install: Backup old ~/.vimrc to ~/.vimrc.old"
   mv ~/.vimrc ~/.vimrc.old
 fi
 
 # create symlinks for setups
 if [ ! -f ~/.vimrc ]; then
+  echo "Install: Linking Linkut IT config for vim"
   ln -s ~/.linkux-dev/vimrc ~/.vimrc
 fi
 
 # Setting up neobundle
 if [ ! -d ~/.vim/bundle ]; then
+  echo "Install: Creating bundle directory for NeoBundle"
   mkdir -p ~/.vim/bundle
 fi
 
 if [ ! -d "~/.vim/bundle/neobundle.vim" ]; then
+echo "Install:Cloning NeoBundle"
   git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 fi
 
+echo "Install vim plugins"
 +NeoBundleInstall +qall
 
 # Setup configs neovim, taskwarrior, tmux
