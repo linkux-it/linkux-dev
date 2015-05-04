@@ -1,6 +1,13 @@
-# dev
+# Dev Tools used by Linkux IT
 
-Will create and environment with vim + tmux and other cool features for quick coding
+Will create and setup the environment with vim + tmux and other cool features for quick coding on
+OSX and *NIX like os's.
+
+Install
+=======
+
+Update
+======
 
 Vim
 ===
@@ -10,6 +17,7 @@ You have to read each plugin for docs and how to use each features
 Plugins used:
  - Common
    - [Neobundle](https://github.com/Shougo/neobundle.vim) Plugin Manager for vim/neovim
+   - [Base16 Theme](https://github.com/chriskempson/base16-vim) Just use another theme than the default.
    - [vimproc](https://github.com/Shougo/vimproc.vim) Recommended by neobundle
    - [unite](https://github.com/Shougo/unite.vim)
    - [NerdTree](https://github.com/scrooloose/nerdtree) This is useful?
@@ -17,7 +25,6 @@ Plugins used:
    - [Surround](https://github.com/tpope/vim-surround)
    - [ESLint](https://github.com/scrooloose/syntastic/tree/master/syntax_checkers)  need all syntaxs?
    - [Editor config](https://github.com/editorconfig/editorconfig-vim) To manage team conventions on editors, not only vim
-   - [Base16 Theme](https://github.com/chriskempson/base16-vim)
    - [Figitive](https://github.com/tpope/vim-fugitive) it is a git integration... maybe useful?
 
  - HTML, CSS, Javascript
@@ -29,8 +36,7 @@ Plugins used:
  - Python
    - [Jedi](https://github.com/davidhalter/jedi-vim) autcomplete, refactor and more
    - [Snnippeds](https://github.com/SirVer/ultisnips)
-   
+
 
  - For later?
    - [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
-
