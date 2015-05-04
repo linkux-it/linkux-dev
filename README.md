@@ -29,7 +29,7 @@ export CONFIG_NEOVIM=1
 To install just for vim
 
 ```bash
-curl https://raw.githubusercontent.com/linkux-it/linkux-dev/master/install.sh | bash
+curl -s https://raw.githubusercontent.com/linkux-it/linkux-dev/master/install.sh | bash
 ```
 
 If you want alternatives on Ubuntu

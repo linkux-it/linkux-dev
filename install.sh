@@ -67,11 +67,14 @@ else
 fi
 
 # if exists and is not symlinks
-if [ -f ~/.vimrc ] && [ ! -L ~/.vimrc ]; then
-  echo "Linkux IT :: Install: Backup old ~/.vimrc to ~/.vimrc.old"
-  if [ -n "$CONFIG_NEOVIM" ]; then
+if [ -n "$CONFIG_NEOVIM" ]; then
+  echo "Linkux IT :: Install: Backup old ~/.nvimrc to ~/.nvimrc.old"
+  if [ -f ~/.nvimrc ] && [ ! -L ~/.nvimrc ]; then
     mv ~/.nvimrc ~/.nvimrc.old
-  else
+  fi
+else
+  if [ -f ~/.vimrc ] && [ ! -L ~/.vimrc ]; then
+    echo "Linkux IT :: Install: Backup old ~/.vimrc to ~/.vimrc.old"
     mv ~/.vimrc ~/.vimrc.old
   fi
 fi
