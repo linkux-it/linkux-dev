@@ -213,8 +213,8 @@ set incsearch
     let NERDTreeShowBookmarks=1
     let NERDTreeIgnore=['\.git','\.hg']
     " let NERDTreeBookmarksFile=s:get_cache_dir('NERDTreeBookmarks')
-    map <C-n> :NERDTreeToggle<CR>
-    map <C-N> :NERDTreeFind<CR>
+    nnoremap <F2> :NERDTreeToggle<CR>
+    nnoremap <F3> :NERDTreeFind<CR>
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
   "}}}
 
