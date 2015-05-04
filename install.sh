@@ -39,14 +39,6 @@ else
     sudo add-apt-repository ppa:neovim-ppa/unstable
     sudo apt-get update
     sudo apt-get --assume-yes install git git-core python-dev python-pip python3-dev python3-pip neovim tmux task
-
-    # Set alternatives
-    # sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
-    # sudo update-alternatives --config vi
-    # sudo update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60
-    # sudo update-alternatives --config vim
-    # sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
-    # sudo update-alternatives --config editor
 fi
 
 # First clone or update our dotfiles
