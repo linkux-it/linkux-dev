@@ -41,12 +41,12 @@
   "}}}
 
   NeoBundle 'mhinz/vim-startify' "{{{
-    let g:startify_session_dir = s:get_cache_dir('sessions')
+    " let g:startify_session_dir = s:get_cache_dir('sessions')
     let g:startify_change_to_vcs_root = 1
     let g:startify_show_sessions = 1
     nnoremap <F1> :Startify<cr>
   "}}}
-  
+
   NeoBundle 'tpope/vim-fugitive' "{{{
     nnoremap <silent> <leader>gs :Gstatus<CR>
     nnoremap <silent> <leader>gd :Gdiff<CR>
@@ -97,7 +97,7 @@
             \ })
     endfunction
 
-    let g:unite_data_directory=s:get_cache_dir('unite')
+    " let g:unite_data_directory=s:get_cache_dir('unite')
     let g:unite_source_history_yank_enable=1
     let g:unite_source_rec_max_cache_files=5000
 
@@ -121,13 +121,8 @@
     nmap <space> [unite]
     nnoremap [unite] <nop>
 
-    if s:is_windows
-      nnoremap <silent> [unite]<space> :<C-u>Unite -toggle -auto-resize -buffer-name=mixed file_rec:! buffer file_mru bookmark<cr><c-u>
-      nnoremap <silent> [unite]f :<C-u>Unite -toggle -auto-resize -buffer-name=files file_rec:!<cr><c-u>
-    else
-      nnoremap <silent> [unite]<space> :<C-u>Unite -toggle -auto-resize -buffer-name=mixed file_rec/async:! buffer file_mru bookmark<cr><c-u>
-      nnoremap <silent> [unite]f :<C-u>Unite -toggle -auto-resize -buffer-name=files file_rec/async:!<cr><c-u>
-    endif
+    nnoremap <silent> [unite]<space> :<C-u>Unite -toggle -auto-resize -buffer-name=mixed file_rec/async:! buffer file_mru bookmark<cr><c-u>
+    nnoremap <silent> [unite]f :<C-u>Unite -toggle -auto-resize -buffer-name=files file_rec/async:!<cr><c-u>
     nnoremap <silent> [unite]e :<C-u>Unite -buffer-name=recent file_mru<cr>
     nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yanks history/yank<cr>
     nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=line line<cr>
@@ -189,7 +184,7 @@
     let NERDTreeChDirMode=0
     let NERDTreeShowBookmarks=1
     let NERDTreeIgnore=['\.git','\.hg']
-    let NERDTreeBookmarksFile=s:get_cache_dir('NERDTreeBookmarks')
+    " let NERDTreeBookmarksFile=s:get_cache_dir('NERDTreeBookmarks')
     nnoremap <F2> :NERDTreeToggle<CR>
     nnoremap <F3> :NERDTreeFind<CR>
   "}}}
