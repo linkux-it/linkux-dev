@@ -213,8 +213,8 @@ set incsearch
     let NERDTreeShowBookmarks=1
     let NERDTreeIgnore=['\.git','\.hg']
     " let NERDTreeBookmarksFile=s:get_cache_dir('NERDTreeBookmarks')
-    nnoremap <c-n> :NERDTreeToggle<CR>
-    nnoremap <c-n-f> :NERDTreeFind<CR>
+    nnoremap <C-n> :NERDTreeToggle<CR>
+    nnoremap <C-N> :NERDTreeFind<CR>
   "}}}
 
   NeoBundleLazy 'tpope/vim-scriptease', {'autoload':{'filetypes':['vim']}}
