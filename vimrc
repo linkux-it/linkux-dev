@@ -18,7 +18,7 @@ let python_highlight_all = 1
 
 set background=dark     " Assume a dark background
 set history=1000
-set incrementalsearch
+set incsearch
 
 if has('cmdline_info')
 	set ruler                  	" show the ruler
