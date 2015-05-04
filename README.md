@@ -12,6 +12,12 @@ This ensure to install:
 Install
 =======
 
+You need python neovim package installed
+
+```bash
+pip install neovim  # or any other form
+```
+
 To install neovim, only install on OSX and ubuntu
 
 ```bash
