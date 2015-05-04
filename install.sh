@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 # We need to ensure that brew is intalled
 # install:
 #  . git
