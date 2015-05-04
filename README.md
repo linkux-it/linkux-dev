@@ -1,13 +1,17 @@
 # Dev Tools used by Linkux IT
 
 Will create and setup the environment with vim + tmux and other cool features for quick coding on
-OSX and *NIX like os's.
+OSX and Ubuntu (Debian hasn't package for neovim yet).
 
 Install
 =======
 
+> curl https://raw.githubusercontent.com/linkux-it/linkux-dev/master/install.sh | bash
+
 Update
 ======
+
+> cd ~/.linkux-dev && git pull
 
 Vim
 ===

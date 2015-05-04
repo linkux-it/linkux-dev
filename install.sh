@@ -46,10 +46,10 @@ else
 fi
 
 # First clone or update our dotfiles
-if [ ! -d ~/.linkuxit-dev ]; then
-  git clone https://github.com/linkux-it/linkux-dev.git ~/.linkuxit-dev
+if [ ! -d ~/.linkux-dev ]; then
+  git clone https://github.com/linkux-it/linkux-dev.git ~/.linkux-dev
 else
-  cd ~/.linkuxit-dev && git pull
+  cd ~/.linkux-dev && git pull
 fi
 
 # if exists and is not symlinks
@@ -59,7 +59,7 @@ fi
 
 # create symlinks for setups
 if [ ! -f ~/.vimrc ]; then
-  ln -s ~/.linkuxit-dev/vimrc ~/.vimrc
+  ln -s ~/.linkux-dev/vimrc ~/.vimrc
 fi
 
 # Setting up neobundle
