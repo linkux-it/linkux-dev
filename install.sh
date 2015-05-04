@@ -17,10 +17,9 @@ echo "*                    Starting installation                     *"
 echo "****************************************************************"
 echo
 
-read -p "Do you want to use neovim? (Installer only can install for OSX and Ubuntu - Sorry) " -n 1 -r
+echo "Neo Installer only can install for OSX and Ubuntu - Sorry :("
+read -p "Do you want to use neovim?" useNeoVim
 echo
-
-useNeoVim = $REPLY =~ ^[Yy]$
 
 echo $useNeoVim
 
