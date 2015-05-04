@@ -94,11 +94,7 @@ fi
 
 if [ ! -d ~/.vim/bundle/neobundle.vim ]; then
   echo "Linkux IT :: Install:Cloning NeoBundle"
-  if [ -n "$CONFIG_NEOVIM" ]; then
-    git clone https://github.com/Shougo/neobundle.vim ~/.nvim/bundle/neobundle.vim
-  else
-    git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-  fi
+  git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 fi
 
 echo "Linkux IT :: Install vim plugins"

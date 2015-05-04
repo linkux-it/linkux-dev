@@ -21,6 +21,9 @@
  " Refer to |:NeoBundle-examples|.
  " Note: You don't set neobundle setting in .gvimrc!
 
+ NeoBundle 'Shougo/vimproc.vim', {'build': {'unix': g:make}}
+ NeoBundle 'chriskempson/base16-vim'
+
  call neobundle#end()
 
  " Required:
@@ -36,9 +39,6 @@ if system('uname -o') =~ '^GNU/'
         let g:make = 'make'
 endif
 
-" Plugins
-NeoBundle 'Shougo/vimproc.vim', {'build': {'unix': g:make}}
-NeoBundle 'chriskempson/base16-vim'
-
 
 " Configs
+colorscheme base16-default
