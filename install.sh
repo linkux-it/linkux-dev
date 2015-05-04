@@ -18,7 +18,7 @@ echo "****************************************************************"
 echo
 
 echo "Neo Installer only can install for OSX and Ubuntu - Sorry :("
-read -p "Do you want to use neovim?" useNeoVim
+read -r -p "Do you want to use neovim?" useNeoVim
 echo
 
 echo $useNeoVim
