@@ -71,6 +71,7 @@ endif
   NeoBundle 'Shougo/vimproc.vim', {'build': {'unix': g:make}}
   NeoBundle 'chriskempson/base16-vim'
 
+  NeoBundle 'SirVer/ultisnips'
   NeoBundle 'Lokaltog/vim-easymotion'
   NeoBundle 'tpope/vim-surround'
   NeoBundle 'scrooloose/syntastic' "{{{
@@ -182,8 +183,6 @@ endif
   NeoBundleLazy 'klen/python-mode', {'autoload':{'filetypes':['python']}} "{{{
     let g:pymode_rope=0
   "}}}
-
-  NeoBundleLazy 'SirVer/ultisnips'
 
   NeoBundleLazy 'moll/vim-node', {'autoload': {'filetypes':['javascript']}}
   NeoBundleLazy 'groenewege/vim-less', {'autoload':{'filetypes':['less']}}
