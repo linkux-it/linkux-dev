@@ -183,7 +183,7 @@ endif
     let g:pymode_rope=0
   "}}}
 
-  NeoBundleLazy 'SirVer/ultisnips', {'autoload':{'filetypes':['python']}}
+  NeoBundleLazy 'SirVer/ultisnips'
 
   NeoBundleLazy 'moll/vim-node', {'autoload': {'filetypes':['javascript']}}
   NeoBundleLazy 'groenewege/vim-less', {'autoload':{'filetypes':['less']}}
