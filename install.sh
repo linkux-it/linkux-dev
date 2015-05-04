@@ -17,13 +17,7 @@ echo "*                    Starting installation                     *"
 echo "****************************************************************"
 echo
 
-echo "Neo Installer only can install for OSX and Ubuntu - Sorry :("
-read -p "Do you want to use neovim?" -r useNeoVim
-echo
-
-echo $useNeoVim
-
-exit 1
+unamestr=`uname`
 
 if [[ "$unamestr" == 'Darwin' ]]; then
     which -s brew
@@ -35,22 +29,31 @@ if [[ "$unamestr" == 'Darwin' ]]; then
         brew update
     fi
 
-    # install neovim
-    which -s nvim
-    if [[ $? != 0 ]] ; then
-        brew tap neovim/homebrew-neovim
-        brew install --HEAD neovim
-    else
-        brew reinstall --HEAD neovim
+    if [ -n "$INSTALL_NEOVIM" ]; then
+      echo "Linkux IT :: Install: Installing NeoVim"
+      # install neovim
+      which -s nvim
+      if [[ $? != 0 ]] ; then
+          brew tap neovim/homebrew-neovim
+          brew install --HEAD neovim
+      else
+          brew reinstall --HEAD neovim
+      fi
     fi
 
     which -s git || brew install git
+    which -s vim || brew install vim
     which -s tmux || brew install tmux
     which -s task || brew install task
 else
-    sudo add-apt-repository ppa:neovim-ppa/unstable
     sudo apt-get update
-    sudo apt-get --assume-yes install git git-core python-dev python-pip python3-dev python3-pip neovim tmux task
+    sudo apt-get --assume-yes install git git-core python-dev python-pip python3-dev python3-pip vim tmux task
+
+    if [ -n "$INSTALL_NEOVIM" ]; then
+      echo "Linkux IT :: Install: Installing NeoVim"
+      sudo add-apt-repository ppa:neovim-ppa/unstable
+      sudo apt-get --assume-yes install neovim
+    fi
 fi
 
 # First clone or update our dotfiles
@@ -72,23 +75,37 @@ fi
 # create symlinks for setups
 if [ ! -f ~/.vimrc ]; then
   echo "Linkux IT :: Install: Linking Linkut IT config for vim and nvim"
-  ln -s ~/.linkux-dev/vimrc ~/.vimrc
-  ln -s ~/.linkux-dev/vimrc ~/.nvimrc
-  ln -s .vim .nvim
+  if [ -n "$CONFIG_NEOVIM" ]; then
+    ln -s ~/.linkux-dev/vimrc ~/.nvimrc
+  else
+    ln -s ~/.linkux-dev/vimrc ~/.vimrc
+  fi
 fi
 
 # Setting up neobundle
 if [ ! -d ~/.vim/bundle ]; then
   echo "Linkux IT :: Install: Creating bundle directory for NeoBundle"
-  mkdir -p ~/.vim/bundle
+  if [ -n "$CONFIG_NEOVIM" ]; then
+    mkdir -p ~/.nvim/bundle
+  else
+    mkdir -p ~/.vim/bundle
+  fi
 fi
 
 if [ ! -d ~/.vim/bundle/neobundle.vim ]; then
-echo "Linkux IT :: Install:Cloning NeoBundle"
-  git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+  echo "Linkux IT :: Install:Cloning NeoBundle"
+  if [ -n "$CONFIG_NEOVIM" ]; then
+    git clone https://github.com/Shougo/neobundle.vim ~/.nvim/bundle/neobundle.vim
+  else
+    git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+  fi
 fi
 
 echo "Linkux IT :: Install vim plugins"
-nvim +NeoBundleInstall +qall
+if [ -n "$CONFIG_NEOVIM" ]; then
+  nvim +NeoBundleInstall +qall
+else
+  vim +NeoBundleInstall +qall
+fi
 
 # Setup configs neovim, taskwarrior, tmux

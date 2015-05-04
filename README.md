@@ -3,8 +3,26 @@
 Will create and setup the environment with vim + tmux and other cool features for quick coding on
 OSX and Ubuntu (Debian hasn't package for neovim yet).
 
+This ensure to install:
+ * git
+ * tmux
+ * vim
+ * neovim (if requested only for OSX and Ubuntu)
+
 Install
 =======
+
+To install neovim, only install on OSX and ubuntu
+
+> export INSTALL_NEOVIM=1
+
+To config neovim instead of vim (config files setup this), be sure you have it
+installed. You can run installer for both running twice one setting up this
+and the other without it, use whichever you want!
+
+> export CONFIG_NEOVIM=1
+
+To install just for vim
 
 > curl https://raw.githubusercontent.com/linkux-it/linkux-dev/master/install.sh | bash
 

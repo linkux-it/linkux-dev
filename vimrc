@@ -51,4 +51,3 @@ NeoBundle 'chriskempson/base16-vim'
 
 
 " Configs
-colorscheme base16-default
