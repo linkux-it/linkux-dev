@@ -37,16 +37,7 @@ if system('uname -o') =~ '^GNU/'
 endif
 
 " Plugins
-NeoBundle 'Shougo/vimproc.vim', {
- 'build' : {
-     'windows' : 'toolsupdate-dll-mingw',
-     'cygwin' : 'make -f make_cygwin.mak',
-     'mac' : 'make -f make_mac.mak',
-     'linux' : 'make',
-     'unix' : 'gmake',
-    },
- }
-
+NeoBundle 'Shougo/vimproc.vim', {'build': {'unix': g:make}}
 NeoBundle 'chriskempson/base16-vim'
 
 
