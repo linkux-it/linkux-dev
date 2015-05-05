@@ -112,7 +112,7 @@ fi
 
 if [ ! -f ~/.taskrc ]; then
   echo "Linkux IT :: Install: Linking Linkux IT config for nvim"
-  ln ~/.linkux-dev/taskrc ~/.taskrc
+  ln -s ~/.linkux-dev/taskrc ~/.taskrc
 fi
 
 echo "Linkux IT :: Install vim plugins"
