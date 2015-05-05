@@ -103,17 +103,7 @@ if [ ! -d ~/.vim/bundle/neobundle.vim ]; then
   git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 fi
 
-echo "Linkux IT :: Install vim plugins"
-if [ -n "$CONFIG_NEOVIM" ]; then
-  nvim +VimProcInstall
-  nvim +NeoBundleInstall +qall
-else
-  vim +VimProcInstall
-  vim +NeoBundleInstall +qall
-fi
-
 # Taskwarrior
-
 
 if [ -f ~/.taskrc ] && [ ! -L ~/.taskrc ]; then
   echo "Linkux IT :: Install: Backup old ~/.taskrc to ~/.taskrc.old"
@@ -124,3 +114,13 @@ if [ ! -f ~/.taskrc ]; then
   echo "Linkux IT :: Install: Linking Linkux IT config for nvim"
   ln -s ~/.linkux-dev/taskrc ~/.taskrc
 fi
+
+echo "Linkux IT :: Install vim plugins"
+if [ -n "$CONFIG_NEOVIM" ]; then
+  nvim +VimProcInstall
+  nvim +NeoBundleInstall +qall
+else
+  vim +VimProcInstall
+  vim +NeoBundleInstall +qall
+fi
+
