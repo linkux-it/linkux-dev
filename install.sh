@@ -68,8 +68,8 @@ fi
 
 # if exists and is not symlinks
 if [ -n "$CONFIG_NEOVIM" ]; then
-  echo "Linkux IT :: Install: Backup old ~/.nvimrc to ~/.nvimrc.old"
   if [ -f ~/.nvimrc ] && [ ! -L ~/.nvimrc ]; then
+    echo "Linkux IT :: Install: Backup old ~/.nvimrc to ~/.nvimrc.old"
     mv ~/.nvimrc ~/.nvimrc.old
   fi
 else
@@ -82,12 +82,12 @@ fi
 # create symlinks for setups
 if [ -n "$CONFIG_NEOVIM" ]; then
   if [ ! -f ~/.nvimrc ]; then
-    echo "Linkux IT :: Install: Linking Linkut IT config for nvim"
+    echo "Linkux IT :: Install: Linking Linkux IT config for nvim"
     ln -s ~/.linkux-dev/vimrc ~/.nvimrc
   fi
 else
   if [ ! -f ~/.nvimrc ]; then
-    echo "Linkux IT :: Install: Linking Linkut IT config for vim"
+    echo "Linkux IT :: Install: Linking Linkux IT config for vim"
     ln -s ~/.linkux-dev/vimrc ~/.vimrc
   fi
 fi
@@ -112,4 +112,15 @@ else
   vim +NeoBundleInstall +qall
 fi
 
-# Setup configs neovim, taskwarrior, tmux
+# Taskwarrior
+
+
+if [ -f ~/.taskrc ] && [ ! -L ~/.taskrc ]; then
+  echo "Linkux IT :: Install: Backup old ~/.taskrc to ~/.taskrc.old"
+  mv ~/.taskrc ~/.taskrc.old
+fi
+
+if [ ! -f ~/.taskrc ]; then
+  echo "Linkux IT :: Install: Linking Linkux IT config for nvim"
+  ln -s ~/.linkux-dev/taskrc ~/.taskrc
+fi
