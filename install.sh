@@ -45,9 +45,11 @@ if [[ "$unamestr" == 'Darwin' ]]; then
     which -s vim || brew install vim
     which -s tmux || brew install tmux
     which -s task || brew install task
+    which -s ag || brew install ag
+    which -s ack || brew install ack
 else
     sudo apt-get update
-    sudo apt-get --assume-yes install git git-core python-dev python-pip python3-dev python3-pip vim tmux task
+    sudo apt-get --assume-yes install git git-core python-dev python-pip python3-dev python3-pip vim tmux task ag ack
 
     if [ -n "$INSTALL_NEOVIM" ]; then
       echo "Linkux IT :: Install: Installing NeoVim"

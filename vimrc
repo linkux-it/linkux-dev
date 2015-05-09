@@ -82,6 +82,7 @@ set incsearch
   NeoBundle 'terryma/vim-expand-region'
   NeoBundle 'terryma/vim-multiple-cursors'
   NeoBundle 'chrisbra/NrrwRgn'
+  NeoBundle 'airblade/vim-gitgutter'
   NeoBundleLazy 'godlygeek/tabular', {'autoload':{'commands':'Tabularize'}} "{{{
     nmap <Leader>a& :Tabularize /&<CR>
     vmap <Leader>a& :Tabularize /&<CR>
@@ -97,9 +98,6 @@ set incsearch
     vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
   "}}}
   NeoBundle 'jiangmiao/auto-pairs'
-  NeoBundle 'justinmk/vim-sneak' "{{{
-    let g:sneak#streak = 1
-  "}}}
 
   NeoBundle 'bling/vim-airline' "{{{
     let g:airline#extensions#tabline#enabled = 1
@@ -169,6 +167,7 @@ set incsearch
   "}}}
 
   NeoBundleLazy 'davidhalter/jedi-vim', {'autoload':{'filetypes':['python']}}
+  NeoBundleLazy 'jmcantrell/vim-virtualenv', {'autoload':{'filetypes':['python']}}
   NeoBundleLazy 'klen/python-mode', {'autoload':{'filetypes':['python']}} "{{{
     let g:pymode_rope=0
   "}}}
