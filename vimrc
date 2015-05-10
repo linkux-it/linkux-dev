@@ -49,6 +49,7 @@ set hlsearch
   " Note: You don't set neobundle setting in .gvimrc!
 
   NeoBundle 'Shougo/vimproc.vim', {'build': {'unix': g:make}}
+  NeoBundle 'Shougo/neomru.vim'
   NeoBundle 'chriskempson/base16-vim'
 
   NeoBundle 'SirVer/ultisnips'
