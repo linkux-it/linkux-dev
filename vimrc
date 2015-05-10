@@ -1,4 +1,4 @@
-" enable syntax highlighting
+ enable syntax highlighting
 syntax enable
 
 " show line numbers
@@ -261,5 +261,3 @@ else
   map <C-k> <C-w>k
   map <C-l> <C-w>l
 endif
-
-let g:python_host_prog='python3'
