@@ -231,7 +231,7 @@ set hlsearch
   " this will conveniently prompt you to install them.
   NeoBundleCheck
 
-  colorscheme base16-default
+  colorscheme base16-ocean
 
   if exists('$TMUX')
   function! TmuxOrSplitSwitch(wincmd, tmuxdir)
