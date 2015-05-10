@@ -88,7 +88,7 @@ if [ -n "$CONFIG_NEOVIM" ]; then
     ln -s ~/.linkux-dev/vimrc ~/.nvimrc
   fi
 else
-  if [ ! -f ~/.nvimrc ]; then
+  if [ ! -f ~/.vimrc ]; then
     echo "Linkux IT :: Install: Linking Linkux IT config for vim"
     ln -s ~/.linkux-dev/vimrc ~/.vimrc
   fi
