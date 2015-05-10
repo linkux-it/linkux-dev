@@ -16,7 +16,6 @@ set showmatch
 " enable all Python syntax highlighting features
 let python_highlight_all = 1
 
-set background=dark     " Assume a dark background
 set history=10000
 set incsearch
 set hlsearch
@@ -233,6 +232,9 @@ set hlsearch
 
   let base16colorspace=256
   colorscheme base16-ocean
+  set term=screen-256color
+  set t_Co=256
+  set background=dark
 
   if exists('$TMUX')
   function! TmuxOrSplitSwitch(wincmd, tmuxdir)
