@@ -231,6 +231,7 @@ set hlsearch
   " this will conveniently prompt you to install them.
   NeoBundleCheck
 
+  let base16colorspace=256
   colorscheme base16-ocean
 
   if exists('$TMUX')
