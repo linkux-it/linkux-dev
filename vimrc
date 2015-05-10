@@ -102,6 +102,7 @@ set hlsearch
   NeoBundle 'jiangmiao/auto-pairs'
 
   NeoBundle 'bling/vim-airline' "{{{
+    set laststatus=2  "Force appear the status line "
     let g:airline#extensions#tabline#enabled = 1
     let g:airline#extensions#tabline#left_sep = ' '
     let g:airline#extensions#tabline#left_alt_sep = '¦'

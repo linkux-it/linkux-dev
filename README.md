@@ -14,6 +14,13 @@ This ensure to install:
  * tmux
  * vim
  * neovim (if requested only for OSX and Ubuntu)
+ 
+**Be sure**
+
+To install Base16 color for your terminal: https://github.com/chriskempson/base16
+To install Base16-shell for your shell: https://github.com/chriskempson/base16-shell
+
+We don't install it because depends on your needs and preferences.
 
 Install
 =======
