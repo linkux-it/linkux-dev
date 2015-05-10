@@ -3,6 +3,12 @@
 Will create and setup the environment with vim + tmux and other cool features for quick coding on
 OSX and Ubuntu (Debian hasn't package for neovim yet).
 
+
+Based on :
+  - https://github.com/aaronjensen/dotfiles
+  - https://github.com/jackfranklin/dotfiles
+  - https://github.com/bling/dotvim/
+
 This ensure to install:
  * git
  * tmux
@@ -87,6 +93,7 @@ Plugins used:
   - [Vim Scriptease](https://github.com/tpope/vim-scriptease)
   - [Vim Markdown](https://github.com/tpope/vim-markdown)
   - [Git Gutter](https://github.com/airblade/vim-gitgutter)
+  - [Tmux and Vim Navigator](christoomey/vim-tmux-navigator)
 
  - HTML, CSS, Javascript
   - [Emmet](https://github.com/mattn/emmet-vim) Really cool for this

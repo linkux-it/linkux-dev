@@ -117,6 +117,17 @@ if [ ! -f ~/.taskrc ]; then
   ln -s ~/.linkux-dev/taskrc ~/.taskrc
 fi
 
+# Tmux
+
+if [ -f ~/.tmux.conf ] && [ ! -L ~/.tmux.conf ]; then
+  echo "Linkux IT :: Install: Backup old ~/.tmux.conf to ~/.tmux.conf.old"
+  mv ~/.tmux.conf ~/.tmux.conf.old
+fi
+
+if [ ! -f ~/.tmux.conf ]; then
+  echo "Linkux IT :: Install: Linking Linkux IT config for tmux"
+  ln -s ~/.linkux-dev/tmux.conf ~/.tmux.conf
+fi
 echo "Linkux IT :: Install vim plugins"
 if [ -n "$CONFIG_NEOVIM" ]; then
   nvim +VimProcInstall +qall
