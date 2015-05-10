@@ -17,7 +17,7 @@ set showmatch
 let python_highlight_all = 1
 
 set background=dark     " Assume a dark background
-set history=1000
+set history=10000
 set incsearch
 set hlsearch
 
