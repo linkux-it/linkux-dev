@@ -22,10 +22,10 @@ To install Base16-shell for your shell: https://github.com/chriskempson/base16-s
 
 We don't install it because depends on your needs and preferences.
 
-Also install
+Also install so you can check python code, not automatic update because we will need super user permissions
 
 ```bash
-pip install flake8 pylint
+pip install flake8 pylint pep8
 ```
 
 Install
