@@ -22,6 +22,12 @@ To install Base16-shell for your shell: https://github.com/chriskempson/base16-s
 
 We don't install it because depends on your needs and preferences.
 
+Also install
+
+```bash
+pip install flake8 pylint
+```
+
 Install
 =======
 
@@ -126,7 +132,6 @@ Plugins used:
  - Python
   - [Jedi](https://github.com/davidhalter/jedi-vim) autcomplete, refactor and more
   - [Snnippeds](https://github.com/SirVer/ultisnips)
-  - [Python Mode](https://github.com/klen/python-mode)
   - [Virtualenv](https://github.com/jmcantrell/vim-virtualenv)
 
  - Ruby - Rails

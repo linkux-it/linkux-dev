@@ -20,6 +20,8 @@ set history=10000
 set incsearch
 set hlsearch
 set autoread
+set smarttab 
+set undolevels=1000
 
 " Note: Skip initialization for vim-tiny or vim-small.
   let g:make = 'gmake'
@@ -61,6 +63,15 @@ set autoread
     let g:syntastic_style_error_symbol = '✠'
     let g:syntastic_warning_symbol = '∆'
     let g:syntastic_style_warning_symbol = '≈'
+
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
+
+    let g:syntastic_always_populate_loc_list = 1
+    let g:syntastic_auto_loc_list = 1
+    let g:syntastic_check_on_open = 1
+    let g:syntastic_check_on_wq = 0
   "}}}
 
   NeoBundle 'tpope/vim-fugitive' "{{{
@@ -170,11 +181,11 @@ set autoread
     nnoremap <silent> <leader>gV :Gitv!<CR>
   "}}}
 
-  NeoBundleLazy 'davidhalter/jedi-vim', {'autoload':{'filetypes':['python']}}
-  NeoBundleLazy 'jmcantrell/vim-virtualenv', {'autoload':{'filetypes':['python']}}
-  NeoBundleLazy 'klen/python-mode', {'autoload':{'filetypes':['python']}} "{{{
-    let g:pymode_rope=0
+  NeoBundleLazy 'davidhalter/jedi-vim', {'autoload':{'filetypes':['python']}} "{{{
+    let g:jedi#use_splits_not_buffers = "left"
+    "let g:jedi#use_tabs_not_buffers = 0 " Maybe better this than splits?
   "}}}
+  NeoBundleLazy 'jmcantrell/vim-virtualenv', {'autoload':{'filetypes':['python']}}
 
   NeoBundleLazy 'moll/vim-node', {'autoload': {'filetypes':['javascript']}}
   NeoBundleLazy 'groenewege/vim-less', {'autoload':{'filetypes':['less']}}
@@ -252,6 +263,7 @@ set autoread
   let &t_ti = "\<Esc>]2;vim\<Esc>\\" . &t_ti
   let &t_te = "\<Esc>]2;". previous_title . "\<Esc>\\" . &t_te
 
+  " Easy navigation same as tmux, enjoy it!
   nnoremap <silent> <C-h> :call TmuxOrSplitSwitch('h', 'L')<cr>
   nnoremap <silent> <C-j> :call TmuxOrSplitSwitch('j', 'D')<cr>
   nnoremap <silent> <C-k> :call TmuxOrSplitSwitch('k', 'U')<cr>
