@@ -19,6 +19,7 @@ let python_highlight_all = 1
 set history=10000
 set incsearch
 set hlsearch
+set autoread
 
 " Note: Skip initialization for vim-tiny or vim-small.
   let g:make = 'gmake'
