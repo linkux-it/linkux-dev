@@ -176,6 +176,7 @@ filetype plugin indent on
     nnoremap <silent> [unite]s :<C-u>Unite -quick-match buffer<cr>
   "}}}
 
+  NeoBundle 'vim-scripts/PreserveNoEOL'
   NeoBundleLazy 'editorconfig/editorconfig-vim', {'autoload':{'insert':1, 'filetypes': 'all'}} "{{{
     let g:EditorConfig_exclude_patterns = ['fugitive://.*']
     let g:EditorConfig_exclude_patterns = ['scp://.*']
