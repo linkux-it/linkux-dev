@@ -23,8 +23,6 @@ set autoread
 set smarttab 
 set undolevels=1000
 
-filetype plugin on
-
 " Note: Skip initialization for vim-tiny or vim-small.
   let g:make = 'gmake'
   if system('uname -o') =~ '^GNU/'
@@ -177,7 +175,7 @@ filetype plugin on
     nnoremap <silent> [unite]s :<C-u>Unite -quick-match buffer<cr>
   "}}}
 
-  NeoBundleLazy 'editorconfig/editorconfig-vim', {'autoload':{'insert':1}} "{{{
+  NeoBundleLazy 'editorconfig/editorconfig-vim', {'autoload':{'insert':1, 'filetypes': 'all'}} "{{{
     let g:EditorConfig_exclude_patterns = ['fugitive://.*']
     let g:EditorConfig_exclude_patterns = ['scp://.*']
     let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
