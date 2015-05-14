@@ -23,6 +23,8 @@ set autoread
 set smarttab 
 set undolevels=1000
 
+filetype plugin on
+
 " Note: Skip initialization for vim-tiny or vim-small.
   let g:make = 'gmake'
   if system('uname -o') =~ '^GNU/'
@@ -175,7 +177,12 @@ set undolevels=1000
     nnoremap <silent> [unite]s :<C-u>Unite -quick-match buffer<cr>
   "}}}
 
-  NeoBundleLazy 'editorconfig/editorconfig-vim', {'autoload':{'insert':1}}
+  NeoBundleLazy 'editorconfig/editorconfig-vim', {'autoload':{'insert':1}} "{{{
+    let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+    let g:EditorConfig_exclude_patterns = ['scp://.*']
+    let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+  "}}}
+  "
   NeoBundleLazy 'gregsexton/gitv', {'depends':['tpope/vim-fugitive'], 'autoload':{'commands':'Gitv'}} "{{{
     nnoremap <silent> <leader>gv :Gitv<CR>
     nnoremap <silent> <leader>gV :Gitv!<CR>
