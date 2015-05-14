@@ -22,6 +22,7 @@ set hlsearch
 set autoread
 set smarttab 
 set undolevels=1000
+filetype plugin indent on
 
 " Note: Skip initialization for vim-tiny or vim-small.
   let g:make = 'gmake'
@@ -220,7 +221,9 @@ set undolevels=1000
     nnoremap <leader>fjs :call JsBeautify()<cr>
   "}}}
   NeoBundleLazy 'leafgarland/typescript-vim', {'autoload':{'filetypes':['typescript']}}
-  NeoBundleLazy 'kchmck/vim-coffee-script', {'autoload':{'filetypes':['coffee']}}
+  NeoBundleLazy 'kchmck/vim-coffee-script', {'autoload':{'filetypes':['coffee']}} "{{{
+    let coffee_indent_keep_current = 1
+  "}}}
   NeoBundleLazy 'leshill/vim-json', {'autoload':{'filetypes':['javascript','json']}}
   NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {'autoload':{'filetypes':['javascript','coffee','ls','typescript']}}
 
@@ -254,7 +257,11 @@ set undolevels=1000
   set t_Co=256
   set background=dark
 
-  if exists('$TMUX')
+  "foldmethod ident for some type of files
+  autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
+  autocmd BufNewFile,BufReadPost *.py setl foldmethod=indent nofoldenable
+
+if exists('$TMUX')
   function! TmuxOrSplitSwitch(wincmd, tmuxdir)
     let previous_winnr = winnr()
     silent! execute "wincmd " . a:wincmd
