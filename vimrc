@@ -9,6 +9,7 @@ set autoindent
 
 " show a visual line under the cursor's current line
 set cursorline
+set cursorcolumn
 
 " show the matching part of the pair for [] {} and ()
 set showmatch
@@ -22,6 +23,7 @@ set hlsearch
 set autoread
 set smarttab 
 set undolevels=1000
+set relativenumber
 filetype plugin indent on
 
 " Note: Skip initialization for vim-tiny or vim-small.
