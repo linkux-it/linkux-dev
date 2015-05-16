@@ -64,7 +64,6 @@ filetype plugin indent on
   NeoBundle 'Shougo/vimproc.vim', {'build': {'unix': g:make}}
   NeoBundle 'Shougo/neomru.vim'
   NeoBundle 'chriskempson/base16-vim' "{{{
-    colorscheme base16-ocean
   "}}}
 
   NeoBundle 'SirVer/ultisnips'
@@ -295,3 +294,5 @@ endif
 autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 autocmd BufNewFile,BufReadPost *.py setl foldmethod=indent nofoldenable
 
+" Color schema working at this point?
+colorscheme base16-ocean
