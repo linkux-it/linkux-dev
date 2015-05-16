@@ -14,9 +14,6 @@ set cursorcolumn
 " show the matching part of the pair for [] {} and ()
 set showmatch
 
-" enable all Python syntax highlighting features
-let python_highlight_all = 1
-
 set history=10000
 set incsearch
 set hlsearch
@@ -26,10 +23,16 @@ set undolevels=1000
 set relativenumber
 set list
 set listchars=tab:▸\
+set t_Co=256
+set background=dark
 
+" enable all Python syntax highlighting features
+let python_highlight_all = 1
 let mapleader = ","
+let base16colorspace=256
 
 filetype plugin indent on
+colorscheme base16-ocean
 
 " Note: Skip initialization for vim-tiny or vim-small.
   let g:make = 'gmake'
@@ -260,15 +263,6 @@ filetype plugin indent on
   " this will conveniently prompt you to install them.
   NeoBundleCheck
 
-  let base16colorspace=256
-  colorscheme base16-ocean
-  set t_Co=256
-  set background=dark
-
-  "foldmethod ident for some type of files
-  autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
-  autocmd BufNewFile,BufReadPost *.py setl foldmethod=indent nofoldenable
-
 if exists('$TMUX')
   function! TmuxOrSplitSwitch(wincmd, tmuxdir)
     let previous_winnr = winnr()
@@ -294,3 +288,9 @@ else
   map <C-k> <C-w>k
   map <C-l> <C-w>l
 endif
+
+
+"foldmethod ident for some type of files
+autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
+autocmd BufNewFile,BufReadPost *.py setl foldmethod=indent nofoldenable
+
