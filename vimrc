@@ -23,8 +23,13 @@ set hlsearch
 set autoread
 set smarttab 
 set undolevels=1000
-set relativenumber
+
+let mapleader = ","
+set list
+set listchars=tab:▸\ ,eol:¬
+
 filetype plugin indent on
+set relativenumber
 
 " Note: Skip initialization for vim-tiny or vim-small.
   let g:make = 'gmake'
