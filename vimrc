@@ -32,7 +32,6 @@ let mapleader = ","
 let base16colorspace=256
 
 filetype plugin indent on
-colorscheme base16-ocean
 
 " Note: Skip initialization for vim-tiny or vim-small.
   let g:make = 'gmake'
@@ -64,7 +63,9 @@ colorscheme base16-ocean
 
   NeoBundle 'Shougo/vimproc.vim', {'build': {'unix': g:make}}
   NeoBundle 'Shougo/neomru.vim'
-  NeoBundle 'chriskempson/base16-vim'
+  NeoBundle 'chriskempson/base16-vim' "{{{
+    colorscheme base16-ocean
+  "}}}
 
   NeoBundle 'SirVer/ultisnips'
   NeoBundle 'Lokaltog/vim-easymotion'
