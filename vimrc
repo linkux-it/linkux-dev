@@ -214,8 +214,9 @@ filetype plugin indent on
   NeoBundleLazy 'wavded/vim-stylus', {'autoload':{'filetypes':['styl']}}
   NeoBundleLazy 'digitaltoad/vim-jade', {'autoload':{'filetypes':['jade']}}
   NeoBundleLazy 'juvenn/mustache.vim', {'autoload':{'filetypes':['mustache']}}
+  NeoBundleLazy 'mustache/vim-mustache-handlebars', {'autoload':{'filetypes':['mustache','handlebars','hbs']}}
   NeoBundleLazy 'gregsexton/MatchTag', {'autoload':{'filetypes':['html','xml']}}
-  NeoBundleLazy 'mattn/emmet-vim', {'autoload':{'filetypes':['html','xml','xsl','xslt','xsd','css','sass','scss','less','mustache']}} "{{{
+  NeoBundleLazy 'mattn/emmet-vim', {'autoload':{'filetypes':['html','xml','xsl','xslt','xsd','css','sass','scss','less','mustache','handlebars','hbs']}} "{{{
     function! s:zen_html_tab()
       let line = getline('.')
       if match(line, '<.*>') < 0
