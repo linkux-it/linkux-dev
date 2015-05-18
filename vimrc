@@ -25,6 +25,7 @@ set list
 set listchars=tab:▸\
 set t_Co=256
 set background=dark
+set clipboard=unnamed
 
 " enable all Python syntax highlighting features
 let python_highlight_all = 1
