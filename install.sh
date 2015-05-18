@@ -47,6 +47,7 @@ if [[ "$unamestr" == 'Darwin' ]]; then
     which -s task || brew install task
     which -s ag || brew install ag
     which -s ack || brew install ack
+    which -s reattach-to-user-namespace || brew install reattach-to-user-namespace
 else
     sudo apt-get update
     sudo apt-get --assume-yes install git git-core python-dev python-pip python3-dev python3-pip vim tmux task ag ack 
