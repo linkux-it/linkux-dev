@@ -213,8 +213,9 @@ filetype plugin indent on
   NeoBundleLazy 'othree/html5.vim', {'autoload':{'filetypes':['html']}}
   NeoBundleLazy 'wavded/vim-stylus', {'autoload':{'filetypes':['styl']}}
   NeoBundleLazy 'digitaltoad/vim-jade', {'autoload':{'filetypes':['jade']}}
-  NeoBundleLazy 'juvenn/mustache.vim', {'autoload':{'filetypes':['mustache']}}
-  NeoBundleLazy 'mustache/vim-mustache-handlebars', {'autoload':{'filetypes':['mustache','handlebars','hbs']}}
+  NeoBundleLazy 'mustache/vim-mustache-handlebars', {'autoload':{'filetypes':['mustache','handlebars','hbs']}} '{{{
+    let g:mustache_abbreviations = 1
+  '}}}
   NeoBundleLazy 'gregsexton/MatchTag', {'autoload':{'filetypes':['html','xml']}}
   NeoBundleLazy 'mattn/emmet-vim', {'autoload':{'filetypes':['html','xml','xsl','xslt','xsd','css','sass','scss','less','mustache','handlebars','hbs']}} "{{{
     function! s:zen_html_tab()
