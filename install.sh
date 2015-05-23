@@ -19,7 +19,7 @@ echo
 
 unamestr=`uname`
 
-if [ -n "$ALLOW_INSTALL" ]
+if [ -n "$ALLOW_INSTALL" ]; then
   if [[ "$unamestr" == 'Darwin' ]]; then
       which -s brew
       if [[ $? != 0 ]] ; then
@@ -59,6 +59,7 @@ if [ -n "$ALLOW_INSTALL" ]
         sudo apt-get --assume-yes install neovim
       fi
   fi
+fi
 
 # First clone or update our dotfiles
 if [ ! -d ~/.linkux-dev ]; then
