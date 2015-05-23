@@ -19,44 +19,46 @@ echo
 
 unamestr=`uname`
 
-if [[ "$unamestr" == 'Darwin' ]]; then
-    which -s brew
-    if [[ $? != 0 ]] ; then
-        # Linkux IT :: Install Homebrew
-        # https://github.com/mxcl/homebrew/wiki/installation
-        /usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"
-    else
-        brew update
-    fi
-
-    if [ -n "$INSTALL_NEOVIM" ]; then
-      echo "Linkux IT :: Install: Installing NeoVim"
-      # install neovim
-      which -s nvim
+if [ -n "$ALLOW_INSTALL" ]
+  if [[ "$unamestr" == 'Darwin' ]]; then
+      which -s brew
       if [[ $? != 0 ]] ; then
-          brew tap neovim/homebrew-neovim
-          brew install --HEAD neovim
+          # Linkux IT :: Install Homebrew
+          # https://github.com/mxcl/homebrew/wiki/installation
+          /usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"
       else
-          brew reinstall --HEAD neovim
+          brew update
       fi
-    fi
-
-    which -s git || brew install git
-    which -s vim || brew install vim
-    which -s tmux || brew install tmux
-    which -s task || brew install task
-    which -s ag || brew install ag
-    which -s ack || brew install ack
-    which -s reattach-to-user-namespace || brew install reattach-to-user-namespace
-else
-    sudo apt-get update
-    sudo apt-get --assume-yes install git git-core python-dev python-pip python3-dev python3-pip vim tmux task ag ack 
-
-    if [ -n "$INSTALL_NEOVIM" ]; then
-      echo "Linkux IT :: Install: Installing NeoVim"
-      sudo add-apt-repository ppa:neovim-ppa/unstable
-      sudo apt-get --assume-yes install neovim
-    fi
+  
+      if [ -n "$INSTALL_NEOVIM" ]; then
+        echo "Linkux IT :: Install: Installing NeoVim"
+        # install neovim
+        which -s nvim
+        if [[ $? != 0 ]] ; then
+            brew tap neovim/homebrew-neovim
+            brew install --HEAD neovim
+        else
+            brew reinstall --HEAD neovim
+        fi
+      fi
+  
+      which -s git || brew install git
+      which -s vim || brew install vim
+      which -s tmux || brew install tmux
+      which -s task || brew install task
+      which -s ag || brew install ag
+      which -s ack || brew install ack
+      which -s reattach-to-user-namespace || brew install reattach-to-user-namespace
+  else
+      sudo apt-get update
+      sudo apt-get --assume-yes install git git-core python-dev python-pip python3-dev python3-pip vim tmux task ag ack 
+  
+      if [ -n "$INSTALL_NEOVIM" ]; then
+        echo "Linkux IT :: Install: Installing NeoVim"
+        sudo add-apt-repository ppa:neovim-ppa/unstable
+        sudo apt-get --assume-yes install neovim
+      fi
+  fi
 fi
 
 # First clone or update our dotfiles

@@ -37,6 +37,12 @@ You need python neovim package installed
 pip install neovim  # or any other form
 ```
 
+To install all app, dependencies. This not install neovim by default set
+
+```bash
+export ALLOW_INSTALL=1 
+```
+
 To install neovim, only install on OSX and ubuntu
 
 ```bash
