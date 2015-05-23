@@ -59,7 +59,6 @@ if [ -n "$ALLOW_INSTALL" ]
         sudo apt-get --assume-yes install neovim
       fi
   fi
-fi
 
 # First clone or update our dotfiles
 if [ ! -d ~/.linkux-dev ]; then
@@ -139,4 +138,3 @@ else
   vim +VimProcInstall +qall
   vim +NeoBundleInstall +qall
 fi
-
