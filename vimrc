@@ -147,6 +147,8 @@ filetype plugin indent on
     nmap <leader>8 <Plug>AirlineSelectTab8
     nmap <leader>9 <Plug>AirlineSelectTab9
   "}}}
+  
+  NeoBundle 'severin-lemaignan/vim-minimap'
 
   NeoBundle 'Shougo/unite.vim' "{{{
     let bundle = neobundle#get('unite.vim')
@@ -253,10 +255,10 @@ filetype plugin indent on
     let NERDTreeShowLineNumbers=1
     let NERDTreeChDirMode=0
     let NERDTreeShowBookmarks=1
-    let NERDTreeIgnore=['\.git','\.hg']
+    let NERDTreeIgnore=['\.git','\.hg','\.pyc$','\.DS_Store','\.swp']
     " let NERDTreeBookmarksFile=s:get_cache_dir('NERDTreeBookmarks')
-    nnoremap <F2> :NERDTreeToggle<CR>
-    nnoremap <F3> :NERDTreeFind<CR>
+    nnoremap <C-n> :NERDTreeToggle<CR>
+    nnoremap <C-n>f :NERDTreeFind<CR>
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
   "}}}
 
