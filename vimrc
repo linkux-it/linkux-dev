@@ -148,7 +148,7 @@ filetype plugin indent on
     nmap <leader>9 <Plug>AirlineSelectTab9
   "}}}
   
-  NeoBundle 'koron/minimap-vim'
+  NeoBundle 'severin-lemaignan/vim-minimap'
 
   NeoBundle 'Shougo/unite.vim' "{{{
     let bundle = neobundle#get('unite.vim')
