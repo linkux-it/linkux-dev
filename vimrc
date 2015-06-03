@@ -257,8 +257,8 @@ filetype plugin indent on
     let NERDTreeShowBookmarks=1
     let NERDTreeIgnore=['\.git','\.hg','\.pyc$','\.DS_Store','\.swp']
     " let NERDTreeBookmarksFile=s:get_cache_dir('NERDTreeBookmarks')
-    nnoremap <C-n> :NERDTreeToggle<CR>
-    nnoremap <C-n>f :NERDTreeFind<CR>
+    map <C-n> :NERDTreeToggle<CR>
+    map <C-n>f :NERDTreeFind<CR>
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
   "}}}
 
