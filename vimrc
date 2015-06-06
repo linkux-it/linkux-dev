@@ -208,8 +208,8 @@ filetype plugin indent on
   "}}}
 
   NeoBundleLazy 'davidhalter/jedi-vim', {'autoload':{'filetypes':['python']}} "{{{
-    let g:jedi#use_splits_not_buffers = "left"
-    "let g:jedi#use_tabs_not_buffers = 0 " Maybe better this than splits?
+    " let g:jedi#use_splits_not_buffers = "left"
+    let g:jedi#use_tabs_not_buffers = 0 " Maybe better this than splits?
   "}}}
   NeoBundleLazy 'jmcantrell/vim-virtualenv', {'autoload':{'filetypes':['python']}}
 
