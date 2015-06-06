@@ -150,6 +150,10 @@ filetype plugin indent on
   
   NeoBundle 'severin-lemaignan/vim-minimap'
 
+  NeoBundle 'gilsondev/searchtasks.vim' "{{{
+    let g:searchtasks_list=["TODO", "FIXME", "NOTE", "CHANGED", "TEST"]
+  " }}}
+
   NeoBundle 'Shougo/unite.vim' "{{{
     let bundle = neobundle#get('unite.vim')
     function! bundle.hooks.on_source(bundle)
