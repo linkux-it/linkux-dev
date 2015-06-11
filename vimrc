@@ -133,7 +133,6 @@ NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'severin-lemaignan/vim-minimap'
 NeoBundle 'vim-scripts/PreserveNoEOL'
 NeoBundleLazy 'tpope/vim-scriptease', {'autoload':{'filetypes':['vim']}}
-NeoBundle 'farseer90718/vim-taskwarrior'
 
 NeoBundle 'scrooloose/syntastic' " {{{
   let g:syntastic_error_symbol = '✗'
