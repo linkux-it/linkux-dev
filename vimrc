@@ -72,6 +72,11 @@ let base16colorspace=256
 let mapleader = ","
 let g:mapleader = ","
 
+" Remember last position
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NeoVim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -128,6 +133,7 @@ NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'severin-lemaignan/vim-minimap'
 NeoBundle 'vim-scripts/PreserveNoEOL'
 NeoBundleLazy 'tpope/vim-scriptease', {'autoload':{'filetypes':['vim']}}
+NeoBundle 'farseer90718/vim-taskwarrior'
 
 NeoBundle 'scrooloose/syntastic' " {{{
   let g:syntastic_error_symbol = '✗'
