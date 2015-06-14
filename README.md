@@ -26,6 +26,7 @@ Also install so you can check python code, not automatic update because we will 
 
 ```bash
 pip install flake8 pylint pep8
+npm install -g eslint babel-eslint eslint-plugin-react 
 ```
 
 Install

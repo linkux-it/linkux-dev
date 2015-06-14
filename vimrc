@@ -148,6 +148,7 @@ NeoBundle 'scrooloose/syntastic' " {{{
   let g:syntastic_auto_loc_list = 1
   let g:syntastic_check_on_open = 1
   let g:syntastic_check_on_wq = 0
+  let g:syntastic_javascript_checkers = ['eslint']
 " }}}
 
 NeoBundle 'tpope/vim-fugitive' " {{{
@@ -311,6 +312,10 @@ NeoBundleLazy 'kchmck/vim-coffee-script', {'autoload':{'filetypes':['coffee']}} 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => FrontEnd
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+NeoBundle 'mxw/vim-jsx' "{{{
+  let g:jsx_ext_required = 0 " Allow JSX in normal JS files"
+"}}}
+NeoBundle 'flux.vim'
 NeoBundleLazy 'groenewege/vim-less', {'autoload':{'filetypes':['less']}}
 NeoBundleLazy 'cakebaker/scss-syntax.vim', {'autoload':{'filetypes':['scss','sass']}}
 NeoBundleLazy 'hail2u/vim-css3-syntax', {'autoload':{'filetypes':['css','scss','sass']}}
