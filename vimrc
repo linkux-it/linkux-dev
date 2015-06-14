@@ -315,7 +315,7 @@ NeoBundleLazy 'kchmck/vim-coffee-script', {'autoload':{'filetypes':['coffee']}} 
 NeoBundle 'mxw/vim-jsx' "{{{
   let g:jsx_ext_required = 0 " Allow JSX in normal JS files"
 "}}}
-NeoBundle 'flux.vim'
+NeoBundle 'avelino/flux.vim'
 NeoBundleLazy 'groenewege/vim-less', {'autoload':{'filetypes':['less']}}
 NeoBundleLazy 'cakebaker/scss-syntax.vim', {'autoload':{'filetypes':['scss','sass']}}
 NeoBundleLazy 'hail2u/vim-css3-syntax', {'autoload':{'filetypes':['css','scss','sass']}}
