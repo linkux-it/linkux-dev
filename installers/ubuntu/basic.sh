@@ -10,7 +10,21 @@ e_header "Updating Repositories"
 sudo apt-get update
 
 e_header "Installing tools with apt-get"
-sudo apt-get install -y ack wget git git-core tmux zsh task python python-dev python-pip python3-dev python3-pip neovim libgnutls-dev
+sudo apt-get install -y ack
+sudo apt-get install -y wget
+sudo apt-get install -y git 
+sudo apt-get install -y git-core
+sudo apt-get install -y tmux
+sudo apt-get install -y zsh
+sudo apt-get install -y libgnutls-dev
+sudo apt-get install -y task
+sudo apt-get install -y python
+sudo apt-get install -y python-dev
+sudo apt-get install -y python-pip
+sudo apt-get install -y python3-dev
+sudo apt-get install -y python3-pip
+sudo apt-get install -y neovim
+
 curl https://raw.githubusercontent.com/creationix/nvm/v0.11.1/install.sh | bash
 
 e_header "Install zprezto"
@@ -29,12 +43,12 @@ done
 chsh -s $(which zsh)
 
 # Setting up neobundle
-if [ ! -d ~/.vim/bundle ]; then
+if [ ! -d ~/.nvim/bundle ]; then
   e_header "Creating bundle directory for NeoBundle"
-  mkdir -p ~/.vim/bundle
+  mkdir -p ~/.nvim/bundle
 fi
 
-if [ ! -d ~/.vim/bundle/neobundle.vim ]; then
+if [ ! -d ~/.nvim/bundle/neobundle.vim ]; then
   e_header "Cloning NeoBundle"
-  git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+  git clone https://github.com/Shougo/neobundle.vim ~/.nvim/bundle/neobundle.vim
 fi
