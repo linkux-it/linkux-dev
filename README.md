@@ -58,88 +58,14 @@ curl -s https://raw.githubusercontent.com/linkux-it/linkux-dev/master/install-ub
 
 ```
 
-
-Install basic apps, instalation scripts.
-========================================
-
-- Common
-
-  installer/python.sh
-  installer/javascript.sh
-
-- For OSX
-
-  installer/osx/basic.sh
-  installer/osx/settings.sh
-
-- For Ubuntu/Debian
-
-  installer/ubuntu/basic.sh
-  installer/ubuntu/settings.sh
-
--------------------------------------------------------------
-
-Based on :
-
-**Be sure**
-
-To install Base16 color for your terminal: https://github.com/chriskempson/base16
-To install Base16-shell for your shell: https://github.com/chriskempson/base16-shell
-
-We don't install it because depends on your needs and preferences.
-
-Also install so you can check python code, not automatic update because we will need super user permissions
+Install on OSX:
+=================
 
 ```bash
-pip install flake8 pylint pep8
-npm install -g eslint babel-eslint eslint-plugin-react 
+curl -s https://raw.githubusercontent.com/linkux-it/linkux-dev/master/install-osx.sh | bash
+
 ```
 
-Install
-=======
-
-You need python neovim package installed
-
-```bash
-pip install neovim  # or any other form
-```
-
-To install all app, dependencies. This not install neovim by default set
-
-```bash
-export ALLOW_INSTALL=1 
-```
-
-To install neovim, only install on OSX and ubuntu
-
-```bash
-export INSTALL_NEOVIM=1
-```
-
-To config neovim instead of vim (config files setup this), be sure you have it
-installed. You can run installer for both running twice one setting up this
-and the other without it, use whichever you want!
-
-```bash
-export CONFIG_NEOVIM=1
-```
-
-To install just for vim
-
-```bash
-curl -s https://raw.githubusercontent.com/linkux-it/linkux-dev/master/install.sh | bash
-```
-
-If you want alternatives on Ubuntu
-
-```bash
-sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
-sudo update-alternatives --config vi
-sudo update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60
-sudo update-alternatives --config vim
-sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
-sudo update-alternatives --config editor
-```
 Update
 ======
 
@@ -150,7 +76,7 @@ commands on vim) run installer again.
 cd ~/.linkux-dev && git pull
 ```
 
-Vim
+NeoVim
 ===
 
 You have to read each plugin for docs and how to use each features
