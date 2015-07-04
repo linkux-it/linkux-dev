@@ -37,7 +37,7 @@ ${ZDOTDIR:-$HOME}/.zprezto/runcoms/zpreztorc
 ${ZDOTDIR:-$HOME}/.zprezto/runcoms/zshenv
 ${ZDOTDIR:-$HOME}/.zprezto/runcoms/zshrc"
 for rcfile in $FILES; do
-  ln -s "$rcfile" "${rcfile:t}"
+  ln -s "${rcfile:t}" ".$(basename $rcfile)"
 done
 
 sudo chsh -s $(which zsh)

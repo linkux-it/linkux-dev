@@ -11,7 +11,7 @@ ${$HOME}/.linkux-dev/conf/ubuntu/taskrc
 ${$HOME}/.linkux-dev/conf/ubuntu/ackrc"
 
 for rcfile in $FILES; do
-	ln -s "${rcfile:t}" "$(basename $rcfile)"
+  ln -s "${rcfile:t}" ".$(basename $rcfile)"
 done
 
 e_header "Install base16 themes"
