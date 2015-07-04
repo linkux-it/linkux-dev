@@ -40,7 +40,7 @@ for rcfile in $FILES; do
   ln -s "$rcfile" "${rcfile:t}"
 done
 
-chsh -s $(which zsh)
+sudo chsh -s $(which zsh)
 
 # Setting up neobundle
 if [ ! -d ~/.nvim/bundle ]; then

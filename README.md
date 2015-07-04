@@ -17,10 +17,26 @@ Based on this dotfiles:
   - https://github.com/nicknisi/dotfiles
   - https://github.com/cowboy/dotfiles
 
+Install on Ubuntu:
+=================
+
+```bash
+curl -s https://raw.githubusercontent.com/linkux-it/linkux-dev/master/install-ubuntu.sh | bash
+
+```
+
+Install on OSX:
+=================
+
+```bash
+curl -s https://raw.githubusercontent.com/linkux-it/linkux-dev/master/install-osx.sh | bash
+
+```
+
 Main Installers install:
 =======================
 
-Installers: install-ubuntu.sh install-osx.sh
+Installers: *install-ubuntu.sh* *install-osx.sh*
 
 * git
 * neovim
@@ -49,22 +65,6 @@ Manual Installation:
 
 * node (install manually with nvm)
 * iojs (install manually with nvm)
-
-Install on Ubuntu:
-=================
-
-```bash
-curl -s https://raw.githubusercontent.com/linkux-it/linkux-dev/master/install-ubuntu.sh | bash
-
-```
-
-Install on OSX:
-=================
-
-```bash
-curl -s https://raw.githubusercontent.com/linkux-it/linkux-dev/master/install-osx.sh | bash
-
-```
 
 Update
 ======
