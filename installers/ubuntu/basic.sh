@@ -48,3 +48,13 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
 # end bas16 setup
 EOM
 
+# Setting up neobundle
+if [ ! -d ~/.vim/bundle ]; then
+  e_header "Creating bundle directory for NeoBundle"
+  mkdir -p ~/.vim/bundle
+fi
+
+if [ ! -d ~/.vim/bundle/neobundle.vim ]; then
+  e_header "Cloning NeoBundle"
+  git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+fi
