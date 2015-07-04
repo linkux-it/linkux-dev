@@ -17,24 +17,46 @@ Based on this dotfiles:
   - https://github.com/nicknisi/dotfiles
   - https://github.com/cowboy/dotfiles
 
-Apps to be used:
-================
+Main Installers install:
+=======================
+
+Installers: install-ubuntu.sh install-osx.sh
 
 * git
 * neovim
 * tmux
 * nvm
-* node (install manually with nvm)
-* iojs (install manually with nvm)
-* virtualenv-wrapper
 * ack
 * taskwarrior
 * zsh (zprezto)
 * Base 16 color schema
+
+Python installer:
+================
+
+* virtualenv-wrapper
 * flake8 pylint pep8 for python
+
+Javascript installer:
+====================
+
 * eslint babel-eslint eslint-plugin-react for node/js
 * gulp
 * grunt
+
+Manual Installation:
+===================
+
+* node (install manually with nvm)
+* iojs (install manually with nvm)
+
+Install on Ubuntu:
+=================
+
+```bash
+curl -s https://raw.githubusercontent.com/linkux-it/linkux-dev/master/install-ubuntu.sh | bash
+
+```
 
 
 Install basic apps, instalation scripts.
