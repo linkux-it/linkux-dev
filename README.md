@@ -1,20 +1,64 @@
-# Dev Tools used by Linkux IT
+# Basic development environment
 
-Will create and setup the environment with vim + tmux and other cool features for quick coding on
-OSX and Ubuntu (Debian hasn't package for neovim yet).
+This repository has the config files also the install scripts
+to automate all process for setting up an usable environment.
 
+Scripts only for osx and for ubuntu (debian)
 
-Based on :
+This environment is used by Linkux IT for all computers in our 
+offices.
+
+Based on this dotfiles:
+=======================
+
   - https://github.com/aaronjensen/dotfiles
   - https://github.com/jackfranklin/dotfiles
-  - https://github.com/bling/dotvim/
+  - https://github.com/bling/dotvim
+  - https://github.com/nicknisi/dotfiles
+  - https://github.com/cowboy/dotfiles
 
-This ensure to install:
- * git
- * tmux
- * vim
- * neovim (if requested only for OSX and Ubuntu)
- 
+Apps to be used:
+================
+
+* git
+* neovim
+* tmux
+* nvm
+* node (install manually with nvm)
+* iojs (install manually with nvm)
+* virtualenv-wrapper
+* ack
+* taskwarrior
+* zsh (zprezto)
+* Base 16 color schema
+* flake8 pylint pep8 for python
+* eslint babel-eslint eslint-plugin-react for node/js
+* gulp
+* grunt
+
+
+Install basic apps, instalation scripts.
+========================================
+
+- Common
+
+  installer/python.sh
+  installer/javascript.sh
+
+- For OSX
+
+  installer/osx/basic.sh
+  installer/osx/settings.sh
+
+- For Ubuntu/Debian
+
+  installer/ubuntu/basic.sh
+  installer/ubuntu/settings.sh
+
+-------------------------------------------------------------
+
+Based on :
+
 **Be sure**
 
 To install Base16 color for your terminal: https://github.com/chriskempson/base16
