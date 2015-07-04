@@ -7,11 +7,11 @@ e_header "Adding some repositories"
 sudo add-apt-repository ppa:neovim-ppa/unstable -y
 
 e_header "Updating Repositories"
-apt-get update
+sudo apt-get update
 
 e_header "Installing tools with apt-get"
 sudo apt-get install -y ack wget git git-core tmux zsh task python python-dev python-pip python3-dev python3-pip neovim libgnutls-dev
-`curl https://raw.githubusercontent.com/creationix/nvm/v0.11.1/install.sh | bash`
+curl https://raw.githubusercontent.com/creationix/nvm/v0.11.1/install.sh | bash
 
 e_header "Install zprezto"
 
