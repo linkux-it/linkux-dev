@@ -22,7 +22,10 @@ Install on Ubuntu:
 
 ```bash
 curl -s https://raw.githubusercontent.com/linkux-it/linkux-dev/master/install-ubuntu.sh | bash
-
+# if you need python tools
+bash .linkux-dev/installers/ubuntu/python.sh
+# if you need javascript tools
+bash .linkux-dev/installers/ubuntu/javascript.sh
 ```
 
 Install on OSX:
@@ -30,13 +33,19 @@ Install on OSX:
 
 ```bash
 curl -s https://raw.githubusercontent.com/linkux-it/linkux-dev/master/install-osx.sh | bash
-
+# if you need python tools
+bash .linkux-dev/installers/osx/python.sh
+# if you need javascript tools
+bash .linkux-dev/installers/osx/javascript.sh
 ```
 
 Main Installers install:
 =======================
 
-Installers: *install-ubuntu.sh* *install-osx.sh*
+Installers: 
+
+*install-ubuntu.sh*
+*install-osx.sh*
 
 * git
 * neovim
