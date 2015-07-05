@@ -51,7 +51,7 @@ set-window-option -g clock-mode-colour $tm_color_active
 # tm_spotify="#[fg=$tm_color_music]#(osascript ~/.linkux-dev/conf/ubuntu/applescripts/spotify.scpt)"
 # tm_itunes="#[fg=$tm_color_music]#(osascript ~/.linkux-dev/conf/ubuntu/applescripts/itunes.scpt)"
 # tm_rdio="#[fg=$tm_color_music]#(osascript ~/.linkux-dev/conf/ubuntu/applescripts/rdio.scpt)"
-tm_battery="#(~/.linkux-dev/conf/ubuntu/sh/battery_indicator.sh)"
+tm_battery="#(bash ~/.linkux-dev/conf/ubuntu/sh/battery_indicator.sh)"
 
 tm_date="#[fg=$tm_color_inactive] %d %b %Y |%l:%M %p"
 tm_host="#[fg=$tm_color_feature,bold]#h@#[fg=brightblue]#(curl icanhazip.com)#[fg=yellow] #(ifconfig en0 | grep 'inet ' | awk '{print \"en0 \" $2}') #(ifconfig en1 | grep 'inet ' | awk '{print \"en1 \" $2}') #[fg=red]#(ifconfig tun0 | grep 'inet ' | awk '{print \"vpn \" $2}') "
