@@ -51,11 +51,7 @@ set-window-option -g clock-mode-colour $tm_color_active
 tm_spotify="#[fg=$tm_color_music]#(osascript ~/.linkux-dev/conf/osx/applescripts/spotify.scpt)"
 tm_itunes="#[fg=$tm_color_music]#(osascript ~/.linkux-dev/conf/osx/applescripts/itunes.scpt)"
 tm_rdio="#[fg=$tm_color_music]#(osascript ~/.linkux-dev/conf/osx/applescripts/rdio.scpt)"
-tm_battery="#(~/.linkux-dev/conf/osx/sh/battery_indicator.sh)"
-
-# show host name and IP address on left side of status bar
-# set -g status-left-length 70
-# set -g status-left "#[fg=green]: #h : j#[fg=brightblue]#(curl icanhazip.com) #[fg=yellow]#(ifconfig en0 | grep 'inet ' | awk '{print \"en0 \" $2}') #(ifconfig en1 | grep 'inet ' | awk '{print \"en1 \" $2}') #[fg=red]#(ifconfig tun0 | grep 'inet ' | awk '{print \"vpn \" $2}') "
+tm_battery="#(. ~/.linkux-dev/conf/osx/sh/battery_indicator.sh)"
 
 tm_date="#[fg=$tm_color_inactive] %d %b %Y |%l:%M %p"
 tm_host="#[fg=$tm_color_feature,bold]#h@#[fg=brightblue]#(curl icanhazip.com)#[fg=yellow] #(ifconfig en0 | grep 'inet ' | awk '{print \"en0 \" $2}') #(ifconfig en1 | grep 'inet ' | awk '{print \"en1 \" $2}') #[fg=red]#(ifconfig tun0 | grep 'inet ' | awk '{print \"vpn \" $2}') "
