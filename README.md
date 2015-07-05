@@ -81,6 +81,11 @@ commands on vim) run installer again.
 cd ~/.linkux-dev && git pull
 ```
 
+Tmux
+====
+
+Prefix key: ctrl+o
+
 NeoVim
 ===
 
