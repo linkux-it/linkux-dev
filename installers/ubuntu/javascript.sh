@@ -14,7 +14,9 @@ npm install babel-eslint -g
 npm install eslint-plugin-react -g
 npm install grunt-cli -g
 npm install gulp-cli -g
+npm install avn avn-nvm -g
 
+avn setup
 
 e_header "Update .zshrc"
 if grep -Fxq "# start javascript setup" ~/.zshrc

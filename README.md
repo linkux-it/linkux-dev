@@ -50,7 +50,6 @@ Installers:
 * git
 * neovim
 * tmux
-* nvm
 * ack
 * taskwarrior
 * zsh (zprezto)
@@ -68,6 +67,8 @@ Javascript installer:
 * eslint babel-eslint eslint-plugin-react for node/js
 * gulp
 * grunt
+* nvm
+* avn
 * node latest version
 * iojs laste version
 
