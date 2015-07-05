@@ -85,6 +85,7 @@ Tmux
 ====
 
 Prefix key: ctrl+o
+New session for default ide layout: prefix + P
 
 NeoVim
 ===
