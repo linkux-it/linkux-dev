@@ -33,11 +33,11 @@ e_header "Install zprezto"
 
 FILES="${ZDOTDIR:-$HOME}/.zprezto/runcoms/zlogin
 ${ZDOTDIR:-$HOME}/.zprezto/runcoms/zlogout
-${ZDOTDIR:-$HOME}/.zprezto/runcoms/zpreztorc
+${ZDOTDIR:-$HOME}/.zprezto/runcoms/zprofile
 ${ZDOTDIR:-$HOME}/.zprezto/runcoms/zshenv
 ${ZDOTDIR:-$HOME}/.zprezto/runcoms/zshrc"
 for rcfile in $FILES; do
-  ln -s "${rcfile:t}" "~/.$(basename $rcfile)"
+  ln -s "${rcfile}" "$(~/.$(basename $rcfile))"
 done
 
 sudo chsh -s $(which zsh)

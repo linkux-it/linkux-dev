@@ -8,23 +8,8 @@ ${$HOME}/.linkux-dev/conf/osx/zpreztorc
 ${$HOME}/.linkux-dev/conf/osx/ackrc"
 
 for rcfile in $FILES; do
-  ln -s "$rcfile" "${rcfile:t}"
+  ln -s "${rcfile}" "$(~/.$(basename $rcfile))"
 done
-
-e_header "Install zprezto"
-
-[ ! -d "${ZDOTDIR:-$HOME}/.zprezto" ] && git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-
-FILES="${ZDOTDIR:-$HOME}/.zprezto/runcoms/zlogin
-${ZDOTDIR:-$HOME}/.zprezto/runcoms/zlogout
-${ZDOTDIR:-$HOME}/.zprezto/runcoms/zpreztorc
-${ZDOTDIR:-$HOME}/.zprezto/runcoms/zshenv
-${ZDOTDIR:-$HOME}/.zprezto/runcoms/zshrc"
-for rcfile in $FILES; do
-  ln -s "$rcfile" "${rcfile:t}"
-done
-
-chsh -s /bin/zsh
 
 e_header "Install base16 themes"
 [ ! -d "~/.config/base16-shell" ] && git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell

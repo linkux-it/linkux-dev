@@ -30,6 +30,21 @@ brew install gnutls
 brew install task
 brew install python
 
+e_header "Install zprezto"
+
+[ ! -d "${ZDOTDIR:-$HOME}/.zprezto" ] && git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+
+FILES="${ZDOTDIR:-$HOME}/.zprezto/runcoms/zlogin
+${ZDOTDIR:-$HOME}/.zprezto/runcoms/zlogout
+${ZDOTDIR:-$HOME}/.zprezto/runcoms/zprofile
+${ZDOTDIR:-$HOME}/.zprezto/runcoms/zshenv
+${ZDOTDIR:-$HOME}/.zprezto/runcoms/zshrc"
+for rcfile in $FILES; do
+  ln -s "${rcfile}" "$(~/.$(basename $rcfile))"
+done
+
+chsh -s /bin/zsh
+
 # Setting up neobundle
 if [ ! -d ~/.nvim/bundle ]; then
   e_header "Creating bundle directory for NeoBundle"
