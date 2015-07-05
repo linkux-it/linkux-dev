@@ -4,7 +4,7 @@ echo
 
 e_header "Linking configurations"
 
-FILES="${HOME}/.linkux-dev/conf/ubuntu/vimrc
+FILES="${HOME}/.linkux-dev/conf/ubuntu/nvimrc
 ${HOME}/.linkux-dev/conf/ubuntu/tmux.conf
 ${HOME}/.linkux-dev/conf/ubuntu/zpreztorc
 ${HOME}/.linkux-dev/conf/ubuntu/taskrc

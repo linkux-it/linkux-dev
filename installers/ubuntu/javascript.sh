@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ./installers/common.sh
+source ~/.linkux-dev/installers/common.sh
 
 e_header "Installing nodejs, javascript tools"
 npm install eslint -g

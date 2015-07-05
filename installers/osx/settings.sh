@@ -2,10 +2,11 @@
 source ./installers/common.sh
 echo
 
-FILES="${$HOME}/.linkux-dev/conf/osx/vimrc
-${$HOME}/.linkux-dev/conf/osx/tmux.conf
-${$HOME}/.linkux-dev/conf/osx/zpreztorc
-${$HOME}/.linkux-dev/conf/osx/ackrc"
+FILES="${HOME}/.linkux-dev/conf/osx/nvimrc
+${HOME}/.linkux-dev/conf/osx/tmux.conf
+${HOME}/.linkux-dev/conf/osx/zpreztorc
+${HOME}/.linkux-dev/conf/osx/taskrc
+${HOME}/.linkux-dev/conf/osx/ackrc"
 
 for rcfile in $FILES; do
   ln -s "${rcfile}" ~/.$(basename $rcfile)
@@ -24,8 +25,8 @@ cat >> ~/.zshrc <<- EOM
 # start bas16 setup
 
 # Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+BASE16_SHELL="\$HOME/.config/base16-shell/base16-default.dark.sh"
+[[ -s \$BASE16_SHELL ]] && source \$BASE16_SHELL
 
 # end bas16 setup
 EOM
