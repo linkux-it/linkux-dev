@@ -23,9 +23,9 @@ Install on Ubuntu:
 ```bash
 curl -s https://raw.githubusercontent.com/linkux-it/linkux-dev/master/install-ubuntu.sh | bash
 # if you need python tools
-bash .linkux-dev/installers/ubuntu/python.sh
+bash ~/.linkux-dev/installers/ubuntu/python.sh
 # if you need javascript tools
-bash .linkux-dev/installers/ubuntu/javascript.sh
+bash ~/.linkux-dev/installers/ubuntu/javascript.sh
 ```
 
 Install on OSX:
@@ -34,9 +34,9 @@ Install on OSX:
 ```bash
 curl -s https://raw.githubusercontent.com/linkux-it/linkux-dev/master/install-osx.sh | bash
 # if you need python tools
-bash .linkux-dev/installers/osx/python.sh
+bash ~/.linkux-dev/installers/osx/python.sh
 # if you need javascript tools
-bash .linkux-dev/installers/osx/javascript.sh
+bash ~/.linkux-dev/installers/osx/javascript.sh
 ```
 
 Main Installers install:
@@ -68,12 +68,8 @@ Javascript installer:
 * eslint babel-eslint eslint-plugin-react for node/js
 * gulp
 * grunt
-
-Manual Installation:
-===================
-
-* node (install manually with nvm)
-* iojs (install manually with nvm)
+* node latest version
+* iojs laste version
 
 Update
 ======
