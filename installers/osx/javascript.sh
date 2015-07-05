@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
 source ~/.linkux-dev/installers/common.sh
+e_header "Installing NVM and nodejs and iojs"
+brew install nvm
+nvm install nodejs
+nvm install iojs 
 
 e_header "Installing nodejs, javascript tools"
 npm install eslint -g

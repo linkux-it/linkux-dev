@@ -25,8 +25,6 @@ sudo apt-get install -y python3-dev
 sudo apt-get install -y python3-pip
 sudo apt-get install -y neovim
 
-curl https://raw.githubusercontent.com/creationix/nvm/v0.11.1/install.sh | bash
-
 e_header "Install zprezto"
 
 [ ! -d "${ZDOTDIR:-$HOME}/.zprezto" ] && git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"

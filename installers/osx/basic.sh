@@ -24,7 +24,6 @@ brew install git
 brew install reattach-to-user-namespace
 brew install tmux
 brew install zsh
-brew install nvm
 brew install neovim --HEAD
 brew install gnutls
 brew install task
