@@ -33,6 +33,7 @@ alias ta='tmux attach'
 alias tls='tmux ls'
 alias tat='tmux attach -t'
 alias tns='tmux new-session -s'
+alias codeit='. codeit.sh'
 
 # end global setup
 EOM
