@@ -81,6 +81,17 @@ commands on vim) run installer again.
 cd ~/.linkux-dev && git pull
 ```
 
+Commands
+========
+
+```bash
+tls = tmux list
+tns = tmux new -s
+ta = tmux attach
+tat = tmux attach -t
+codeit = . codeit.sh  # will run codeit.sh that should automate processes to start a coding
+```
+
 Tmux
 ====
 
