@@ -1,35 +1,39 @@
-# [Created by task 2.4.3 5/5/2015 13:50:59]
-# Taskwarrior program configuration file.
-# For more documentation, see http://taskwarrior.org or try 'man task', 'man task-color',
-# 'man task-sync' or 'man taskrc'
+ #########################################################
+# General ack Settings
+##########################################################
 
-# Here is an example of entries that use the default, override and blank values
-#   variable=foo   -- By specifying a value, this overrides the default
-#   variable=      -- By specifying no value, this means no default
-#   #variable=foo  -- By commenting out the line, or deleting it, this uses the default
+# only search with case-sensitivity if there is mixed case
+--smart-case
+# follow symlinks
+--follow
 
-# Use the command 'task show' to see all defaults and overrides
+# ignore directories
+--ignore-dir=node_modules
+--ignore-dir=bundle
+--ignore-dir=tmp
+--ignore-dir=solr/data
+--ignore-dir=.sass-cache
+--ignore-dir=log
+--ignore-dir=coverage
 
-# Files
-data.location=~/.task
-
-# Color theme (uncomment one to use)
-#include /usr/local/Cellar/task/2.4.3/share/doc/task/rc/light-16.theme
-#include /usr/local/Cellar/task/2.4.3/share/doc/task/rc/light-256.theme
-#include /usr/local/Cellar/task/2.4.3/share/doc/task/rc/dark-16.theme
-#include /usr/local/Cellar/task/2.4.3/share/doc/task/rc/dark-256.theme
-#include /usr/local/Cellar/task/2.4.3/share/doc/task/rc/dark-red-256.theme
-#include /usr/local/Cellar/task/2.4.3/share/doc/task/rc/dark-green-256.theme
-#include /usr/local/Cellar/task/2.4.3/share/doc/task/rc/dark-blue-256.theme
-#include /usr/local/Cellar/task/2.4.3/share/doc/task/rc/dark-violets-256.theme
-#include /usr/local/Cellar/task/2.4.3/share/doc/task/rc/dark-yellow-green.theme
-#include /usr/local/Cellar/task/2.4.3/share/doc/task/rc/dark-gray-256.theme
-#include /usr/local/Cellar/task/2.4.3/share/doc/task/rc/dark-gray-blue-256.theme
-#include /usr/local/Cellar/task/2.4.3/share/doc/task/rc/solarized-dark-256.theme
-#include /usr/local/Cellar/task/2.4.3/share/doc/task/rc/solarized-light-256.theme
-#include /usr/local/Cellar/task/2.4.3/share/doc/task/rc/no-color.theme
-
-color=on
-dateformat=d/m/Y
-dateformat.report=d/m/Y
-dateformat.anotation=d/m/Y
+# added file types
+--type-set=css=.css,.less,.scss,.styl,.sass
+--type-set=styl=.styl
+--type-set=less=.less
+--type-set=html=.html,.mustache,.handlebars,.tmpl
+--type-set=json=.json
+--type-set=md=.markdown,.md
+--type-set=svg=.svg
+--type-set=ts=.ts
+--type-set=style=.scss,.sass,.styl,.less,.css
+--type-add=ruby=.haml,.feature
+--type-set=tags=tags
+--type-set=hamlbars=hamlbars
+--type-add=hamlbars=.hamlbars,.hbs
+--type-set=jst=.jst,.ejs
+--type-set=video=.mp4
+--type-set=docs=.docx,.doc,.xlsx,.xls
+--notags
+--noimage
+--novideo
+--nodocs
