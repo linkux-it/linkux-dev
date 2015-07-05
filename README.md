@@ -91,7 +91,6 @@ ta = tmux attach
 tat = tmux attach -t
 codeit = . codeit.sh  # will run codeit.sh that should automate processes to start a coding
 ```
-
 Tmux
 ====
 
@@ -102,6 +101,8 @@ NeoVim
 ===
 
 You have to read each plugin for docs and how to use each features
+
+<leader> = ,
 
 Plugins used:
  - Common
