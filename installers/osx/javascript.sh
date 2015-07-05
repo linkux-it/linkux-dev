@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ./installers/common.sh
+source ~/.linkux-dev/installers/common.sh
 
 e_header "Installing nodejs, javascript tools"
 npm install eslint -g
@@ -20,7 +20,7 @@ cat >> ~/.zshrc <<- EOM
 # start javascript setup
 
 # Set preference on project binaries for nodejs or iojs
-export PATH="./node_modules/.bin:$PATH"
+export PATH="./node_modules/.bin:\$PATH"
 
 # end javascript setup
 EOM
