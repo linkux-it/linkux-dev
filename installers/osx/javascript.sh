@@ -3,6 +3,7 @@
 source ~/.linkux-dev/installers/common.sh
 e_header "Installing NVM and nodejs and iojs"
 brew install nvm
+source ~/.nvm/nvm.sh
 nvm install nodejs
 nvm install iojs 
 
@@ -25,6 +26,7 @@ cat >> ~/.zshrc <<- EOM
 
 # Set preference on project binaries for nodejs or iojs
 export PATH="./node_modules/.bin:\$PATH"
+source ~/.nvm/nvm.sh
 
 # end javascript setup
 EOM
