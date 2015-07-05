@@ -8,7 +8,7 @@ ${$HOME}/.linkux-dev/conf/osx/zpreztorc
 ${$HOME}/.linkux-dev/conf/osx/ackrc"
 
 for rcfile in $FILES; do
-  ln -s "${rcfile}" "$(~/.$(basename $rcfile))"
+  ln -s "${rcfile}" ~/.$(basename $rcfile)
 done
 
 e_header "Install base16 themes"
