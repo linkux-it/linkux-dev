@@ -5,7 +5,7 @@ source ~/.linkux-dev/installers/common.sh
 e_header "Installing NVM, nodejs and iojs"
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh | bash
 source ~/.nvm/nvm.sh
-nvm install nodejs
+nvm install node
 nvm install iojs
 
 e_header "Installing nodejs, javascript tools"
