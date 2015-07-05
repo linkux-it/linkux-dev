@@ -53,9 +53,9 @@ tm_itunes="#[fg=$tm_color_music]#(osascript ~/.linkux-dev/conf/osx/applescripts/
 tm_rdio="#[fg=$tm_color_music]#(osascript ~/.linkux-dev/conf/osx/applescripts/rdio.scpt)"
 tm_battery="#(~/.linkux-dev/conf/osx/sh/battery_indicator.sh)"
 
-tm_date="#[fg=$tm_color_inactive] %R %d %b"
+tm_date="#[fg=$tm_color_inactive] %d %b | %R"
 tm_host="#[fg=$tm_color_feature,bold]#h"
 tm_session_name="#[fg=$tm_color_feature,bold]$tm_icon #S"
 
-set -g status-left $tm_session_name' '
+set -g status-left $tm_session_name' '$tm_battery
 set -g status-right $tm_itunes' '$tm_rdio' '$tm_spotify' '$tm_date' '$tm_host
