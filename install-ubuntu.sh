@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Ensure git is installed
+sudo aptitude install git git-core -y
+
 # First clone or update our dotfiles
 if [ ! -d ~/.linkux-dev ]; then
   echo "Linkux IT :: Install: Cloning Repository"
