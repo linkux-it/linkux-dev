@@ -11,6 +11,9 @@ ${HOME}/.linkux-dev/conf/ubuntu/taskrc
 ${HOME}/.linkux-dev/conf/ubuntu/ackrc"
 
 for rcfile in $FILES; do
+  if [ ! -f ~/.$(basename $rcfile).back ]; then
+    mv ~/.$(basename $rcfile) ~/.$(basename $rcfile).back
+  fi
   ln -s "${rcfile}" ~/.$(basename $rcfile)
 done
 
