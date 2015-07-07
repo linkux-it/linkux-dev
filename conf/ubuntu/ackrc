@@ -34,6 +34,6 @@
 --type-set=video=.mp4
 --type-set=docs=.docx,.doc,.xlsx,.xls
 --notags
---noimage
+#--noimage
 --novideo
 --nodocs
