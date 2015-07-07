@@ -37,3 +37,8 @@
 #--noimage
 --novideo
 --nodocs
+--smart-case
+--sort-files
+--color
+--follow
+--group
