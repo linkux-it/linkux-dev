@@ -33,6 +33,9 @@ ${ZDOTDIR:-$HOME}/.zprezto/runcoms/zprofile
 ${ZDOTDIR:-$HOME}/.zprezto/runcoms/zshenv
 ${ZDOTDIR:-$HOME}/.zprezto/runcoms/zshrc"
 for rcfile in $FILES; do
+  if [ ! -f ~/.$(basename $rcfile).back ]; then
+    mv ~/.$(basename $rcfile) ~/.$(basename $rcfile).back
+  fi
   ln -s "${rcfile}" ~/.$(basename $rcfile)
 done
 
