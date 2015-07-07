@@ -27,6 +27,7 @@ cat >> ~/.zshrc <<- EOM
 # start global setup
 
 # Base16 Shell
+export TERM=screen-256color-bce
 BASE16_SHELL="\$HOME/.config/base16-shell/base16-default.dark.sh"
 [[ -s \$BASE16_SHELL ]] && source \$BASE16_SHELL
 
