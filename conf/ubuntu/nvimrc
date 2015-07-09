@@ -125,7 +125,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc.vim', {'build': {'unix': g:make}}
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'chriskempson/base16-vim'
-NeoBundle 'SirVer/ultisnips'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-endwise'
@@ -142,6 +141,13 @@ NeoBundle 'severin-lemaignan/vim-minimap'
 NeoBundle 'vim-scripts/PreserveNoEOL'
 NeoBundle 'mileszs/ack.vim'
 NeoBundleLazy 'tpope/vim-scriptease', {'autoload':{'filetypes':['vim']}}
+
+NeoBundle 'honza/vim-snippets'
+NeoBundle 'SirVer/ultisnips' "{{{
+  let g:UltiSnipsExpandTrigger="<tab>"
+  let g:UltiSnipsJumpForwardTrigger="<c-b>"
+  let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" }}}
 
 NeoBundle 'scrooloose/syntastic' " {{{
   let g:syntastic_error_symbol = '✗'
