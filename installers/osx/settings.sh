@@ -35,6 +35,9 @@ alias tat='tmux attach -t'
 alias tns='tmux new-session -s'
 alias codeit='. ./codeit.sh'
 
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+
 # end global setup
 EOM
 

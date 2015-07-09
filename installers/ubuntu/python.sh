@@ -16,8 +16,8 @@ cat >> ~/.zshrc <<- EOM
 
 export WORKON_HOME=\$HOME/.virtualenvs
 export PROJECT_HOME=\$HOME/Projects
-export VIRTUALENVWRAPPER_SCRIPT=/usr/share/virtualenvwrapper/virtualenvwrapper.sh
-source /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh
+export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper_lazy.sh
 
 # end python setup
 EOM
