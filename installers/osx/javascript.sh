@@ -4,8 +4,8 @@ source ~/.linkux-dev/installers/common.sh
 e_header "Installing NVM and nodejs and iojs"
 brew install nvm
 source ~/.nvm/nvm.sh
-nvm install node
 nvm install iojs 
+nvm install node
 
 e_header "Installing nodejs, javascript tools"
 npm install eslint -g
