@@ -347,13 +347,6 @@ NeoBundleLazy 'mustache/vim-mustache-handlebars', {'autoload':{'filetypes':['mus
 " }}}
 
 NeoBundleLazy 'mattn/emmet-vim', {'autoload':{'filetypes':['html','xml','xsl','xslt','xsd','css','sass','scss','less','mustache','handlebars','hbs']}} " {{{
-  function! s:zen_html_tab()
-    let line = getline('.')
-    if match(line, '<.*>') < 0
-      return "\<c-y>,"
-    endif
-    return "\<c-y>n"
-  endfunction
   let g:user_emmet_install_global = 0
   autocmd FileType xml,xsl,xslt,xsd,css,sass,scss,less,mustache imap <buffer><tab> <c-y>,
   autocmd FileType html imap <buffer><expr><tab> <sid>zen_html_tab()
