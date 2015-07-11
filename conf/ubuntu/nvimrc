@@ -278,7 +278,7 @@ NeoBundleLazy 'scrooloose/nerdtree', {'autoload':{'commands':['NERDTreeToggle','
   let NERDTreeShowLineNumbers=1
   let NERDTreeChDirMode=0
   let NERDTreeShowBookmarks=1
-  let NERDTreeIgnore=['\.git','\.hg','\.pyc$','\.DS_Store','\.swp']
+  let NERDTreeIgnore=['\.git','\.hg','\.pyc$','\.DS_Store','\.swp','\.sass-cache']
   " let NERDTreeBookmarksFile=s:get_cache_dir('NERDTreeBookmarks')
   nmap <silent><leader>nt :NERDTreeToggle<CR>
   nmap <silent><leader>ntf :NERDTreeFind<CR>
