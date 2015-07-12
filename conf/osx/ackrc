@@ -9,6 +9,7 @@
 
 # ignore directories
 --ignore-dir=node_modules
+--ignore-dir=bower_components
 --ignore-dir=bundle
 --ignore-dir=tmp
 --ignore-dir=solr/data
