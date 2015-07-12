@@ -31,7 +31,7 @@ set encoding=utf-8
 set fileencoding=utf-8
 
 " enable syntax highlighting
-" syntax enable
+syntax enable
 
 " show line numbers
 set number
