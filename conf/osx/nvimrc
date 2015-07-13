@@ -211,7 +211,7 @@ NeoBundle 'Shougo/unite.vim' "{{{
           \ })
   endfunction
 
-  " let g:unite_data_directory=s:get_cache_dir('unite')
+  let g:unite_data_directory=s:get_cache_dir('unite')
   let g:unite_source_history_yank_enable=1
   let g:unite_source_rec_max_cache_files=5000
 
@@ -279,7 +279,7 @@ NeoBundleLazy 'scrooloose/nerdtree', {'autoload':{'commands':['NERDTreeToggle','
   let NERDTreeChDirMode=0
   let NERDTreeShowBookmarks=1
   let NERDTreeIgnore=['\.git','\.hg','\.pyc$','\.DS_Store','\.swp','\.sass-cache']
-  " let NERDTreeBookmarksFile=s:get_cache_dir('NERDTreeBookmarks')
+  let NERDTreeBookmarksFile=s:get_cache_dir('NERDTreeBookmarks')
   nmap <silent><leader>nt :NERDTreeToggle<CR>
   nmap <silent><leader>ntf :NERDTreeFind<CR>
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
