@@ -61,6 +61,7 @@ set t_Co=256
 set background=dark
 set clipboard=unnamed
 set lazyredraw
+set hidden
 " faster redrawing
 set ttyfast
 set magic " Set magic on, for regex
