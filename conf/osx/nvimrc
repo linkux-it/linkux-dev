@@ -42,6 +42,7 @@ set autoindent
 " show a visual line under the cursor's current line
 set cursorline
 set cursorcolumn
+set colorcolumn=80
 
 " show the matching part of the pair for [] {} and ()
 set showmatch
