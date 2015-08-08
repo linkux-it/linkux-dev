@@ -34,6 +34,7 @@
 --type-set=jst=.jst,.ejs
 --type-set=video=.mp4
 --type-set=docs=.docx,.doc,.xlsx,.xls
+--type-set=jsx=.jsx
 --notags
 #--noimage
 --novideo
