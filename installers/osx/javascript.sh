@@ -14,6 +14,7 @@ npm install eslint-plugin-react -g
 npm install grunt-cli -g
 npm install gulp-cli -g
 npm install avn avn-nvm -g
+npm install tern -g
 
 avn setup
 
