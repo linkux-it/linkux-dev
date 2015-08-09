@@ -81,7 +81,11 @@ let base16colorspace=256
 " With a map leader it's possible to do extra key combinations
 let mapleader = ","
 let g:mapleader = ","
+
+" Next three lines are to enable C-Space to autocomplete, omnicomplete
 inoremap <C-Space> <C-x><C-o>
+imap <buffer> <Nul> <C-Space>
+smap <buffer> <Nul> <C-Space>
 
 " Remember last position
 if has("autocmd")
