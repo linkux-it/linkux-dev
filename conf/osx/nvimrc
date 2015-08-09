@@ -312,7 +312,10 @@ NeoBundleLazy 'moll/vim-node', {'autoload': {'filetypes':['javascript']}}
 NeoBundleLazy 'pangloss/vim-javascript', {'autoload':{'filetypes':['javascript']}}
 NeoBundleLazy 'leafgarland/typescript-vim', {'autoload':{'filetypes':['typescript']}}
 NeoBundleLazy 'leshill/vim-json', {'autoload':{'filetypes':['javascript','json']}}
-NeoBundleLazy 'marijnh/tern_for_vim', {'autoload':{'filetypes':['javascript','jsx','javascript.jsx']}}
+NeoBundleLazy 'marijnh/tern_for_vim', {'autoload':{'filetypes':['javascript','jsx','javascript.jsx']}} " {{{
+  let g:tern_map_keys = 1
+  let g:tern_show_argument_hints = 1
+" }}}
 
 NeoBundleLazy 'maksimr/vim-jsbeautify', {'autoload':{'filetypes':['javascript']}} " {{{
   nnoremap <leader>fjs :call JsBeautify()<cr>
