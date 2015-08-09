@@ -81,6 +81,7 @@ let base16colorspace=256
 " With a map leader it's possible to do extra key combinations
 let mapleader = ","
 let g:mapleader = ","
+imap <c-space> <c-x><c-o>
 
 " Remember last position
 if has("autocmd")
@@ -295,10 +296,9 @@ NeoBundleLazy 'tpope/vim-bundler'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 NeoBundleLazy 'davidhalter/jedi-vim', {'autoload':{'filetypes':['python']}} " {{{
-  " let g:jedi#use_splits_not_buffers = "left"
-  let g:jedi#use_tabs_not_buffers = 0 " Maybe better this than splits?
-  let g:jedi#popup_on_dot = 0
-  let g:jedi#completions_command = "<C-p>"
+  let g:jedi#use_splits_not_buffers = "bottom"
+  " let g:jedi#use_tabs_not_buffers = 0 " Maybe better this than splits?
+  " let g:jedi#popup_on_dot = 0
 " }}}
 
 NeoBundleLazy 'jmcantrell/vim-virtualenv', {'autoload':{'filetypes':['python']}}

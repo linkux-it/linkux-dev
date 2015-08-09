@@ -81,6 +81,7 @@ let base16colorspace=256
 " With a map leader it's possible to do extra key combinations
 let mapleader = ","
 let g:mapleader = ","
+imap <c-space> <c-x><c-o>
 
 " Remember last position
 if has("autocmd")
