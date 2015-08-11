@@ -31,6 +31,6 @@ cat >> ~/.zshrc <<- EOM
 export PATH="./node_modules/.bin:\$PATH"
 source ~/.nvm/nvm.sh
 
-[[ -s "$HOME/.avn/bin/avn.sh" ]] && bash "$HOME/.avn/bin/avn.sh" # load avn
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 # end javascript setup
 EOM
