@@ -30,7 +30,7 @@ cat >> ~/.zshrc <<- EOM
 
 # Set preference on project binaries for nodejs or iojs
 export PATH=./node_modules/.bin:\$PATH
-source ~/.nvm/nvm.sh
+bash ~/.nvm/nvm.sh
 
 # end javascript setup
 EOM
