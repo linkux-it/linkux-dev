@@ -395,5 +395,4 @@ colorscheme base16-ocean
 
 " Next three lines are to enable C-Space to autocomplete, omnicomplete
 inoremap <C-Space> <C-x><C-o>
-imap <buffer> <Nul> <C-Space>
-smap <buffer> <Nul> <C-Space>
+inoremap <C-@> <C-Space>
