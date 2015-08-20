@@ -395,4 +395,4 @@ let g:mapleader = ","
 
 " Next three lines are to enable C-Space to autocomplete, omnicomplete
 inoremap <C-Space> <C-x><C-o>
-inoremap <C-@> <C-Space>
+inoremap <C-@> <c-x><c-o>
