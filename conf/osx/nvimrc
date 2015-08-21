@@ -142,6 +142,7 @@ NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'severin-lemaignan/vim-minimap'
 NeoBundle 'vim-scripts/PreserveNoEOL'
 NeoBundle 'mileszs/ack.vim'
+NeoBundle 'tpope/vim-repeat'
 NeoBundleLazy 'tpope/vim-scriptease', {'autoload':{'filetypes':['vim']}}
 
 NeoBundle 'honza/vim-snippets'
