@@ -153,11 +153,6 @@ NeoBundle 'tpope/vim-repeat'
 NeoBundle 'sjl/gundo.vim'
 NeoBundleLazy 'tpope/vim-scriptease', {'autoload':{'filetypes':['vim']}}
 
-NeoBundle 'gcmt/taboo.vim' "{{{
-  set guioptions-=e
-  set sessionoptions+=tabpages,globals
-"}}}
-
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'SirVer/ultisnips' "{{{
   let g:UltiSnipsExpandTrigger="<tab>"
