@@ -361,6 +361,7 @@ NeoBundleLazy 'mustache/vim-mustache-handlebars', {'autoload':{'filetypes':['mus
 " }}}
 
 NeoBundleLazy 'mattn/emmet-vim', {'autoload':{'filetypes':['htmldjango','jsx','swig','html','xml','xsl','xslt','xsd','css','sass','scss','less','mustache','handlebars','hbs']}} " {{{
+  let g:user_emmet_settings = {'html':{'quote_char': "'",},}
 " }}}
 
 call neobundle#end()
