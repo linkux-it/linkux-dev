@@ -151,6 +151,7 @@ NeoBundle 'vim-scripts/PreserveNoEOL'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-obsession'
+NeoBundle 'embear/vim-localvimrc'
 NeoBundle 'sjl/gundo.vim'
 NeoBundleLazy 'tpope/vim-scriptease', {'autoload':{'filetypes':['vim']}}
 
