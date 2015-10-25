@@ -89,6 +89,10 @@ nnoremap tg  :tabnext<Space>
 nnoremap tm  :tabm<Space>
 nnoremap td  :tabclose<CR>
 
+" buffer navigation
+nnoremap gt  :bnext<CR>
+nnoremap gT  :bprev<CR>
+
 " Remember last position
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
