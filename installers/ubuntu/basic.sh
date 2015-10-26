@@ -42,9 +42,9 @@ done
 sudo chsh -s $(which zsh)
 
 # Setting up neobundle
-if [ ! -d ~/.config ]; then
+if [ ! -d ~/.config/nvim ]; then
   e_header "Creating config directory for Neovim"
-  mkdir -p ~/.config
+  mkdir -p ~/.config/nvim
 fi
 
 # Setting up neobundle
