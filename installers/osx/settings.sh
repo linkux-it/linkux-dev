@@ -2,11 +2,12 @@
 source ./installers/common.sh
 echo
 
-FILES="${HOME}/.linkux-dev/conf/osx/nvimrc
-${HOME}/.linkux-dev/conf/osx/tmux.conf
+FILES="${HOME}/.linkux-dev/conf/osx/tmux.conf
 ${HOME}/.linkux-dev/conf/osx/zpreztorc
 ${HOME}/.linkux-dev/conf/osx/taskrc
 ${HOME}/.linkux-dev/conf/osx/ackrc"
+
+ln -s "${HOME}/.linkux-dev/conf/osx/nvimrc" ~/.config/nvim/init.vim
 
 for rcfile in $FILES; do
   ln -s "${rcfile}" ~/.$(basename $rcfile)

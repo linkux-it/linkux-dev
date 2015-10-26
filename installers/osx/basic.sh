@@ -45,7 +45,13 @@ done
 chsh -s /bin/zsh
 
 # Setting up neobundle
-if [ ! -d ~/.nvim/bundle ]; then
+if [ ! -d ~/.config ]; then
+  e_header "Creating config directory for Neovim"
+  mkdir -p ~/.config
+fi
+
+# Setting up neobundle
+if [ ! -d ~/.config/nvim/bundle ]; then
   e_header "Creating bundle directory for NeoBundle"
   mkdir -p ~/.nvim/bundle
 fi
