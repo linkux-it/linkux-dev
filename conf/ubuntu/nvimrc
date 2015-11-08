@@ -78,6 +78,10 @@ let python_highlight_all = 1
 
 let base16colorspace=256
 
+" With a map leader it's possible to do extra key combinations
+let mapleader = ","
+let g:mapleader = ","
+
 " tab navigation
 nnoremap th  :tabfirst<CR>
 nnoremap tj  :tabnext<CR>
@@ -408,10 +412,6 @@ autocmd BufNewFile,BufReadPost *.py setl foldmethod=indent nofoldenable
 
 " Color schema working at this point?
 colorscheme base16-ocean
-
-" With a map leader it's possible to do extra key combinations
-let mapleader = ","
-let g:mapleader = ","
 
 " Next three lines are to enable C-Space to autocomplete, omnicomplete
 inoremap <C-Space> <C-x><C-o>
