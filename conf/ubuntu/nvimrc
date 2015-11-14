@@ -369,6 +369,12 @@ NeoBundleLazy 'mattn/emmet-vim', {'autoload':{'filetypes':['htmldjango','jsx','s
   let g:user_emmet_settings = {'html':{'quote_char': "'",},}
 " }}}
 
+
+
+NeoBundle 'jvirtanen/vim-octave'
+
+
+
 call neobundle#end()
 
 " Required:
