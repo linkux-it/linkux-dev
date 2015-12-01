@@ -19,3 +19,6 @@ if [[ $charged_slots -lt 5 ]]; then
   echo -n '#[fg=colour254]'
   for i in `seq 1 $(echo "5-$charged_slots" | bc)`; do echo -n "$HEART"; done
 fi
+
+echo -n '#[fg=colour241]| '
+echo $(ioreg -l | awk '$3~/Capacity/{c[$3]=$5}END{OFMT="%.2f%%";max=c["\"MaxCapacity\""];print(max>0?100*c["\"CurrentCapacity\""]/max:"?")}')
