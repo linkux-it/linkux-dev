@@ -409,7 +409,6 @@ else
 endif
 
 tnoremap <Esc> <C-\><C-n>
-tnoremap <C-`> <C-\><C-n>
 tnoremap <C-[> <C-\><C-n>
 
 tnoremap <C-h> <C-\><C-n><C-w>h
