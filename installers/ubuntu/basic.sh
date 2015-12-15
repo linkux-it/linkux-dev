@@ -22,6 +22,7 @@ sudo apt-get install -y python-pip
 sudo apt-get install -y python3-dev
 sudo apt-get install -y python3-pip
 sudo apt-get install -y neovim
+sudo apt-get install -y exuberant-ctags
 
 e_header "Install zprezto"
 

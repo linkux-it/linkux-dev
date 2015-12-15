@@ -28,6 +28,7 @@ brew install neovim --HEAD
 brew install gnutls
 brew install task
 brew install python
+brew install ctags-exuberant
 
 e_header "Install zprezto"
 
