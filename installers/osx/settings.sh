@@ -5,7 +5,8 @@ echo
 FILES="${HOME}/.linkux-dev/conf/osx/tmux.conf
 ${HOME}/.linkux-dev/conf/osx/zpreztorc
 ${HOME}/.linkux-dev/conf/osx/taskrc
-${HOME}/.linkux-dev/conf/osx/ackrc"
+${HOME}/.linkux-dev/conf/osx/ackrc
+${HOME}/.linkux-dev/conf/osx/ctags"
 
 ln -s "${HOME}/.linkux-dev/conf/osx/nvimrc" ~/.config/nvim/init.vim
 

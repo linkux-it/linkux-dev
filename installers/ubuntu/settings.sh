@@ -7,7 +7,8 @@ e_header "Linking configurations"
 FILES=" ${HOME}/.linkux-dev/conf/ubuntu/tmux.conf
 ${HOME}/.linkux-dev/conf/ubuntu/zpreztorc
 ${HOME}/.linkux-dev/conf/ubuntu/taskrc
-${HOME}/.linkux-dev/conf/ubuntu/ackrc"
+${HOME}/.linkux-dev/conf/ubuntu/ackrc
+${HOME}/.linkux-dev/conf/ubuntu/ctags"
 
 ln -s "${HOME}/.linkux-dev/conf/ubuntu/nvimrc" ~/.config/nvim/init.vim
 

@@ -172,6 +172,7 @@ NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-obsession'
 NeoBundle 'embear/vim-localvimrc'
 NeoBundle 'sjl/gundo.vim'
+NeoBundle 'craigemery/vim-autotag'
 NeoBundleLazy 'tpope/vim-scriptease', {'autoload':{'filetypes':['vim']}}
 
 NeoBundle 'honza/vim-snippets'
@@ -276,6 +277,14 @@ NeoBundle 'Shougo/unite.vim' "{{{
   nnoremap <silent> [unite]s :<C-u>Unite -quick-match buffer<cr>
 " }}}
 
+NeoBundleLazy 'tsukkee/unite-tag', {'depends':['Shougo/unite.vim']} " {{{
+  nnoremap <silent> [unite]t :Unite tag<cr>
+  nnoremap <silent> [unite]tf :Unite tag/file<cr>
+  nnoremap <silent> [unite]ti :Unite tag/include<cr>
+  nnoremap <silent> [unite]tb :Unite tag:%<cr>
+  nnoremap <silent> [unite]tt :Unite tag:text
+  nnoremap <silent> [unite]tp :Unite tag:/
+" }}}
 
 NeoBundleLazy 'gregsexton/gitv', {'depends':['tpope/vim-fugitive'], 'autoload':{'commands':'Gitv'}} " {{{
   nnoremap <silent> <leader>gv :Gitv<CR>
