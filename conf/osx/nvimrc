@@ -276,10 +276,12 @@ NeoBundle 'Shougo/unite.vim' "{{{
   nnoremap <silent> [unite]s :<C-u>Unite -quick-match buffer<cr>
 " }}}
 
+
 NeoBundleLazy 'gregsexton/gitv', {'depends':['tpope/vim-fugitive'], 'autoload':{'commands':'Gitv'}} " {{{
   nnoremap <silent> <leader>gv :Gitv<CR>
   nnoremap <silent> <leader>gV :Gitv!<CR>
 " }}}
+
 
 NeoBundleLazy 'godlygeek/tabular', {'autoload':{'commands':'Tabularize'}} " {{{
   nmap <Leader>a& :Tabularize /&<CR>
@@ -296,11 +298,13 @@ NeoBundleLazy 'godlygeek/tabular', {'autoload':{'commands':'Tabularize'}} " {{{
   vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
 " }}}
 
+
 NeoBundleLazy 'editorconfig/editorconfig-vim', {'autoload':{'insert':1, 'filetypes': 'all'}} " {{{
   let g:EditorConfig_exclude_patterns = ['fugitive://.*']
   let g:EditorConfig_exclude_patterns = ['scp://.*']
   let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 " }}}
+
 
 NeoBundleLazy 'scrooloose/nerdtree', {'autoload':{'commands':['NERDTreeToggle','NERDTreeFind']}} " {{{
   let NERDTreeShowHidden=1
@@ -416,10 +420,10 @@ if exists('$TMUX')
 
   let g:tmux_navigator_save_on_switch = 1
 else
-  map <C-h> <C-w>h
-  map <C-j> <C-w>j
-  map <C-k> <C-w>k
-  map <C-l> <C-w>l
+  nnoremap <C-h> <C-w>h
+  nnoremap <C-j> <C-w>j
+  nnoremap <C-k> <C-w>k
+  nnoremap <C-l> <C-w>l
 endif
 
 tnoremap <Esc> <C-\><C-n>

@@ -175,6 +175,7 @@ NeoBundle 'SirVer/ultisnips' "{{{
   let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 " }}}
 
+
 NeoBundle 'scrooloose/syntastic' " {{{
   let g:syntastic_error_symbol = '✗'
   let g:syntastic_style_error_symbol = '✠'
@@ -192,6 +193,7 @@ NeoBundle 'scrooloose/syntastic' " {{{
   let g:syntastic_javascript_checkers = ['eslint']
 " }}}
 
+
 NeoBundle 'tpope/vim-fugitive' " {{{
   nnoremap <silent> <leader>gs :Gstatus<CR>
   nnoremap <silent> <leader>gd :Gdiff<CR>
@@ -203,6 +205,7 @@ NeoBundle 'tpope/vim-fugitive' " {{{
   nnoremap <silent> <leader>gr :Gremove<CR>
   autocmd BufReadPost fugitive://* set bufhidden=delete
 " }}}
+
 
 NeoBundle 'bling/vim-airline' " {{{
   set laststatus=2  "Force appear the status line "
@@ -223,9 +226,11 @@ NeoBundle 'bling/vim-airline' " {{{
   nmap <leader>9 <Plug>AirlineSelectTab9
 " }}}
 
+
 NeoBundle 'gilsondev/searchtasks.vim' " {{{
   let g:searchtasks_list=["TODO", "FIXME", "NOTE", "CHANGED", "TEST"]
 " }}}
+
 
 NeoBundle 'Shougo/unite.vim' "{{{
   let bundle = neobundle#get('unite.vim')
@@ -236,6 +241,7 @@ NeoBundle 'Shougo/unite.vim' "{{{
           \ 'start_insert': 1
           \ })
   endfunction
+
 
   " let g:unite_data_directory=s:get_cache_dir('unite')
   let g:unite_source_history_yank_enable=1
@@ -267,10 +273,12 @@ NeoBundle 'Shougo/unite.vim' "{{{
   nnoremap <silent> [unite]s :<C-u>Unite -quick-match buffer<cr>
 " }}}
 
+
 NeoBundleLazy 'gregsexton/gitv', {'depends':['tpope/vim-fugitive'], 'autoload':{'commands':'Gitv'}} " {{{
   nnoremap <silent> <leader>gv :Gitv<CR>
   nnoremap <silent> <leader>gV :Gitv!<CR>
 " }}}
+
 
 NeoBundleLazy 'godlygeek/tabular', {'autoload':{'commands':'Tabularize'}} " {{{
   nmap <Leader>a& :Tabularize /&<CR>
@@ -287,11 +295,13 @@ NeoBundleLazy 'godlygeek/tabular', {'autoload':{'commands':'Tabularize'}} " {{{
   vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
 " }}}
 
+
 NeoBundleLazy 'editorconfig/editorconfig-vim', {'autoload':{'insert':1, 'filetypes': 'all'}} " {{{
   let g:EditorConfig_exclude_patterns = ['fugitive://.*']
   let g:EditorConfig_exclude_patterns = ['scp://.*']
   let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 " }}}
+
 
 NeoBundleLazy 'scrooloose/nerdtree', {'autoload':{'commands':['NERDTreeToggle','NERDTreeFind']}} " {{{
   let NERDTreeShowHidden=1
@@ -407,10 +417,10 @@ if exists('$TMUX')
 
   let g:tmux_navigator_save_on_switch = 1
 else
-  map <C-h> <C-w>h
-  map <C-j> <C-w>j
-  map <C-k> <C-w>k
-  map <C-l> <C-w>l
+  nnoremap <C-h> <C-w>h
+  nnoremap <C-j> <C-w>j
+  nnoremap <C-k> <C-w>k
+  nnoremap <C-l> <C-w>l
 endif
 
 tnoremap <Esc> <C-\><C-n>
