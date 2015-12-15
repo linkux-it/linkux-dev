@@ -275,12 +275,12 @@ NeoBundle 'Shougo/unite.vim' "{{{
 " }}}
 
 NeoBundleLazy 'tsukkee/unite-tag', {'depends':['Shougo/unite.vim']} " {{{
-  nnoremap <silent> [unite]t :Unite tag<cr>
-  nnoremap <silent> [unite]tf :Unite tag/file<cr>
-  nnoremap <silent> [unite]ti :Unite tag/include<cr>
-  nnoremap <silent> [unite]tb :Unite tag:%<cr>
-  nnoremap <silent> [unite]tt :Unite tag:text
-  nnoremap <silent> [unite]tp :Unite tag:/
+  nnoremap <silent> [unite]ut :Unite tag<cr>
+  nnoremap <silent> [unite]utf :Unite tag/file<cr>
+  nnoremap <silent> [unite]uti :Unite tag/include<cr>
+  nnoremap <silent> [unite]utb :Unite tag:%<cr>
+  nnoremap <silent> [unite]utt :Unite tag:text
+  nnoremap <silent> [unite]utp :Unite tag:/
 " }}}
 
 NeoBundleLazy 'gregsexton/gitv', {'depends':['tpope/vim-fugitive'], 'autoload':{'commands':'Gitv'}} " {{{
