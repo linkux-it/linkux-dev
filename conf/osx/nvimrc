@@ -18,6 +18,12 @@
 "   This script is used inside Linkux IT for using vim or neovim as
 "   main text editor for coding software.
 "
+"   All key mappings should be set to a namespace under the keyleader
+"   for exampke:
+"
+"   	* Bufers will be under <leader> b 
+"   	* Tabs will be under <leader> t 
+"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -79,22 +85,28 @@ let python_highlight_all = 1
 let base16colorspace=256
 
 " With a map leader it's possible to do extra key combinations
-let mapleader = ","
-let g:mapleader = ","
+let mapleader = " "
+let g:mapleader = " "
 
 " tab navigation
-nnoremap th  :tabfirst<CR>
-nnoremap tj  :tabnext<CR>
-nnoremap tk  :tabprev<CR>
-nnoremap tl  :tablast<CR>
-nnoremap tn  :tabnew<CR>
-nnoremap tt  :tabedit<Space>
-nnoremap tm  :tabm<Space>
-nnoremap td  :tabclose<CR>
+nnoremap <leader>th  :tabfirst<CR>
+nnoremap <leader>tj  :tabnext<CR>
+nnoremap <leader>tk  :tabprev<CR>
+nnoremap <leader>tl  :tablast<CR>
+nnoremap <leader>tn  :tabnew<CR>
+nnoremap <leader>tt  :tabedit<Space>
+nnoremap <leader>tm  :tabm<Space>
+nnoremap <leader>td  :tabclose<CR>
 
 " buffer navigation
-nnoremap gt  :bnext<CR>
-nnoremap gT  :bprev<CR>
+nnoremap <leader>bh  :bfirst<CR>
+nnoremap <leader>bj  :bnext<CR>
+nnoremap <leader>bk  :bprev<CR>
+nnoremap <leader>bl  :blast<CR>
+nnoremap <leader>bn  :enew<CR>
+nnoremap <leader>bm  :bm<Space>
+nnoremap <leader>bd  :bdelete<CR>
+
 
 " Remember last position
 if has("autocmd")
@@ -169,6 +181,7 @@ NeoBundle 'SirVer/ultisnips' "{{{
   let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 " }}}
 
+
 NeoBundle 'scrooloose/syntastic' " {{{
   let g:syntastic_error_symbol = '✗'
   let g:syntastic_style_error_symbol = '✠'
@@ -186,6 +199,7 @@ NeoBundle 'scrooloose/syntastic' " {{{
   let g:syntastic_javascript_checkers = ['eslint']
 " }}}
 
+
 NeoBundle 'tpope/vim-fugitive' " {{{
   nnoremap <silent> <leader>gs :Gstatus<CR>
   nnoremap <silent> <leader>gd :Gdiff<CR>
@@ -197,6 +211,7 @@ NeoBundle 'tpope/vim-fugitive' " {{{
   nnoremap <silent> <leader>gr :Gremove<CR>
   autocmd BufReadPost fugitive://* set bufhidden=delete
 " }}}
+
 
 NeoBundle 'bling/vim-airline' " {{{
   set laststatus=2  "Force appear the status line "
