@@ -450,7 +450,7 @@ tnoremap <C-l> <C-\><C-n><C-w>l
 "foldmethod ident for some type of files
 set foldlevel=99
 " This the default one
-autocmd BufNewFile,BufReadPost * setl foldmethod=syntax nofoldenable
+set foldmethod=syntax nofoldenable
 autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 autocmd BufNewFile,BufReadPost *.py setl foldmethod=indent nofoldenable
 
