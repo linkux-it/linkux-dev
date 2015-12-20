@@ -30,7 +30,7 @@ brew install task
 brew install python
 brew install ctags-exuberant
 brew install fortune
-sudo gem install cowsay
+brew install cowsay
 
 e_header "Install zprezto"
 
