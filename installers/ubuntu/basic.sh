@@ -23,6 +23,9 @@ sudo apt-get install -y python3-dev
 sudo apt-get install -y python3-pip
 sudo apt-get install -y neovim
 sudo apt-get install -y exuberant-ctags
+sudo apt-get install -y fortune
+sudo apt-get install -y cowsay
+
 
 e_header "Install zprezto"
 
