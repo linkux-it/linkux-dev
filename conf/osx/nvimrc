@@ -152,7 +152,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc.vim', {'build': {'unix': g:make}}
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'chriskempson/base16-vim'
-NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-speeddating'
@@ -174,6 +173,28 @@ NeoBundle 'craigemery/vim-autotag'
 NeoBundle 'bronson/vim-visual-star-search'
 NeoBundle 'tpope/vim-abolish'
 NeoBundleLazy 'tpope/vim-scriptease', {'autoload':{'filetypes':['vim']}}
+
+NeoBundle 'Lokaltog/vim-easymotion' "{{{
+  " Search Motions!
+  map  / <Plug>(easymotion-sn)
+  omap / <Plug>(easymotion-tn)
+  
+  " These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
+  " Without these mappings, `n` & `N` works fine. (These mappings just provide
+  " different highlight method and have some other features )
+  map  n <Plug>(easymotion-next)
+  map  N <Plug>(easymotion-prev)
+
+  " Line motion
+  map <Leader>l <Plug>(easymotion-lineforward)
+  map <Leader>j <Plug>(easymotion-j)
+  map <Leader>k <Plug>(easymotion-k)
+  map <Leader>h <Plug>(easymotion-linebackward)
+
+  let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
+  let g:EasyMotion_smartcase = 1
+  let g:EasyMotion_use_smartsign_us = 1 " US layout
+"}}}
 
 NeoBundle 'mhinz/vim-startify' "{{{
   let g:startify_list_order = [
