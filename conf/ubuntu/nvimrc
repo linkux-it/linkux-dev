@@ -172,7 +172,7 @@ NeoBundle 'qpkorr/vim-bufkill'
 NeoBundleLazy 'tpope/vim-scriptease', {'autoload':{'filetypes':['vim']}}
 
 NeoBundle 'embear/vim-localvimrc' "{{{
-  let g:localvimrc_sandbox=0;
+  let g:localvimrc_sandbox = 0
 " }}}
 
 NeoBundle 'Lokaltog/vim-easymotion' "{{{
