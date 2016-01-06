@@ -168,8 +168,12 @@ NeoBundle 'sjl/gundo.vim'
 NeoBundle 'craigemery/vim-autotag'
 NeoBundle 'bronson/vim-visual-star-search'
 NeoBundle 'tpope/vim-abolish'
-NeoBundle 'qpkorr/vim-bufkill'
+NeoBundle 'qpkorr/vim-bnmap <F8> :TagbarToggle<CR>ufkill'
 NeoBundleLazy 'tpope/vim-scriptease', {'autoload':{'filetypes':['vim']}}
+
+NeoBundle 'majutsushi/tagbar' "{{{
+  noremap <leader>ct :TagbarToggle<CR>
+"}}}
 
 NeoBundle 'embear/vim-localvimrc' "{{{
   let g:localvimrc_sandbox = 0
