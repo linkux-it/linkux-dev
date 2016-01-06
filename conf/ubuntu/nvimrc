@@ -99,7 +99,10 @@ nnoremap <leader>bk  :bprev<CR>
 nnoremap <leader>bl  :blast<CR>
 nnoremap <leader>bn  :enew<CR>
 nnoremap <leader>bm  :bm<Space>
-nnoremap <leader>bd  :bdelete<CR>
+nnoremap <leader>bd  :BD<CR>
+nnoremap <leader>bun :BUN<CR>
+nnoremap <leader>bw  :BW<CR>
+nnoremap <leader>ba  :BA<CR>
 
 
 " Remember last position
@@ -161,12 +164,16 @@ NeoBundle 'vim-scripts/PreserveNoEOL'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-obsession'
-NeoBundle 'embear/vim-localvimrc'
 NeoBundle 'sjl/gundo.vim'
 NeoBundle 'craigemery/vim-autotag'
 NeoBundle 'bronson/vim-visual-star-search'
 NeoBundle 'tpope/vim-abolish'
+NeoBundle 'qpkorr/vim-bufkill'
 NeoBundleLazy 'tpope/vim-scriptease', {'autoload':{'filetypes':['vim']}}
+
+NeoBundle 'embear/vim-localvimrc' "{{{
+  set g:localvimrc_sandbox = 0;
+" }}}
 
 NeoBundle 'Lokaltog/vim-easymotion' "{{{
   " Search Motions!
