@@ -184,6 +184,7 @@ NeoBundle 'sjl/gundo.vim'
 NeoBundle 'bronson/vim-visual-star-search'
 NeoBundle 'tpope/vim-abolish'
 NeoBundle 'qpkorr/vim-bufkill'
+NeoBundle 'xolox/vim-misc'
 NeoBundleLazy 'tpope/vim-scriptease', {'autoload':{'filetypes':['vim']}}
 
 NeoBundle 'xolox/vim-easytags' "{{{
