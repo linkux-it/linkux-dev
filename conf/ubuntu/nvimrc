@@ -175,11 +175,26 @@ NeoBundle 'mileszs/ack.vim'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-obsession'
 NeoBundle 'sjl/gundo.vim'
-NeoBundle 'craigemery/vim-autotag'
 NeoBundle 'bronson/vim-visual-star-search'
 NeoBundle 'tpope/vim-abolish'
 NeoBundle 'qpkorr/vim-bnmap <F8> :TagbarToggle<CR>ufkill'
 NeoBundleLazy 'tpope/vim-scriptease', {'autoload':{'filetypes':['vim']}}
+
+NeoBundle 'xolox/vim-easytags' "{{{
+  let g:easytags_async=1
+  let g:easytags_dynamic_files=2
+  let g:easytags_include_members=1
+  let g:easytags_dynamic_files=1
+  let g:easytags_languages = {
+   'javascript': {
+     'cmd': 'jsctags',
+     'args': [],
+     'fileoutput_opt': '-f',
+     'stdout_opt': '-f-',
+     'recurse_flag': '-R'
+   }
+  }
+"}}}
 
 NeoBundle 'majutsushi/tagbar' "{{{
   noremap <leader>ct :TagbarToggle<CR>
@@ -193,6 +208,8 @@ NeoBundle 'Lokaltog/vim-easymotion' "{{{
   " Search Motions!
   map  <leader>/ <Plug>(easymotion-sn)
   omap <leader>/ <Plug>(easymotion-tn)
+  map  <leader>se <Plug>(easymotion-sn)
+  omap <leader>se <Plug>(easymotion-tn)
   
   " These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
   " Without these mappings, `n` & `N` works fine. (These mappings just provide
