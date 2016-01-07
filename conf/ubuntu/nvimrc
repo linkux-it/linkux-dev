@@ -104,6 +104,16 @@ nnoremap <leader>bun :BUN<CR>
 nnoremap <leader>bw  :BW<CR>
 nnoremap <leader>ba  :BA<CR>
 
+" Search maps
+nnoremap <leader>s /
+nnoremap <leader>sa :Ack --
+nnoremap <leader>svg :vimgrep 
+nnoremap <leader>sg :grep 
+
+" File maps
+nnoremap <leader>fs :w<CR>
+nnoremap <leader>fsa :wa<CR>
+nnoremap <leader>fo :e
 
 " Remember last position
 if has("autocmd")
@@ -181,14 +191,14 @@ NeoBundle 'embear/vim-localvimrc' "{{{
 
 NeoBundle 'Lokaltog/vim-easymotion' "{{{
   " Search Motions!
-  map  / <Plug>(easymotion-sn)
-  omap / <Plug>(easymotion-tn)
+  map  <leader>/ <Plug>(easymotion-sn)
+  omap <leader>/ <Plug>(easymotion-tn)
   
   " These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
   " Without these mappings, `n` & `N` works fine. (These mappings just provide
   " different highlight method and have some other features )
-  map  n <Plug>(easymotion-next)
-  map  N <Plug>(easymotion-prev)
+  map  <leader>n <Plug>(easymotion-next)
+  map  <leader>N <Plug>(easymotion-prev)
 
   " Line motion
   map <Leader>l <Plug>(easymotion-lineforward)
@@ -322,7 +332,7 @@ NeoBundle 'Shougo/unite.vim' "{{{
   endfunction
   autocmd FileType unite call s:unite_settings()
 
-  nmap <space> [unite]
+  nmap <space>u [unite]
   nnoremap [unite] <nop>
 
   nnoremap <silent> [unite]<space> :<C-u>Unite -toggle -auto-resize -buffer-name=mixed file_rec/async:! buffer file_mru bookmark<cr><c-u>
@@ -337,12 +347,12 @@ NeoBundle 'Shougo/unite.vim' "{{{
 " }}}
 
 NeoBundleLazy 'tsukkee/unite-tag', {'depends':['Shougo/unite.vim']} " {{{
-  nnoremap <silent> [unite]ut :Unite tag<cr>
-  nnoremap <silent> [unite]utf :Unite tag/file<cr>
-  nnoremap <silent> [unite]uti :Unite tag/include<cr>
-  nnoremap <silent> [unite]utb :Unite tag:%<cr>
-  nnoremap [unite]utt :Unite tag:text
-  nnoremap [unite]utp :Unite tag:/
+  nnoremap <silent> [unite]t :Unite tag<cr>
+  nnoremap <silent> [unite]tf :Unite tag/file<cr>
+  nnoremap <silent> [unite]ti :Unite tag/include<cr>
+  nnoremap <silent> [unite]tb :Unite tag:%<cr>
+  nnoremap [unite]tt :Unite tag:text
+  nnoremap [unite]tp :Unite tag:/
 " }}}
 
 NeoBundleLazy 'gregsexton/gitv', {'depends':['tpope/vim-fugitive'], 'autoload':{'commands':'Gitv'}} " {{{
