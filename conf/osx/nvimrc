@@ -189,7 +189,7 @@ NeoBundleLazy 'tpope/vim-scriptease', {'autoload':{'filetypes':['vim']}}
 
 NeoBundle 'xolox/vim-easytags' "{{{
   set cpoptions+=d  " i had to add this, it wasn't on until now.
-  let g:easytags_by_filetype='./'
+  let g:easytags_by_filetype = expand(".")
   let g:easytags_async=1
   let g:easytags_dynamic_files=2
   let g:easytags_include_members=1
