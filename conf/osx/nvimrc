@@ -121,6 +121,9 @@ nnoremap <leader>fs :w<CR>
 nnoremap <leader>fsa :wa<CR>
 nnoremap <leader>fo :e
 
+" This expands current directory related with active buffer
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
 " Remember last position
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
