@@ -214,6 +214,7 @@ NeoBundle 'majutsushi/tagbar' "{{{
 
 NeoBundle 'embear/vim-localvimrc' "{{{
   let g:localvimrc_sandbox = 0
+  let g:localvimrc_persistent = 2
 "}}}
 
 NeoBundle 'Lokaltog/vim-easymotion' "{{{
