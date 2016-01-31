@@ -323,6 +323,9 @@ NeoBundle 'bling/vim-airline' " {{{
 " }}}
 
 
+NeoBundle 'vim-airline/vim-airline-themes'
+
+
 NeoBundle 'gilsondev/searchtasks.vim' " {{{
   let g:searchtasks_list=["TODO", "FIXME", "NOTE", "CHANGED", "TEST"]
 " }}}
