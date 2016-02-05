@@ -37,7 +37,7 @@ brew install coreutils
 e_header "Install powerline"
 pip install powerline-status
 cd /temp
-wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.ot://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
+wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
 open PowerlineSymbols.otf
 
 e_header "Install zprezto"
