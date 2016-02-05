@@ -311,7 +311,7 @@ NeoBundle 'tpope/vim-fugitive' " {{{
 " }}}
 
 
-NeoBundle 'bling/vim-airline' " {{{
+NeoBundle 'vim-airline/vim-airline' " {{{
   set laststatus=2  "Force appear the status line "
   let g:airline#extensions#tabline#enabled = 1
   " let g:airline#extensions#tabline#left_sep = ' '
