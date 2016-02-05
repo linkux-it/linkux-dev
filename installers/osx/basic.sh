@@ -31,6 +31,9 @@ brew install python
 brew install ctags-exuberant
 brew install fortune
 brew install cowsay
+brew install coreutils
+
+pip install powerline-status
 
 e_header "Install zprezto"
 

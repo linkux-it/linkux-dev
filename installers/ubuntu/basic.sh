@@ -27,6 +27,8 @@ sudo apt-get install -y fortune
 sudo apt-get install -y cowsay
 
 
+pip install powerline-status
+
 e_header "Install zprezto"
 
 [ ! -d "${ZDOTDIR:-$HOME}/.zprezto" ] && git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
