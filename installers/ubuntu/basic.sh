@@ -30,12 +30,18 @@ sudo apt-get install -y cowsay
 sudo pip install powerline-status
 
 e_header "Install powerline fonts"
-cd ~/.fonts/
-wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
-cd ~/.config/fontconfig/conf.d/
+
+wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf PowerlineSymbols.otf
+mkdir ~/.fonts/
+mv PowerlineSymbols.otf ~/.fonts/
+
 wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
+mkdir -p ~/.config/fontconfig/conf.d/
+mkdir ~/.fonts.conf.d/
+mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
+mv 10-powerline-symbols.conf ~/.fonts.conf.d/
+
 fc-cache -vf ~/.fonts/
-cd ~
 
 e_header "Install zprezto"
 
