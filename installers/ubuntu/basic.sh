@@ -27,7 +27,7 @@ sudo apt-get install -y fortune
 sudo apt-get install -y cowsay
 
 
-pip install powerline-status
+sudo pip install powerline-status
 
 e_header "Install powerline fonts"
 cd ~/.fonts/
