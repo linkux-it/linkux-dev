@@ -29,6 +29,14 @@ sudo apt-get install -y cowsay
 
 pip install powerline-status
 
+e_header "Install powerline fonts"
+cd ~/.fonts/
+wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
+cd ~/.config/fontconfig/conf.d/
+wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
+fc-cache -vf ~/.fonts/
+cd ~
+
 e_header "Install zprezto"
 
 [ ! -d "${ZDOTDIR:-$HOME}/.zprezto" ] && git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
