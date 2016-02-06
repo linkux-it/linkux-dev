@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
 source ~/.linkux-dev/installers/common.sh
-e_header "Installing NVM and nodejs and iojs"
-brew install nvm
-source ~/.nvm/nvm.sh
-nvm install iojs
-nvm install node
+e_header "Installing nodejs"
+brew install node
+brew install npm
 
 e_header "Installing nodejs, javascript tools"
 npm install eslint -g
@@ -18,6 +16,11 @@ npm install tern -g
 npm install jsctags -g
 
 avn setup
+
+e_header "Installing NVM"
+brew install nvm
+source ~/.nvm/nvm.sh
+nvm install node
 
 e_header "Update .zshrc"
 if grep -Fxq "# start javascript setup" ~/.zshrc
