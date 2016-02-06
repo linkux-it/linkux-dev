@@ -7,14 +7,14 @@ sudo apt-get install -y nodejs
 sudo apt-get install -y npm
 
 e_header "Installing nodejs, javascript tools"
-npm install eslint -g
-npm install babel-eslint -g
-npm install eslint-plugin-react -g
-npm install grunt-cli -g
-npm install gulp-cli -g
-npm install avn avn-nvm -g
-npm install tern -g
-npm install jsctags -g
+sudo npm install eslint -g
+sudo npm install babel-eslint -g
+sudo npm install eslint-plugin-react -g
+sudo npm install grunt-cli -g
+sudo npm install gulp-cli -g
+sudo npm install avn avn-nvm -g
+sudo npm install tern -g
+sudo npm install jsctags -g
 
 avn setup
 
