@@ -333,13 +333,11 @@ NeoBundle 'vim-airline/vim-airline' " {{{
 
 
 NeoBundle 'vim-airline/vim-airline-themes'
-
+NeoBundle 'kennykaye/vim-relativity'
 
 NeoBundle 'Shougo/deoplete.nvim' "{{{
   let g:deoplete#enable_at_startup = 1
 " }}}
-
-
 NeoBundle 'zchee/deoplete-jedi'
 NeoBundle 'Shougo/neoinclude.vim'
 
