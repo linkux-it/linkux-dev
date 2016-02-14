@@ -335,6 +335,15 @@ NeoBundle 'vim-airline/vim-airline' " {{{
 NeoBundle 'vim-airline/vim-airline-themes'
 
 
+NeoBundle 'Shougo/deoplete.nvim' "{{{
+  let g:deoplete#enable_at_startup = 1
+" }}}
+
+
+NeoBundle 'zchee/deoplete-jedi'
+NeoBundle 'Shougo/neoinclude.vim'
+
+
 NeoBundle 'gilsondev/searchtasks.vim' " {{{
   let g:searchtasks_list=["TODO", "FIXME", "NOTE", "CHANGED", "TEST"]
 " }}}
@@ -443,12 +452,6 @@ NeoBundleLazy 'tpope/vim-bundler'
 " => Python
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-NeoBundleLazy 'davidhalter/jedi-vim', {'autoload':{'filetypes':['python']}} " {{{
-  let g:jedi#use_splits_not_buffers = "bottom"
-  " let g:jedi#use_tabs_not_buffers = 0 " Maybe better this than splits?
-  " let g:jedi#popup_on_dot = 0
-" }}}
-
 NeoBundleLazy 'jmcantrell/vim-virtualenv', {'autoload':{'filetypes':['python']}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -459,7 +462,7 @@ NeoBundleLazy 'moll/vim-node', {'autoload': {'filetypes':['javascript']}}
 NeoBundleLazy 'pangloss/vim-javascript', {'autoload':{'filetypes':['javascript']}}
 NeoBundleLazy 'leafgarland/typescript-vim', {'autoload':{'filetypes':['typescript']}}
 NeoBundleLazy 'leshill/vim-json', {'autoload':{'filetypes':['javascript','json']}}
-NeoBundleLazy 'marijnh/tern_for_vim', {'autoload':{'filetypes':['javascript','jsx','javascript.jsx']}} " {{{
+NeoBundleLazy 'marijnh/tern_for_vim', {'autoload':{'filetypes':['javascript','jsx','javascript.jsx']}, 'do' : 'npm install' } " {{{
   let g:tern_map_keys = 1
   let g:tern_show_argument_hints = 1
 " }}}
