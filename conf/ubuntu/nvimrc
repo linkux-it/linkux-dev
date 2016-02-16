@@ -559,3 +559,7 @@ colorscheme base16-ocean
 " Next three lines are to enable C-Space to autocomplete, omnicomplete
 inoremap <C-Space> <C-x><C-o>
 inoremap <C-@> <c-x><c-o>
+
+
+" Need to work with deoplete
+au FileType javascript,jsx,javascript.jsx setl omnifunc=tern#Complete

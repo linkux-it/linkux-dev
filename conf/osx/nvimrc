@@ -566,3 +566,6 @@ colorscheme base16-ocean
 inoremap <C-Space> <C-x><C-o>
 inoremap <C-@> <c-x><c-o>
 
+
+" Need to work with deoplete
+au FileType javascript,jsx,javascript.jsx setl omnifunc=tern#Complete
