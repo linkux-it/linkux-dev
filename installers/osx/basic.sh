@@ -63,10 +63,10 @@ fi
 # Setting up neobundle
 if [ ! -d ~/.config/nvim/bundle ]; then
   e_header "Creating bundle directory for NeoBundle"
-  mkdir -p ~/.nvim/bundle
+  mkdir -p ~/.config/nvim/bundle
 fi
 
-if [ ! -d ~/.nvim/bundle/neobundle.vim ]; then
+if [ ! -d ~/.config/nvim/bundle/neobundle.vim ]; then
   e_header "Cloning NeoBundle"
-  git clone https://github.com/Shougo/neobundle.vim ~/.nvim/bundle/neobundle.vim
+  git clone https://github.com/Shougo/neobundle.vim ~/.config/nvim/bundle/neobundle.vim
 fi
