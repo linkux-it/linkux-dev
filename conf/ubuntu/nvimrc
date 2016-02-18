@@ -183,6 +183,7 @@ NeoBundle 'tpope/vim-abolish'
 NeoBundle 'qpkorr/vim-bufkill'
 NeoBundle 'xolox/vim-misc'
 NeoBundle 'vim-scripts/ZoomWin'
+NeoBundle 'bogado/file-line'
 NeoBundleLazy 'tpope/vim-scriptease', {'autoload':{'filetypes':['vim']}}
 
 NeoBundle 'xolox/vim-easytags' "{{{
