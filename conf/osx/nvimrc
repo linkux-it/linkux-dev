@@ -189,6 +189,7 @@ NeoBundle 'tpope/vim-abolish'
 NeoBundle 'qpkorr/vim-bufkill'
 NeoBundle 'xolox/vim-misc'
 NeoBundle 'rizzatti/dash.vim'
+NeoBundle 'vim-scripts/ZoomWin'
 NeoBundleLazy 'tpope/vim-scriptease', {'autoload':{'filetypes':['vim']}}
 
 NeoBundle 'xolox/vim-easytags' "{{{
@@ -569,3 +570,4 @@ inoremap <C-@> <c-x><c-o>
 
 " Need to work with deoplete
 au FileType javascript,jsx,javascript.jsx setl omnifunc=tern#Complete
+
