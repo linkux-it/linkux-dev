@@ -44,6 +44,8 @@ alias codeit='. ./codeit.sh'
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 
+ulimit -n 4096
+
 # end global setup
 EOM
 
