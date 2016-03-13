@@ -185,6 +185,7 @@ NeoBundle 'xolox/vim-misc'
 NeoBundle 'vim-scripts/ZoomWin'
 NeoBundle 'kopischke/vim-fetch'
 NeoBundle 'nhooyr/neoman.vim'
+NeoBundle 'Konfekt/FastFold'
 NeoBundleLazy 'tpope/vim-scriptease', {'autoload':{'filetypes':['vim']}}
 
 NeoBundle 'xolox/vim-easytags' "{{{
