@@ -60,7 +60,6 @@ set list
 set listchars=tab:│\ ,trail:•,extends:❯,precedes:❮
 set t_Co=256
 set background=dark
-set clipboard=unnamedplus
 set lazyredraw
 set hidden
 " faster redrawing
