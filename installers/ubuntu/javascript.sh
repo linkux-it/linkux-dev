@@ -15,6 +15,7 @@ sudo npm install gulp-cli -g
 sudo npm install avn avn-nvm -g
 sudo npm install tern -g
 sudo npm install tern-react -g
+sudo npm install tern-node-express -g
 sudo npm install jsctags -g
 
 avn setup
