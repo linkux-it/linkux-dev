@@ -60,13 +60,13 @@ if [ ! -d ~/.config/nvim ]; then
   mkdir -p ~/.config/nvim
 fi
 
-# Setting up neobundle
+# Setting up Dein
 if [ ! -d ~/.config/nvim/bundle ]; then
-  e_header "Creating bundle directory for NeoBundle"
+  e_header "Creating bundle directory for Dein"
   mkdir -p ~/.config/nvim/bundle
 fi
 
 if [ ! -d ~/.config/nvim/bundle/neobundle.vim ]; then
-  e_header "Cloning NeoBundle"
-  git clone https://github.com/Shougo/neobundle.vim ~/.config/nvim/bundle/neobundle.vim
+  e_header "Cloning Dein"
+  git clone https://github.com/Shougo/dein.vim.git ~/.config/nvim/bundle/dein.vim
 fi
