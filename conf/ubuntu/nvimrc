@@ -494,7 +494,7 @@ call dein#add('mattn/emmet-vim', {'on_ft': ['htmldjango','jsx','swig','html','xm
 call dein#add('jvirtanen/vim-octave')
 
 call dein#end()
-call dein#update()
+call dein#check_update()
 
 " Required:
 " Enable filetype plugins
