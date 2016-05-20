@@ -275,7 +275,10 @@ NeoBundle 'SirVer/ultisnips' "{{{
   let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 " }}}
 
-NeoBundle 'neomake/neomake'
+NeoBundle 'neomake/neomake' "{{{
+  autocmd! BufWritePost * Neomake
+  let g:neomake_open_list = 2
+"}}}
 
 NeoBundle 'tpope/vim-fugitive' " {{{
   nnoremap <silent> <leader>gs :Gstatus<CR>
@@ -536,8 +539,6 @@ set foldlevel=99
 set foldmethod=syntax nofoldenable
 autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 autocmd BufNewFile,BufReadPost *.py setl foldmethod=indent nofoldenable
-
-autocmd! BufWritePost * Neomake
 
 " Color schema working at this point?
 colorscheme base16-ocean
