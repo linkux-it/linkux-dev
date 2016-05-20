@@ -159,16 +159,7 @@ call dein#add('Shougo/dein.vim')
 " => Base Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-call dein#add('Shougo/vimproc.vim', {
-    \ 'build': {
-    \     'windows': 'tools\\update-dll-mingw',
-    \     'cygwin': 'make -f make_cygwin.mak',
-    \     'mac': 'make -f make_mac.mak',
-    \     'linux': 'make',
-    \     'unix': 'gmake',
-    \    },
-    \ })
-
+call dein#add('Shougo/vimproc.vim', {'build': 'make -f make_mac.mak' })
 call dein#add('Shougo/neomru.vim')
 call dein#add('chriskempson/base16-vim')
 call dein#add('tpope/vim-surround')
@@ -331,16 +322,7 @@ call dein#add('Shougo/deoplete.nvim', {'on_i': 1}) "{{{
 " }}}
 
 call dein#add('zchee/deoplete-jedi', )
-call dein#add('carlitux/deoplete-ternjs', {
-    \ 'build': {
-    \     'windows': 'tools\\update-dll-mingw',
-    \     'cygwin': 'make -f make_cygwin.mak',
-    \     'mac': 'make -f make_mac.mak',
-    \     'linux': 'make',
-    \     'unix': 'gmake',
-    \    },
-    \ })
-
+call dein#add('carlitux/deoplete-ternjs', {'build': 'npm install -g tern' })
 call dein#add('Shougo/neoinclude.vim')
 call dein#add('Shougo/neco-syntax')
 
