@@ -151,7 +151,7 @@ if has('vim_starting')
 endif
 
 " Required:
-call dein#begin(expand('~/.config/nvim/bundle'))
+call dein#begin(expand('~/.cache/dein'))
 call dein#add('Shougo/dein.vim')
 
 
@@ -495,7 +495,6 @@ call dein#add('mattn/emmet-vim', {'on_ft': ['htmldjango','jsx','swig','html','xm
 call dein#add('jvirtanen/vim-octave')
 
 call dein#end()
-call dein#check_update()
 
 " Required:
 " Enable filetype plugins
@@ -530,6 +529,9 @@ tnoremap <C-h> <C-\><C-n><C-w>h
 tnoremap <C-j> <C-\><C-n><C-w>j
 tnoremap <C-k> <C-\><C-n><C-w>k
 tnoremap <C-l> <C-\><C-n><C-w>l
+
+nnoremap <leader>du :call dein#update()
+nnoremap <leader>dc :call dein#check_update()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Folding and Theme
