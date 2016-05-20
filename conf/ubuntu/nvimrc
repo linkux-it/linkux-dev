@@ -151,7 +151,7 @@ if has('vim_starting')
 endif
 
 " Required:
-call dein#begin(expand('~/.cache/dein'))
+call dein#begin(expand('~/.config/nvim/bundle'))
 call dein#add('Shougo/dein.vim')
 
 
@@ -494,6 +494,7 @@ call dein#add('mattn/emmet-vim', {'on_ft': ['htmldjango','jsx','swig','html','xm
 call dein#add('jvirtanen/vim-octave')
 
 call dein#end()
+call dein#update()
 
 " Required:
 " Enable filetype plugins
