@@ -330,7 +330,7 @@ call dein#add('gilsondev/searchtasks.vim') " {{{
 " }}}
 
 call dein#add('Shougo/unite.vim') "{{{
-  let bundle = dein#get('unite.vim')
+  let bundle = dein#get('Shougo/unite.vim')
   function! bundle.hooks.on_source(bundle)
     call unite#filters#matcher_default#use(['matcher_fuzzy'])
     call unite#filters#sorter_default#use(['sorter_rank'])
