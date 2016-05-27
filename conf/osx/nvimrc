@@ -414,8 +414,8 @@ call dein#add('Shougo/vimfiler.vim', {'on_cmd' : 'VimFiler'}) " {{{
   nmap <buffer> d <Plug>(vimfiler_mark_current_line)<Plug>(vimfiler_delete_file)
 
   autocmd BufEnter * if (winnr('$') == 1 && &filetype ==# 'vimfiler') | q | endif
-  autocmd FileType vimfiler nnoremap <silent><buffer><expr> S vimfiler#do_action('vsplit')
-  autocmd FileType vimfiler nnoremap <silent><buffer><expr> s vimfiler#do_switch_action('split')
+  autocmd FileType vimfiler nnoremap <silent><buffer><expr> S vimfiler#do_action('vsplit')<CR>
+  autocmd FileType vimfiler nnoremap <silent><buffer><expr> s vimfiler#do_switch_action('split')<CR>
 "}}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
