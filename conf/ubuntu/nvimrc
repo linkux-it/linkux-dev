@@ -395,12 +395,12 @@ call dein#add('editorconfig/editorconfig-vim', {'on_i': 1}) " {{{
   let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 " }}}
 
-call dein#add('Shougo/vimfiler.vim', {'depends': ['Shougo/unite.vim'], 'on_cmd' : 'VimFiler'}) " {{{
+call dein#add('Shougo/vimfiler.vim', {'on_cmd' : 'VimFiler'}) " {{{
   let g:vimfiler_as_default_explorer = 1
   let g:vimfiler_safe_mode_by_default = 0
-  let g:vimfiler_tree_leaf_icon = ' '
-  let g:vimfiler_tree_opened_icon = '▾'
-  let g:vimfiler_tree_closed_icon = '▸'
+  let g:vimfiler_tree_leaf_icon = "⋮"
+  let g:vimfiler_tree_closed_icon = "▷"
+  let g:vimfiler_tree_opened_icon = "▼"
   let g:vimfiler_readonly_file_icon = '\uE0A2'
   let g:vimfiler_enable_auto_cd = 1
   let g:vimfiler_ignore_pattern = '^\%(\.git\|\.hg\|\.swp\|\.sass-cache\|\.DS_Store\)$'')'
