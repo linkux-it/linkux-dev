@@ -405,7 +405,7 @@ call dein#add('Shougo/vimfiler.vim', {'on_cmd' : 'VimFiler'}) " {{{
   let g:vimfiler_enable_auto_cd = 1
   let g:vimfiler_ignore_pattern = '^\%(\.git\|\.hg\|\.swp\|\.sass-cache\|\.DS_Store\|.*\.pyc\|\.vagrant\)$'
 
-  nmap <silent><leader>nt :VimFilerExplorer<CR>
+  nmap <silent><leader>nt :VimFilerExplorer -winwidth=32<CR>
   nmap <silent><leader>ntf :VimFilerExplorer -find<CR>
 
   nmap <buffer> c <Plug>(vimfiler_mark_current_line)<Plug>(vimfiler_copy_file)
