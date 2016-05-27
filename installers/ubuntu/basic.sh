@@ -25,6 +25,7 @@ sudo apt-get install -y neovim
 sudo apt-get install -y exuberant-ctags
 sudo apt-get install -y fortune
 sudo apt-get install -y cowsay
+sudo apt-get install -y trash-cli
 
 
 sudo pip install powerline-status

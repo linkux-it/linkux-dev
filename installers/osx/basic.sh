@@ -32,6 +32,7 @@ brew install ctags-exuberant
 brew install fortune
 brew install cowsay
 brew install coreutils
+brew install rmtrash
 
 
 e_header "Install powerline"

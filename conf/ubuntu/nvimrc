@@ -21,8 +21,8 @@
 "   All key mappings should be set to a namespace under the keyleader
 "   for exampke:
 "
-"   	* Bufers will be under <leader> b 
-"   	* Tabs will be under <leader> t 
+"	* Bufers will be under <leader> b 
+"	* Tabs will be under <leader> t 
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -395,18 +395,26 @@ call dein#add('editorconfig/editorconfig-vim', {'on_i': 1}) " {{{
   let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 " }}}
 
-call dein#add('scrooloose/nerdtree', {'on_cmd': ['NERDTreeToggle', 'NERDTreeFind']}) " {{{
-  let NERDTreeShowHidden=1
-  let NERDTreeQuitOnOpen=0
-  let NERDTreeShowLineNumbers=1
-  let NERDTreeChDirMode=0
-  let NERDTreeShowBookmarks=1
-  let NERDTreeIgnore=['\.git','\.hg','\.pyc$','\.DS_Store','\.swp','\.sass-cache']
-  " let NERDTreeBookmarksFile=s:get_cache_dir('NERDTreeBookmarks')
-  nmap <silent><leader>nt :NERDTreeToggle<CR>
-  nmap <silent><leader>ntf :NERDTreeFind<CR>
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" }}}
+call dein#add('Shougo/vimfiler.vim', {'depends': ['Shougo/unite.vim'], 'on_cmd' : 'VimFiler'}) " {{{
+  let g:vimfiler_as_default_explorer = 1
+  let g:vimfiler_safe_mode_by_default = 0
+  let g:vimfiler_tree_leaf_icon = ' '
+  let g:vimfiler_tree_opened_icon = '▾'
+  let g:vimfiler_tree_closed_icon = '▸'
+  let g:vimfiler_readonly_file_icon = '\uE0A2'
+  let g:vimfiler_enable_auto_cd = 1
+  let g:vimfiler_ignore_pattern = '^\%(\.git\|\.hg\|\.swp\|\.sass-cache\|\.DS_Store\)$'')'
+
+  nmap <silent><leader>nt :VimFilerExplorer<CR>
+  nmap <silent><leader>ntf :VimFilerExplorer -find<CR>
+
+  nmap <buffer> c <Plug>(vimfiler_mark_current_line)<Plug>(vimfiler_copy_file)
+  nmap <buffer> m <Plug>(vimfiler_mark_current_line)<Plug>(vimfiler_move_file)
+  nmap <buffer> d <Plug>(vimfiler_mark_current_line)<Plug>(vimfiler_delete_file)
+
+  autocmd BufEnter * if (winnr('$') == 1 && &filetype ==# 'vimfiler') | q | endif
+"}}}
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Ruby
