@@ -322,7 +322,7 @@ call dein#add('Shougo/deoplete.nvim', {'on_i': 1}) "{{{
 " }}}
 
 call dein#add('zchee/deoplete-jedi', )
-call dein#add('carlitux/deoplete-ternjs', {'build': 'npm install -g tern' })
+call dein#add('carlitux/deoplete-ternjs')
 call dein#add('Shougo/neoinclude.vim')
 call dein#add('Shougo/neco-syntax')
 
