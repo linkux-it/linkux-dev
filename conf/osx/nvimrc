@@ -370,7 +370,7 @@ call dein#add('tsukkee/unite-tag', {'depends': ['Shougo/unite.vim']}) " {{{
   nnoremap [unite]tp :Unite tag:/
 " }}}
 
-call dein#add('gregsexton/gitv', {'depends': ['tpope/vim-fugitive'], 'on_cmd': 'Gitv'}) "{{{
+call dein#add('gregsexton/gitv', {'depends': ['tpope/vim-fugitive']}) "{{{
   nnoremap <silent> <leader>gv :Gitv<CR>
   nnoremap <silent> <leader>gV :Gitv!<CR>
 " }}}
