@@ -279,7 +279,6 @@ call dein#add('SirVer/ultisnips') "{{{
 
 call dein#add('neomake/neomake') "{{{
   autocmd! BufWritePost * Neomake
-  let g:neomake_open_list = 2
 "}}}
 
 call dein#add('tpope/vim-fugitive') " {{{
