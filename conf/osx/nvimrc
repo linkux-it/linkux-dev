@@ -520,6 +520,8 @@ set foldlevel=99
 set foldmethod=syntax nofoldenable
 autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 autocmd BufNewFile,BufReadPost *.py setl foldmethod=indent nofoldenable
+" This to close preview when insert mode leaves
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " Color schema working at this point?
 colorscheme base16-ocean
