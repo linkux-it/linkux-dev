@@ -99,8 +99,8 @@ nnoremap <leader>td  :tabclose<CR>
 
 " buffer navigation
 nnoremap <leader>bh  :bfirst<CR>
-nnoremap <leader>bj  :bnext<CR>
-nnoremap <leader>bk  :bprev<CR>
+nnoremap <leader>bk  :bnext<CR>
+nnoremap <leader>bj  :bprev<CR>
 nnoremap <leader>bl  :blast<CR>
 nnoremap <leader>bn  :enew<CR>
 nnoremap <leader>bm  :bm<Space>
