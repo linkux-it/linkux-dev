@@ -42,6 +42,9 @@ syntax enable
 " show line numbers
 set number
 
+" show partial command
+set showcmd
+
 " indent when moving to the next line while writing code
 set autoindent
 
