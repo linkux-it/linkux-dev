@@ -334,7 +334,7 @@ call dein#add('gilsondev/searchtasks.vim') " {{{
 call dein#add('Shougo/denite.nvim') "{{{
   nmap <leader>d [denite]
   nnoremap [denite] <nop>
-  nnoremap <silent> [denite]f :Denite file_rec
+  nnoremap <silent> [denite]f :Denite file_rec<cr>
 " }}}
 
 call dein#add('Shougo/unite.vim') "{{{
