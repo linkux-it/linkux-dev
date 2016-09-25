@@ -342,13 +342,21 @@ call dein#add('gilsondev/searchtasks.vim') " {{{
 call dein#add('Shougo/denite.nvim') "{{{
   nmap <leader>u [denite]
   nnoremap [denite] <nop>
-  nnoremap <silent> [denite]f :Denite file_rec<cr>
-  nnoremap <silent> [denite]t :Denite filetype<cr>
+  nnoremap <silent> [denite]fr :Denite file_rec<cr>
   nnoremap <silent> [denite]r :Denite file_rmu<cr>
+  nnoremap <silent> [denite]t :Denite filetype<cr>
   nnoremap <silent> [denite]g :Denite grep<cr>
   nnoremap <silent> [denite]l :Denite line<cr>
   nnoremap <silent> [denite]m :Denite menu<cr>
   nnoremap <silent> [denite]j :Denite jump_point<cr>
+  nnoremap <silent> [denite]c :Denite command<cr>
+
+  call denite#custom#var('grep', 'command', ['ack'])
+  call denite#custom#var('grep', 'recursive_opts', [])
+  call denite#custom#var('grep', 'separator', [])
+  call denite#custom#var('grep', 'final_opts', [])
+  call denite#custom#var('grep', 'default_opts', 
+       \ ['-s', '-H', '--nopager', '--nocolor', '--nogroup', '--column'])
 " }}}
  
 call dein#add('Shougo/unite.vim') "{{{
