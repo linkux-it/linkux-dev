@@ -343,7 +343,8 @@ call dein#add('Shougo/denite.nvim') "{{{
   nmap <leader>u [denite]
   nnoremap [denite] <nop>
   nnoremap <silent> [denite]fr :Denite file_rec<cr>
-  nnoremap <silent> [denite]r :Denite file_rmu<cr>
+  nnoremap <silent> [denite]dr :Denite directory_rec<cr>
+  nnoremap <silent> [denite]r :Denite file_mru<cr>
   nnoremap <silent> [denite]t :Denite filetype<cr>
   nnoremap <silent> [denite]g :Denite grep<cr>
   nnoremap <silent> [denite]l :Denite line<cr>
