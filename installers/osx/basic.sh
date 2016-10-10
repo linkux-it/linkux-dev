@@ -40,17 +40,15 @@ pip install powerline-status
 wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf -O PowerlineSymbols.otf
 sudo mv PowerlineSymbols.otf /Library/Fonts/
 
-e_header "Install zprezto"
+e_header "Install Zim"
 
-[ ! -d "${ZDOTDIR:-$HOME}/.zprezto" ] && git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+git clone --recursive https://github.com/Eriner/zim.git ${ZDOTDIR:-${HOME}}/.zim
 
-FILES="${ZDOTDIR:-$HOME}/.zprezto/runcoms/zlogin
-${ZDOTDIR:-$HOME}/.zprezto/runcoms/zlogout
-${ZDOTDIR:-$HOME}/.zprezto/runcoms/zprofile
-${ZDOTDIR:-$HOME}/.zprezto/runcoms/zshenv
-${ZDOTDIR:-$HOME}/.zprezto/runcoms/zshrc"
-for rcfile in $FILES; do
-  ln -s "${rcfile}" ~/.$(basename $rcfile)
+setopt EXTENDED_GLOB
+for template_file ( ${ZDOTDIR:-${HOME}}/.zim/templates/* ); do
+  user_file="${ZDOTDIR:-${HOME}}/.${template_file:t}"
+  touch ${user_file}
+  ( print -rn "$(<${template_file})$(<${user_file})" >! ${user_file} ) 2>/dev/null
 done
 
 chsh -s /bin/zsh

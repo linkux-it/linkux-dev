@@ -37,23 +37,20 @@ sudo mv PowerlineSymbols.otf /usr/share/fonts/
 sudo mv 10-powerline-symbols.conf /etc/fonts/conf.d/
 sudo fc-cache -vf
 
-e_header "Install zprezto"
+e_header "Install Zim"
 
-[ ! -d "${ZDOTDIR:-$HOME}/.zprezto" ] && git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+git clone --recursive https://github.com/Eriner/zim.git ${ZDOTDIR:-${HOME}}/.zim
 
-FILES="${ZDOTDIR:-$HOME}/.zprezto/runcoms/zlogin
-${ZDOTDIR:-$HOME}/.zprezto/runcoms/zlogout
-${ZDOTDIR:-$HOME}/.zprezto/runcoms/zprofile
-${ZDOTDIR:-$HOME}/.zprezto/runcoms/zshenv
-${ZDOTDIR:-$HOME}/.zprezto/runcoms/zshrc"
-for rcfile in $FILES; do
-  if [ ! -f ~/.$(basename $rcfile).back ]; then
-    mv ~/.$(basename $rcfile) ~/.$(basename $rcfile).back
-  fi
-  ln -s "${rcfile}" ~/.$(basename $rcfile)
+setopt EXTENDED_GLOB
+for template_file ( ${ZDOTDIR:-${HOME}}/.zim/templates/* ); do
+  user_file="${ZDOTDIR:-${HOME}}/.${template_file:t}"
+  touch ${user_file}
+  ( print -rn "$(<${template_file})$(<${user_file})" >! ${user_file} ) 2>/dev/null
 done
 
 sudo chsh -s $(which zsh)
+
+source ${ZDOTDIR:-${HOME}}/.zlogin
 
 # Setting up neobundle
 if [ ! -d ~/.config/nvim ]; then
