@@ -50,8 +50,6 @@ done
 
 sudo chsh -s $(which zsh)
 
-source ${ZDOTDIR:-${HOME}}/.zlogin
-
 # Setting up neobundle
 if [ ! -d ~/.config/nvim ]; then
   e_header "Creating config directory for Neovim"
