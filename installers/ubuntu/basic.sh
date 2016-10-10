@@ -45,7 +45,7 @@ for template_file in ${ZDOTDIR:-${HOME}}/.zim/templates/*
 do
   user_file=${ZDOTDIR:-${HOME}}/.$(basename "${template_file}")
   touch $user_file
-  print -rn $(<${template_file})$(<${user_file}) >! ${user_file} 2>/dev/null
+  cat ${template_file} >> ${user_file} 2>/dev/null
 done
 
 sudo chsh -s $(which zsh)
