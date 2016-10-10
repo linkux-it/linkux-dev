@@ -46,8 +46,7 @@ git clone --recursive https://github.com/Eriner/zim.git ${ZDOTDIR:-${HOME}}/.zim
 
 for template_file in ${ZDOTDIR:-${HOME}}/.zim/templates/* 
 do
-  user_file=${ZDOTDIR:-${HOME}}/.${template_file:t}
-  echo $user_file
+  user_file=${ZDOTDIR:-${HOME}}/.$(basename "${template_file}")
   touch $user_file
   ( print -rn "$(<${template_file})$(<${user_file})" >! ${user_file} ) 2>/dev/null
 done
