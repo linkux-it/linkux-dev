@@ -249,9 +249,9 @@ call dein#add('haya14busa/incsearch-fuzzy.vim') "{{{
 "}}} 
 
 call dein#add('haya14busa/incsearch-easymotion.vim') "{{{
-  map z/ <Plug>(incsearch-easymotion-/)
-  map z? <Plug>(incsearch-easymotion-?)
-  map zg/ <Plug>(incsearch-easymotion-stay)
+  map / <Plug>(incsearch-easymotion-/)
+  map ? <Plug>(incsearch-easymotion-?)
+  map g/ <Plug>(incsearch-easymotion-stay)
 
   " incsearch.vim x fuzzy x vim-easymotion
   function! s:config_easyfuzzymotion(...) abort
@@ -291,7 +291,7 @@ call dein#add('easymotion/vim-easymotion') "{{{
 
   " Search Motions!
   map  / <Plug>(easymotion-sn)
-  omap ? <Plug>(easymotion-tn)
+  omap / <Plug>(easymotion-tn)
   
   " These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
   " Without these mappings, `n` & `N` works fine. (These mappings just provide
