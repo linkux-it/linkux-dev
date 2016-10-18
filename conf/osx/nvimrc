@@ -226,24 +226,81 @@ call dein#add('embear/vim-localvimrc') "{{{
   let g:localvimrc_persistent = 2
 "}}}
 
-call dein#add('Lokaltog/vim-easymotion') "{{{
+call dein#add('haya14busa/vim-asterisk') "{{{
+  map *   <Plug>(incsearch-nohl)<Plug>(asterisk-*)
+  map g*  <Plug>(incsearch-nohl)<Plug>(asterisk-g*)
+  map #   <Plug>(incsearch-nohl)<Plug>(asterisk-#)
+  map g#  <Plug>(incsearch-nohl)<Plug>(asterisk-g#)
+  
+  map z*  <Plug>(incsearch-nohl0)<Plug>(asterisk-z*)
+  map gz* <Plug>(incsearch-nohl0)<Plug>(asterisk-gz*)
+  map z#  <Plug>(incsearch-nohl0)<Plug>(asterisk-z#)
+  map gz# <Plug>(incsearch-nohl0)<Plug>(asterisk-gz#)
+  let g:asterisk#keeppos = 1
+"}}}
+
+call dein#add('haya14busa/incsearch.vim') "{{{
+  let g:incsearch#magic = '\v' " very magic
+  let g:incsearch#magic = '\V' " very nomagic
+  let g:incsearch#magic = '\m' " magic
+  let g:incsearch#magic = '\M' " nomagic
+"}}}
+
+call dein#add('haya14busa/incsearch-fuzzy.vim') "{{{
+"}}} 
+
+call dein#add('haya14busa/incsearch-easymotion.vim') "{{{
+  map z/ <Plug>(incsearch-easymotion-/)
+  map z? <Plug>(incsearch-easymotion-?)
+  map zg/ <Plug>(incsearch-easymotion-stay)
+
+  " incsearch.vim x fuzzy x vim-easymotion
+  function! s:config_easyfuzzymotion(...) abort
+    return extend(copy({
+    \   'converters': [incsearch#config#fuzzy#converter()],
+    \   'modules': [incsearch#config#easymotion#module()],
+    \   'keymap': {"\<CR>": '<Over>(easymotion)'},
+    \   'is_expr': 0,
+    \   'is_stay': 1
+    \ }), get(a:, 1, {}))
+  endfunction
+  
+  noremap <silent><expr> <leader>/ incsearch#go(<SID>config_easyfuzzymotion())
+"}}}
+
+call dein#add('easymotion/vim-easymotion') "{{{
+  map f <Plug>(easymotion-f)
+  map F <Plug>(easymotion-F)
+  map t <Plug>(easymotion-t)
+  map T <Plug>(easymotion-T)
+  map w <Plug>(easymotion-w)
+  map W <Plug>(easymotion-W)
+  map b <Plug>(easymotion-b)
+  map B <Plug>(easymotion-B)
+  map e <Plug>(easymotion-e)
+  map E <Plug>(easymotion-E)
+  map e <Plug>(easymotion-e)
+  map E <Plug>(easymotion-E)
+  map ge <Plug>(easymotion-ge)
+  map gE <Plug>(easymotion-gE)
+
+  " Line motion
+  map l <Plug>(easymotion-lineforward)
+  map j <Plug>(easymotion-j)
+  map k <Plug>(easymotion-k)
+  map h <Plug>(easymotion-linebackward)
+
   " Search Motions!
-  map  <leader>/ <Plug>(easymotion-sn)
-  omap <leader>/ <Plug>(easymotion-tn)
+  map  / <Plug>(easymotion-sn)
+  omap / <Plug>(easymotion-tn)
   map  <leader>se <Plug>(easymotion-sn)
   omap <leader>se <Plug>(easymotion-tn)
   
   " These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
   " Without these mappings, `n` & `N` works fine. (These mappings just provide
   " different highlight method and have some other features )
-  map  <leader>n <Plug>(easymotion-next)
-  map  <leader>N <Plug>(easymotion-prev)
-
-  " Line motion
-  map <Leader>l <Plug>(easymotion-lineforward)
-  map <Leader>j <Plug>(easymotion-j)
-  map <Leader>k <Plug>(easymotion-k)
-  map <Leader>h <Plug>(easymotion-linebackward)
+  map  n <Plug>(easymotion-next)
+  map  N <Plug>(easymotion-prev)
 
   let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
   let g:EasyMotion_smartcase = 1
