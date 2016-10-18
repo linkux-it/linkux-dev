@@ -284,16 +284,14 @@ call dein#add('easymotion/vim-easymotion') "{{{
   map gE <Plug>(easymotion-gE)
 
   " Line motion
-  map l <Plug>(easymotion-lineforward)
-  map j <Plug>(easymotion-j)
-  map k <Plug>(easymotion-k)
-  map h <Plug>(easymotion-linebackward)
+  map <leader>l <Plug>(easymotion-lineforward)
+  map <leader>j <Plug>(easymotion-j)
+  map <leader>k <Plug>(easymotion-k)
+  map <leader>h <Plug>(easymotion-linebackward)
 
   " Search Motions!
   map  / <Plug>(easymotion-sn)
-  omap / <Plug>(easymotion-tn)
-  map  <leader>se <Plug>(easymotion-sn)
-  omap <leader>se <Plug>(easymotion-tn)
+  omap ? <Plug>(easymotion-tn)
   
   " These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
   " Without these mappings, `n` & `N` works fine. (These mappings just provide
