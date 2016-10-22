@@ -197,8 +197,11 @@ call dein#add('nhooyr/neoman.vim')
 call dein#add('Konfekt/FastFold')
 call dein#add('tpope/vim-scriptease', {'on_ft': ['vim']})
 call dein#add('rizzatti/dash.vim')
-call dein#add('nathanaelkane/vim-indent-guides')
 call dein#add('junegunn/limelight.vim')
+call dein#add('nathanaelkane/vim-indent-guides') "{{{ 
+  let g:indent_guides_start_level = 2
+  let g:indent_guides_guide_size = 1
+"}}}
 
 call dein#add('xolox/vim-easytags') "{{{
   " set cpoptions+=d  " i had to add this, it wasn't on until now.
