@@ -196,6 +196,8 @@ call dein#add('kopischke/vim-fetch')
 call dein#add('nhooyr/neoman.vim')
 call dein#add('Konfekt/FastFold')
 call dein#add('tpope/vim-scriptease', {'on_ft': ['vim']})
+call dein#add('nathanaelkane/vim-indent-guides')
+call dein#add('junegunn/limelight.vim')
 
 call dein#add('xolox/vim-easytags') "{{{
   " set cpoptions+=d  " i had to add this, it wasn't on until now.
@@ -567,6 +569,8 @@ nnoremap <leader>dc :call dein#check_update()<cr>
 set foldlevel=99
 " This the default one
 set foldmethod=syntax nofoldenable
+autocmd VimEnter * Limelight0.3
+autocmd VimEnter * IndentGuidesEnable
 autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 autocmd BufNewFile,BufReadPost *.py setl foldmethod=indent nofoldenable
 " This to close preview when insert mode leaves
