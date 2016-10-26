@@ -229,19 +229,6 @@ call dein#add('embear/vim-localvimrc') "{{{
   let g:localvimrc_persistent = 2
 "}}}
 
-call dein#add('haya14busa/vim-asterisk') "{{{
-  map *   <Plug>(incsearch-nohl)<Plug>(asterisk-*)
-  map g*  <Plug>(incsearch-nohl)<Plug>(asterisk-g*)
-  map #   <Plug>(incsearch-nohl)<Plug>(asterisk-#)
-  map g#  <Plug>(incsearch-nohl)<Plug>(asterisk-g#)
-  
-  map z*  <Plug>(incsearch-nohl0)<Plug>(asterisk-z*)
-  map gz* <Plug>(incsearch-nohl0)<Plug>(asterisk-gz*)
-  map z#  <Plug>(incsearch-nohl0)<Plug>(asterisk-z#)
-  map gz# <Plug>(incsearch-nohl0)<Plug>(asterisk-gz#)
-  let g:asterisk#keeppos = 1
-"}}}
-
 call dein#add('haya14busa/incsearch.vim') "{{{
   let g:incsearch#magic = '\v' " very magic
   let g:incsearch#magic = '\V' " very nomagic
@@ -275,8 +262,8 @@ call dein#add('easymotion/vim-easymotion') "{{{
   map <leader>h <Plug>(easymotion-linebackward)
 
   " Search Motions!
-  map  / <Plug>(easymotion-sn)
-  omap / <Plug>(easymotion-tn)
+  " map  / <Plug>(easymotion-sn)
+  " omap / <Plug>(easymotion-tn)
   
   " These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
   " Without these mappings, `n` & `N` works fine. (These mappings just provide
@@ -306,6 +293,19 @@ call dein#add('haya14busa/incsearch-easymotion.vim') "{{{
   endfunction
   
   noremap <silent><expr> <leader>/ incsearch#go(<SID>config_easyfuzzymotion())
+"}}}
+
+call dein#add('haya14busa/vim-asterisk') "{{{
+  map *   <Plug>(incsearch-nohl)<Plug>(asterisk-*)
+  map g*  <Plug>(incsearch-nohl)<Plug>(asterisk-g*)
+  map #   <Plug>(incsearch-nohl)<Plug>(asterisk-#)
+  map g#  <Plug>(incsearch-nohl)<Plug>(asterisk-g#)
+  
+  map z*  <Plug>(incsearch-nohl0)<Plug>(asterisk-z*)
+  map gz* <Plug>(incsearch-nohl0)<Plug>(asterisk-gz*)
+  map z#  <Plug>(incsearch-nohl0)<Plug>(asterisk-z#)
+  map gz# <Plug>(incsearch-nohl0)<Plug>(asterisk-gz#)
+  let g:asterisk#keeppos = 1
 "}}}
 
 call dein#add('mhinz/vim-startify') "{{{
