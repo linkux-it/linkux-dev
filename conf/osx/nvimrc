@@ -200,7 +200,7 @@ call dein#add('rizzatti/dash.vim')
 call dein#add('junegunn/limelight.vim')
 call dein#add('mhartington/oceanic-next')
 call dein#add('Yggdroot/indentLine') "{{{
-  let g:indentLine_char='│'
+  let g:indentLine_char='┆'
 "}}}
 
 call dein#add('xolox/vim-easytags') "{{{
