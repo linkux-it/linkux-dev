@@ -21,6 +21,7 @@ avn setup
 
 e_header "Installing NVM"
 brew install nvm
+[ -d ~/.nvm ] || mkdir ~/.nvm
 export NVM_DIR="$HOME/.nvm"
 source /usr/local/opt/nvm/nvm.sh
 nvm install node
