@@ -35,7 +35,8 @@ cat >> ~/.zshrc <<- EOM
 
 # Set preference on project binaries for nodejs or iojs
 export PATH="./node_modules/.bin:\$PATH"
-source ~/.nvm/nvm.sh
+export NVM_DIR="$HOME/.nvm"
+source /usr/local/opt/nvm/nvm.sh
 
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 # end javascript setup

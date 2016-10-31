@@ -21,7 +21,8 @@ sudo npm install jsctags -g
 avn setup
 
 e_header "Installing NVM"
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
 source ~/.nvm/nvm.sh
 nvm install node
 
@@ -36,7 +37,8 @@ cat >> ~/.zshrc <<- EOM
 
 # Set preference on project binaries for nodejs or iojs
 export PATH=./node_modules/.bin:\$PATH
-source ~/.nvm/nvm.sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh" # This loads nvm
 
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 # end javascript setup
