@@ -21,7 +21,8 @@ avn setup
 
 e_header "Installing NVM"
 brew install nvm
-source ~/.nvm/nvm.sh
+export NVM_DIR="$HOME/.nvm"
+source /usr/local/opt/nvm/nvm.sh
 nvm install node
 
 e_header "Update .zshrc"
