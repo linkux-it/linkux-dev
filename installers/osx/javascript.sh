@@ -19,11 +19,9 @@ npm install jsctags -g
 
 avn setup
 
-e_header "Installing NVM"
-brew install nvm
-[ -d ~/.nvm ] || mkdir ~/.nvm
-export NVM_DIR="$HOME/.nvm"
-source /usr/local/opt/nvm/nvm.sh
+e_header "Installing NVM plugin for zsh"
+git clone https://github.com/lukechilds/zsh-nvm.git ~/.zsh-nvm
+source ~/.zsh-nvm/zsh-nvm.plugin.zsh
 nvm install node
 
 e_header "Update .zshrc"
@@ -37,8 +35,7 @@ cat >> ~/.zshrc <<- EOM
 
 # Set preference on project binaries for nodejs or iojs
 export PATH="./node_modules/.bin:\$PATH"
-export NVM_DIR="$HOME/.nvm"
-source /usr/local/opt/nvm/nvm.sh
+source ~/.zsh-nvm/zsh-nvm.plugin.zsh
 
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 # end javascript setup
