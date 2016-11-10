@@ -88,7 +88,7 @@ set tm=500
 set termguicolors
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
-set inccommand="split"
+set inccommand=split
 
 " enable all Python syntax highlighting features
 let python_highlight_all = 1
