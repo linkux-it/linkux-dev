@@ -207,7 +207,7 @@ call dein#add('Yggdroot/indentLine') "{{{
 
 call dein#add('xolox/vim-easytags') "{{{
   " set cpoptions+=d  " i had to add this, it wasn't on until now.
-  " set tags=./tags
+  set tags=./.git/tags
   let g:easytags_by_filetype = expand(".")
   let g:easytags_async=1
   let g:easytags_dynamic_files=1
