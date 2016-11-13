@@ -18,17 +18,19 @@ brew doctor
 brew update
 
 e_header "Installing tools with brew"
+brew tap universal-ctags/universal-ctags
+brew tap neovim/neovim
+brew install --HEAD universal-ctags
+brew install --HEAD neovim
 brew install ack
 brew install wget
 brew install git
 brew install reattach-to-user-namespace
 brew install tmux
 brew install zsh
-brew install neovim --HEAD
 brew install gnutls
 brew install task
 brew install python
-brew install ctags-exuberant
 brew install fortune
 brew install cowsay
 brew install coreutils
