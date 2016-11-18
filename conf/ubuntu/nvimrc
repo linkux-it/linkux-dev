@@ -577,7 +577,7 @@ autocmd BufNewFile,BufReadPost *.py setl foldmethod=indent nofoldenable
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " Color schema working at this point?
-colorscheme OceanicNext
+colorscheme nordisk
 
 " Next three lines are to enable C-Space to autocomplete, omnicomplete
 inoremap <C-Space> <C-x><C-o>
