@@ -201,6 +201,12 @@ call dein#add('tpope/vim-scriptease', {'on_ft': ['vim']})
 call dein#add('rizzatti/dash.vim')
 call dein#add('junegunn/limelight.vim')
 call dein#add('mhartington/oceanic-next')
+call dein#add('kamwitsta/nordisk')
+call dein#add('sickill/vim-monokai')
+call dein#add('ajh17/Spacegray.vim') "{{{
+  let g:spacegray_underline_search = 1
+  let g:spacegray_italicize_comments = 1
+"}}}
 call dein#add('Yggdroot/indentLine') "{{{
   " let g:indentLine_char='┆'
 "}}}
