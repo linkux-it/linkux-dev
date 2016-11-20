@@ -1,13 +1,13 @@
 # Basic options
 --recurse=yes
 --tag-relative=yes
---excmd=number
+#--excmd=number
 --extra=+f+q
 --c-types=+p
 --langmap=make:+.mk
 --langmap=c:+.hec.hep.het.hev.hem.heo.hei.hic.hip.hit.hiv.him.hio.hii.inl.bid
 --langmap=python:+.pmake
---exclude=*/docs/*
+--exclude=docs
 --exclude=heapcon.c
 --exclude=infmt.c
 --exclude=ose_ads_lm_clib.c
@@ -18,19 +18,18 @@
 --exclude=SHIP-*
 --exclude=.#*
 --exclude=*.vc?
---exclude=*/test/ARM*
---exclude=*/test/x86*
---exclude=*/build/*
+--exclude=test/ARM*
+--exclude=test/x86*
+--exclude=build
 --exclude=*.sql
 --exclude=*.schema
 --exclude=Session.vim
---recurse=yes
 --exclude=.git
 --exclude=.hg
---exclude=vendor/*
---exclude=node_modules/*
---exclude=db/*
---exclude=log/*
+--exclude=vendor
+--exclude=node_modules
+--exclude=db
+--exclude=log
 --exclude=tmp
 
 --links=no
