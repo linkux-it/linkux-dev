@@ -458,7 +458,6 @@ call dein#add('Shougo/vimfiler.vim', {'on_cmd' : 'VimFiler'}) " {{{
   nmap <silent><leader>ntf :VimFilerExplorer -find<CR>
 
   autocmd BufEnter * if (winnr('$') == 1 && &filetype ==# 'vimfiler') | q | endif
-  autocmd VimEnter * VimFilerExplorer
   autocmd FileType vimfiler nnoremap <silent><buffer><expr> S vimfiler#do_switch_action('vsplit')
   autocmd FileType vimfiler nnoremap <silent><buffer><expr> s vimfiler#do_switch_action('split')
 "}}}
