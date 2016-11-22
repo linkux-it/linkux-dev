@@ -418,7 +418,15 @@ call dein#add('Shougo/denite.nvim') "{{{
        \ ['--ackrc', $HOME.'/.ackrc', '-H',
        \ '--nopager', '--nocolor', '--nogroup', '--column'])
 
-  call denite#custom#source('base', 'sorters', ['sorter_sublime'])
+  call denite#custom#source('file_rec', 'sorters', ['sorter_sublime'])
+  call denite#custom#source('file_mru', 'sorters', ['sorter_sublime'])
+  call denite#custom#source('directory_rec', 'sorters', ['sorter_sublime'])
+  call denite#custom#source('buffer', 'sorters', ['sorter_sublime'])
+  call denite#custom#source('help', 'sorters', ['sorter_sublime'])
+  call denite#custom#source('line', 'sorters', ['sorter_sublime'])
+  call denite#custom#source('grep', 'sorters', ['sorter_sublime'])
+  call denite#custom#source('command', 'sorters', ['sorter_sublime'])
+  call denite#custom#source('colorscheme', 'sorters', ['sorter_sublime'])
 " }}}
 
 call dein#add('Shougo/unite.vim') "{{{
