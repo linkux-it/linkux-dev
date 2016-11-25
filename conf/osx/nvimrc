@@ -164,7 +164,7 @@ endif
 
 " Required:
 call dein#begin(expand('~/.cache/dein'))
-call dein#add('Shougo/dein.vim')
+call dein#add(expand('~/.config/nvim/bundle/dein.vim'))
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
