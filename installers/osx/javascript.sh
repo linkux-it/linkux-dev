@@ -9,6 +9,9 @@ e_header "Installing nodejs, javascript tools"
 npm install eslint -g
 npm install babel-eslint -g
 npm install eslint-plugin-react -g
+npm install eslint-plugin-import -g
+npm install eslint-config-airbnb-base -g
+npm install eslint-config-airbnb -g
 npm install grunt-cli -g
 npm install gulp-cli -g
 npm install avn avn-nvm -g

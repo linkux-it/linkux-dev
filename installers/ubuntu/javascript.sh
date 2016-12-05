@@ -10,6 +10,9 @@ e_header "Installing nodejs, javascript tools"
 sudo npm install eslint -g
 sudo npm install babel-eslint -g
 sudo npm install eslint-plugin-react -g
+npm install eslint-plugin-import -g
+npm install eslint-config-airbnb-base -g
+npm install eslint-config-airbnb -g
 sudo npm install grunt-cli -g
 sudo npm install gulp-cli -g
 sudo npm install avn avn-nvm -g
