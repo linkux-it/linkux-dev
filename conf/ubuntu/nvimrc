@@ -10,6 +10,7 @@
 "   -> Ruby
 "   -> Python
 "   -> Node, Javascript and Typescript
+"   -> GraphQL
 "   -> FrontEnd
 "   -> TMUX Integration
 "   -> Folding and Theme
@@ -506,6 +507,12 @@ call dein#add('maksimr/vim-jsbeautify', {'on_ft': ['javascript']}) " {{{
 call dein#add('kchmck/vim-coffee-script', {'on_ft': ['coffee']}) " {{{
   let coffee_indent_keep_current = 1
 " }}}
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => GraphQL
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+call dein#add('jparise/vim-graphql')
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => FrontEnd

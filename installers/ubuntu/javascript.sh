@@ -19,6 +19,7 @@ sudo npm install avn avn-nvm -g
 sudo npm install tern -g
 sudo npm install tern-react -g
 sudo npm install tern-node-express -g
+sudo npm install eslint-plugin-graphql -g
 
 avn setup
 
