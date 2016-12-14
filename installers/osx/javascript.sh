@@ -12,6 +12,8 @@ npm install eslint-plugin-react -g
 npm install eslint-plugin-import -g
 npm install eslint-config-airbnb-base -g
 npm install eslint-config-airbnb -g
+npm install eslint-config-airbnb -g
+npm install eslint-plugin-jsx-a11y -g
 npm install grunt-cli -g
 npm install gulp-cli -g
 npm install avn avn-nvm -g
