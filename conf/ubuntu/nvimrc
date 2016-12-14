@@ -94,6 +94,7 @@ set inccommand=split
 
 " Set ag as default grep
 set grepprg=ag\ --nopager\ --nocolor\ --nogroup\ --column\ $*
+set grepformat=%f:%l:%c:%m
 
 " enable all Python syntax highlighting features
 let python_highlight_all = 1
