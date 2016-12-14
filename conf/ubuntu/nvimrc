@@ -203,7 +203,11 @@ call dein#add('junegunn/limelight.vim')
 call dein#add('mhartington/oceanic-next')
 call dein#add('kamwitsta/nordisk')
 call dein#add('sickill/vim-monokai')
-call dein#add('milkypostman/vim-togglelist')
+call dein#add('milkypostman/vim-togglelist') "{{{
+  let g:toggle_list_no_mappings = 1
+  nmap <script> <silent> <leader>wl :call ToggleLocationList()<CR>
+  nmap <script> <silent> <leader>wq :call ToggleQuickfixList()<CR>
+"}}}
 call dein#add('ajh17/Spacegray.vim') "{{{
   let g:spacegray_underline_search = 1
   let g:spacegray_italicize_comments = 1
