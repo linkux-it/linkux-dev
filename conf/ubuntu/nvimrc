@@ -426,7 +426,7 @@ EOF
   nnoremap <silent> [denite]dr :Denite directory_rec<cr>
   nnoremap <silent> [denite]r :Denite file_mru<cr>
   nnoremap <silent> [denite]t :Denite filetype<cr>
-  nnoremap <silent> [denite]g :Denite UsefulGrep<cr>
+  nnoremap <silent> [denite]g :UsefulGrep<cr>
   nnoremap <silent> [denite]l :Denite line<cr>
   nnoremap <silent> [denite]m :Denite menu<cr>
   nnoremap <silent> [denite]j :Denite jump_point<cr>
