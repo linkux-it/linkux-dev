@@ -406,6 +406,17 @@ call dein#add('gilsondev/searchtasks.vim') " {{{
 " }}}
 
 call dein#add('Shougo/denite.nvim') "{{{
+  " Use useful denite, grep source is not useful
+  function! UsefulGrep() abort
+    python3 << EOF
+import vim, shlex
+args = shlex.split(vim.call('input', 'Pattern: '))
+if len(args) >= 1:
+    vim.call('denite#start', [{'name': 'grep', 'args': [[], args[:-1], [args[-1]]]}],
+        {'path': vim.call('getcwd'), 'mode': 'normal'})
+EOF
+  endfunction
+
   nmap <leader>u [denite]
   nnoremap [denite] <nop>
   nnoremap <silent> [denite]fr :Denite file_rec<cr>
@@ -415,7 +426,7 @@ call dein#add('Shougo/denite.nvim') "{{{
   nnoremap <silent> [denite]dr :Denite directory_rec<cr>
   nnoremap <silent> [denite]r :Denite file_mru<cr>
   nnoremap <silent> [denite]t :Denite filetype<cr>
-  nnoremap <silent> [denite]g :Denite grep<cr>
+  nnoremap <silent> [denite]g :Denite UsefulGrep<cr>
   nnoremap <silent> [denite]l :Denite line<cr>
   nnoremap <silent> [denite]m :Denite menu<cr>
   nnoremap <silent> [denite]j :Denite jump_point<cr>
