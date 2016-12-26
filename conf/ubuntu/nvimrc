@@ -608,6 +608,10 @@ autocmd BufNewFile,BufReadPost *.py setl foldmethod=indent nofoldenable
 " This to close preview when insert mode leaves
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
+" Open quickfix when set
+autocmd QuickFixCmdPost [^l]* cwindow
+autocmd QuickFixCmdPost l*    lwindow
+
 " Color schema working at this point?
 colorscheme nordisk
 
