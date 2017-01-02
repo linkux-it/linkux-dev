@@ -408,24 +408,24 @@ call dein#add('gilsondev/searchtasks.vim') " {{{
 call dein#add('Shougo/denite.nvim') "{{{
   nmap <leader>u [denite]
   nnoremap [denite] <nop>
-  nnoremap <silent> [denite]fr :Denite file_rec<cr>
-  nnoremap <silent> [denite]fp :Denite file_filepoint<cr>
-  nnoremap <silent> [denite]b :Denite buffer<cr>
-  nnoremap <silent> [denite]h :Denite help<cr>
-  nnoremap <silent> [denite]dr :Denite directory_rec<cr>
-  nnoremap <silent> [denite]r :Denite file_mru<cr>
-  nnoremap <silent> [denite]t :Denite filetype<cr>
-  nnoremap <silent> [denite]l :Denite line<cr>
-  nnoremap <silent> [denite]m :Denite menu<cr>
-  nnoremap <silent> [denite]j :Denite jump_point<cr>
-  nnoremap <silent> [denite]c :Denite command<cr>
-  nnoremap <silent> [denite]cs :Denite colorscheme<cr>
+  nnoremap <silent> [denite]fr :Denite -auto-resize --auto-preview file_rec<cr>
+  nnoremap <silent> [denite]fp :Denite -auto-resize --auto-preview file_filepoint<cr>
+  nnoremap <silent> [denite]b :Denite -auto-resize --auto-preview buffer<cr>
+  nnoremap <silent> [denite]h :Denite -auto-resize <cr>
+  nnoremap <silent> [denite]dr :Denite -auto-resize directory_rec<cr>
+  nnoremap <silent> [denite]r :Denite -auto-resize --auto-preview file_mru<cr>
+  nnoremap <silent> [denite]t :Denite -auto-resize filetype<cr>
+  nnoremap <silent> [denite]l :Denite -auto-resize line<cr>
+  nnoremap <silent> [denite]m :Denite -auto-resize menu<cr>
+  nnoremap <silent> [denite]j :Denite -auto-resize jump_point<cr>
+  nnoremap <silent> [denite]c :Denite -auto-resize command<cr>
+  nnoremap <silent> [denite]cs :Denite -auto-resize colorscheme<cr>
+  nnoremap <silent> [denite]o :Denite -auto-resize outline<cr>
 
   call denite#custom#source('file_rec', 'sorters', ['sorter_sublime'])
   call denite#custom#source('file_mru', 'sorters', ['sorter_sublime'])
   call denite#custom#source('directory_rec', 'sorters', ['sorter_sublime'])
   call denite#custom#source('buffer', 'sorters', ['sorter_sublime'])
-  call denite#custom#source('help', 'sorters', ['sorter_sublime'])
   call denite#custom#source('line', 'sorters', ['sorter_sublime'])
   call denite#custom#source('command', 'sorters', ['sorter_sublime'])
   call denite#custom#source('colorscheme', 'sorters', ['sorter_sublime'])
