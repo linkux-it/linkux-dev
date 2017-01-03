@@ -71,6 +71,7 @@ set undolevels=1000
 set relativenumber
 set list
 set listchars=tab:│\ ,trail:•,extends:❯,precedes:❮
+set showbreak=⇇
 set t_Co=256
 set background=dark
 set lazyredraw
