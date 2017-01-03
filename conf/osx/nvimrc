@@ -197,7 +197,6 @@ call dein#add('vim-scripts/PreserveNoEOL')
 call dein#add('mileszs/ack.vim')
 call dein#add('tpope/vim-repeat')
 call dein#add('tpope/vim-obsession')
-call dein#add('simnalamburt/vim-mundo')
 call dein#add('tpope/vim-abolish')
 call dein#add('qpkorr/vim-bufkill')
 call dein#add('xolox/vim-misc')
@@ -211,6 +210,9 @@ call dein#add('junegunn/limelight.vim')
 call dein#add('mhartington/oceanic-next')
 call dein#add('kamwitsta/nordisk')
 call dein#add('sickill/vim-monokai')
+call dein#add('simnalamburt/vim-mundo') "{{{
+  let g:mundo_prefer_python3=1
+" }}}
 call dein#add('milkypostman/vim-togglelist') "{{{
   let g:toggle_list_no_mappings = 1
   nmap <script> <silent> <leader>wl :call ToggleLocationList()<CR>
