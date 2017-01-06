@@ -234,6 +234,10 @@ call dein#add('c0r73x/neotags.nvim') "{{{
   let g:neotags_ctags_args = []
 "}}}
 
+call dein#add('brooth/far.vim') "{{{
+  let g:far#source = 'agnvim'
+"}}}
+
 call dein#add('majutsushi/tagbar') "{{{
   noremap <leader>ct :TagbarToggle<CR>
 "}}}

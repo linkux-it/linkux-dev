@@ -237,6 +237,10 @@ call dein#add('majutsushi/tagbar') "{{{
   noremap <leader>ct :TagbarToggle<CR>
 "}}}
 
+call dein#add('brooth/far.vim') "{{{
+  let g:far#source = 'agnvim'
+"}}}
+
 call dein#add('embear/vim-localvimrc') "{{{
   let g:localvimrc_sandbox = 0
   let g:localvimrc_persistent = 2
