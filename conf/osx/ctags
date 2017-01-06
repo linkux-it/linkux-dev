@@ -24,6 +24,7 @@
 --exclude=*.sql
 --exclude=*.schema
 --exclude=Session.vim
+--exclude=webpack-stats.json
 --exclude=.git
 --exclude=.hg
 --exclude=vendor
