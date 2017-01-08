@@ -404,8 +404,6 @@ call dein#add('kennykaye/vim-relativity')
 
 call dein#add('Shougo/deoplete.nvim', {'on_i': 1}) "{{{
   let g:deoplete#enable_at_startup = 1
-  call deoplete#custom#set('_', 'sorters', ['sorter_word'])
-  call deoplete#custom#set('ultisnips', 'rank', 9999)
 " }}}
 
 call dein#add('zchee/deoplete-jedi', )
@@ -569,6 +567,10 @@ call dein#add('mattn/emmet-vim', {'on_ft': ['htmldjango','jsx','swig','html','xm
 call dein#add('jvirtanen/vim-octave')
 
 call dein#end()
+
+" deoplete call
+call deoplete#custom#set('_', 'sorters', ['sorter_word'])
+call deoplete#custom#set('ultisnips', 'rank', 9999)
 
 " Required:
 " Enable filetype plugins
