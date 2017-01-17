@@ -208,6 +208,8 @@ call dein#add('tpope/vim-scriptease', {'on_ft': ['vim']})
 call dein#add('rizzatti/dash.vim')
 call dein#add('junegunn/limelight.vim')
 call dein#add('mhartington/oceanic-next')
+call dein#add('daylerees/colour-schemes')
+call dein#add('dracula/vim')
 call dein#add('kamwitsta/nordisk')
 call dein#add('sickill/vim-monokai')
 call dein#add('simnalamburt/vim-mundo') "{{{
