@@ -383,12 +383,13 @@ call dein#add('tpope/vim-fugitive') " {{{
 call dein#add('vim-airline/vim-airline') " {{{
   set laststatus=2  "Force appear the status line "
   let g:airline#extensions#tabline#enabled = 1
+  let g:airline_base16_improved_contrast = 1
   " let g:airline#extensions#tabline#left_sep = ' '
   " let g:airline#extensions#tabline#left_alt_sep = '¦'
   let g:airline#extensions#tabline#buffer_idx_mode = 1
   let g:airline#extensions#tabline#fnamemod = ':t'
   let g:airline_powerline_fonts = 1
-  let g:airline_theme = 'oceanicnext'
+  let g:airline_theme = 'base16'
   nmap <leader>1 <Plug>AirlineSelectTab1
   nmap <leader>2 <Plug>AirlineSelectTab2
   nmap <leader>3 <Plug>AirlineSelectTab3
@@ -631,7 +632,7 @@ autocmd QuickFixCmdPost [^l]* cwindow
 autocmd QuickFixCmdPost l*    lwindow
 
 " Color schema working at this point?
-colorscheme nordisk
+colorscheme dracula
 
 " Next three lines are to enable C-Space to autocomplete, omnicomplete
 inoremap <C-Space> <C-x><C-o>
