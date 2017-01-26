@@ -178,7 +178,6 @@ call dein#add(expand('~/.config/nvim/bundle/dein.vim'))
 " => Base Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-call dein#add('Shougo/vimproc.vim', {'build': 'make -f make_mac.mak' })
 call dein#add('Shougo/neomru.vim')
 call dein#add('chriskempson/base16-vim')
 call dein#add('tpope/vim-unimpaired')
@@ -459,10 +458,6 @@ call dein#add('carlitux/denite-cool-grep') "{{{
   call denite#custom#source('cool_grep', 'sorters', ['sorter_sublime'])
 " }}}
 
-
-call dein#add('Shougo/unite.vim') "{{{
-" }}}
-
 call dein#add('gregsexton/gitv', {'depends': ['tpope/vim-fugitive']}) "{{{
   nnoremap <silent> <leader>gv :Gitv<CR>
   nnoremap <silent> <leader>gV :Gitv!<CR>
@@ -489,24 +484,22 @@ call dein#add('editorconfig/editorconfig-vim', {'on_i': 1}) " {{{
   let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 " }}}
 
-call dein#add('Shougo/vimfiler.vim', {'on_cmd' : 'VimFiler'}) " {{{
-  let g:vimfiler_as_default_explorer = 1
-  let g:vimfiler_safe_mode_by_default = 0
-  let g:vimfiler_tree_leaf_icon = "⋮"
-  let g:vimfiler_tree_opened_icon = '▾'
-  let g:vimfiler_tree_closed_icon = '▸'
-  let g:vimfiler_readonly_file_icon = '\uE0A2'
-  let g:vimfiler_enable_auto_cd = 1
-  let g:vimfiler_ignore_pattern = '^\%(\.git\|\.hg\|\.swp\|\.sass-cache\|\.DS_Store\|.*\.pyc\|\.vagrant\)$'
+call dein#add('scrooloose/nerdtree') " {{{
+  " let g:vimfiler_as_default_explorer = 1
+  " let g:vimfiler_safe_mode_by_default = 0
+  " let g:vimfiler_tree_leaf_icon = "⋮"
+  " let g:vimfiler_tree_opened_icon = '▾'
+  " let g:vimfiler_tree_closed_icon = '▸'
+  " let g:vimfiler_readonly_file_icon = '\uE0A2'
+  " let g:vimfiler_enable_auto_cd = 1
+  " let g:vimfiler_ignore_pattern = '^\%(\.git\|\.hg\|\.swp\|\.sass-cache\|\.DS_Store\|.*\.pyc\|\.vagrant\)$'
 
-  nmap <silent><leader>nt :VimFilerExplorer -winwidth=32<CR>
-  nmap <silent><leader>ntf :VimFilerExplorer -find<CR>
+  nmap <silent><leader>nt :NERDTreeToggle<CR>
+  nmap <silent><leader>ntf :NERDTreeFind<CR>
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" }}}
 
-  autocmd BufEnter * if (winnr('$') == 1 && &filetype ==# 'vimfiler') | q | endif
-  autocmd FileType vimfiler nnoremap <silent><buffer><expr> S vimfiler#do_switch_action('vsplit')
-  autocmd FileType vimfiler nnoremap <silent><buffer><expr> s vimfiler#do_switch_action('split')
-"}}}
-
+call dein#add('Xuyuanp/nerdtree-git-plugin') 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Ruby
