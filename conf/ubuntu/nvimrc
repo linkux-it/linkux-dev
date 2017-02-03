@@ -421,12 +421,12 @@ call dein#add('gilsondev/searchtasks.vim') " {{{
 call dein#add('Shougo/denite.nvim') "{{{
   nmap <leader>u [denite]
   nnoremap [denite] <nop>
-  nnoremap <silent> [denite]fr :Denite -auto-resize -auto-preview file_rec<cr>
-  nnoremap <silent> [denite]fp :Denite -auto-resize -auto-preview file_filepoint<cr>
-  nnoremap <silent> [denite]b :Denite -auto-resize -auto-preview buffer<cr>
+  nnoremap <silent> [denite]fr :Denite -auto-resize file_rec<cr>
+  nnoremap <silent> [denite]fp :Denite -auto-resize file_filepoint<cr>
+  nnoremap <silent> [denite]b :Denite -auto-resize buffer<cr>
   nnoremap <silent> [denite]h :Denite -auto-resize help<cr>
   nnoremap <silent> [denite]dr :Denite -auto-resize directory_rec<cr>
-  nnoremap <silent> [denite]r :Denite -auto-resize -auto-preview file_mru<cr>
+  nnoremap <silent> [denite]r :Denite -auto-resize file_mru<cr>
   nnoremap <silent> [denite]t :Denite -auto-resize filetype<cr>
   nnoremap <silent> [denite]l :Denite -auto-resize line<cr>
   nnoremap <silent> [denite]m :Denite -auto-resize menu<cr>
@@ -445,7 +445,7 @@ call dein#add('Shougo/denite.nvim') "{{{
 " }}}
 
 call dein#add('carlitux/denite-cool-grep') "{{{
-  nnoremap <silent> [denite]g :Denite -auto-resize -auto-preview cool_grep<cr>
+  nnoremap <silent> [denite]g :Denite -auto-resize cool_grep<cr>
 
   call denite#custom#var('cool_grep', 'command', ['ag'])
   call denite#custom#var('cool_grep', 'recursive_opts', [])
@@ -524,6 +524,7 @@ call dein#add('moll/vim-node', {'on_ft': ['javascript']})
 call dein#add('pangloss/vim-javascript', {'on_ft': ['javascript']})
 call dein#add('leafgarland/typescript-vim', {'on_ft': ['typescript']})
 call dein#add('leshill/vim-json', {'on_ft': ['javascript','json']})
+call dein#add('flowtype/vim-flow', {'on_ft': ['javascript']})
 call dein#add('maksimr/vim-jsbeautify', {'on_ft': ['javascript']}) " {{{
   nnoremap <leader>jsb :call JsBeautify()<cr>
 " }}}
