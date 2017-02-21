@@ -44,6 +44,8 @@ pip install taskwarrior-time-tracking-hook
 
 e_header "Setup taskwarrior"
 mkdir -p ~/.task/hooks
+mkdir -p ~/.config/bugwarrior
+touch ~/.config/bugwarrior/bugwarriorrc
 ln -s `which taskwarrior_time_tracking_hook` ~/.task/hooks/on-modify.timetracking
 
 e_header "Install powerline fonts"
