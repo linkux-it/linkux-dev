@@ -31,6 +31,7 @@ sudo apt-get install -y trash-cli
 
 e_header "Installing tools with pip"
 sudo pip install bugwarrior
+sudo pip install pynotify
 sudo pip install powerline-status
 sudo pip install taskwarrior-time-tracking-hook
 

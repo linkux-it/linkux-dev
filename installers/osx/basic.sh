@@ -39,6 +39,7 @@ brew install rmtrash
 
 e_header "Installing tools with pip"
 pip install bugwarrior
+pip install gntp
 pip install powerline-status
 pip install taskwarrior-time-tracking-hook
 
