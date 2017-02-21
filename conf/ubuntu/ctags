@@ -2,7 +2,7 @@
 --recurse=yes
 --tag-relative=yes
 #--excmd=number
---extra=+f+q
+#--extra=+f+q
 --c-types=+p
 --langmap=make:+.mk
 --langmap=c:+.hec.hep.het.hev.hem.heo.hei.hic.hip.hit.hiv.him.hio.hii.inl.bid
