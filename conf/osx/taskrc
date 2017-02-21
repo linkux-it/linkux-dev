@@ -33,3 +33,7 @@ color=on
 dateformat=d/m/Y
 dateformat.report=d/m/Y
 dateformat.anotation=d/m/Y
+
+uda.totalactivetime.type=duration
+uda.totalactivetime.label=Total active time
+uda.totalactivetime.values=
