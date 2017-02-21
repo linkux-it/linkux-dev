@@ -29,7 +29,27 @@ sudo apt-get install -y cowsay
 sudo apt-get install -y trash-cli
 
 
+e_header "Installing tools with pip"
+sudo pip install bugwarrior
 sudo pip install powerline-status
+sudo pip install taskwarrior-time-tracking-hook
+
+e_header "Setup taskwarrior"
+mkdir -p ~/.task/hooks
+ln -s `which taskwarrior_time_tracking_hook` ~/.task/hooks/on-modify.timetracking
+
+if grep -Fxq "# start taskwarrior linkux-dev" ~/.zshrc
+then
+  sed -i '/# start taskwarrior linkux-dev/,/# end taskwarrior linkux-dev/d' ~/.taskrc
+fi
+
+cat >> ~/.taskrc <<- EOM
+# start taskwarrior linkux-dev
+task config uda.totalactivetime.type duration
+task config uda.totalactivetime.label Total active time
+task config uda.totalactivetime.values ''
+# end taskwarrior linkux-dev
+EOM
 
 e_header "Install powerline fonts"
 wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf

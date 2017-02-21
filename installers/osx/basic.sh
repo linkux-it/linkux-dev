@@ -37,8 +37,29 @@ brew install coreutils
 brew install rmtrash
 
 
-e_header "Install powerline"
+e_header "Installing tools with pip"
+pip install bugwarrior
 pip install powerline-status
+pip install taskwarrior-time-tracking-hook
+
+e_header "Setup taskwarrior"
+mkdir -p ~/.task/hooks
+ln -s `which taskwarrior_time_tracking_hook` ~/.task/hooks/on-modify.timetracking
+
+if grep -Fxq "# start taskwarrior linkux-dev" ~/.zshrc
+then
+  sed -i '/# start taskwarrior linkux-dev/,/# end taskwarrior linkux-dev/d' ~/.taskrc
+fi
+
+cat >> ~/.taskrc <<- EOM
+# start taskwarrior linkux-dev
+task config uda.totalactivetime.type duration
+task config uda.totalactivetime.label Total active time
+task config uda.totalactivetime.values ''
+# end taskwarrior linkux-dev
+EOM
+
+e_header "Install powerline fonts"
 wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf -O PowerlineSymbols.otf
 sudo mv PowerlineSymbols.otf /Library/Fonts/
 
