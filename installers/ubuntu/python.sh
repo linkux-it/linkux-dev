@@ -3,7 +3,7 @@
 source ~/.linkux-dev/installers/common.sh
 
 e_header "Installing python tools"
-pip install flake8 pylint pep8 neovim virtualenvwrapper autopep8
+pip install flake8 pep8 neovim virtualenvwrapper autopep8
 
 e_header "Update .zshrc"
 if grep -Fxq "# start python setup" ~/.zshrc

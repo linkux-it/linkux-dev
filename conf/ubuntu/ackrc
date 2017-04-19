@@ -13,6 +13,7 @@
 --ignore-dir=bundle
 --ignore-dir=tmp
 --ignore-dir=solr/data
+--ignore-dir=__pycache__
 --ignore-dir=.sass-cache
 --ignore-dir=log
 --ignore-dir=coverage

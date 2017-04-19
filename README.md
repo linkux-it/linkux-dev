@@ -59,7 +59,7 @@ Python installer:
 ================
 
 * virtualenv-wrapper
-* flake8 pylint pep8 for python autopep8
+* flake8 pep8 for python autopep8
 
 Javascript installer:
 ====================
