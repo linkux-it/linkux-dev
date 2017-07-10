@@ -26,6 +26,8 @@ fi
 cat >> ~/.zshrc <<- EOM
 # start global setup
 
+export TERMINFO='/usr/local/opt/ncurses/share/terminfo'
+
 # Base16 Shell
 BASE16_SHELL="\$HOME/.config/base16-shell/base16-ocean.dark.sh"
 [[ -s \$BASE16_SHELL ]] && source \$BASE16_SHELL

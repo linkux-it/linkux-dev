@@ -20,6 +20,7 @@ brew update
 e_header "Installing tools with brew"
 brew tap universal-ctags/universal-ctags
 brew tap neovim/neovim
+brew install ncurses
 brew install --HEAD universal-ctags
 brew install --HEAD neovim
 brew install ack

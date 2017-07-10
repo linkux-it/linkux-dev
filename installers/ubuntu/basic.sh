@@ -10,6 +10,7 @@ e_header "Updating Repositories"
 sudo apt-get update
 
 e_header "Installing tools with apt-get"
+sudo apt-get install -y ncurses
 sudo apt-get install -y ack-grep
 sudo apt-get install -y wget
 sudo apt-get install -y tmux
