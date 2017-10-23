@@ -11,12 +11,12 @@ sudo apt-get update
 
 e_header "Installing tools with apt-get"
 sudo apt-get install -y ncurses
-sudo apt-get install -y ack-grep
 sudo apt-get install -y wget
 sudo apt-get install -y tmux
 sudo apt-get install -y zsh
 sudo apt-get install -y libgnutls-dev
 sudo apt-get install -y task
+sudo apt-get install -y timewarrior
 sudo apt-get install -y python
 sudo apt-get install -y python-dev
 sudo apt-get install -y python-pip
@@ -28,6 +28,7 @@ sudo apt-get install -y universal-ctags
 sudo apt-get install -y fortune
 sudo apt-get install -y cowsay
 sudo apt-get install -y trash-cli
+sudo apt-get install -y ripgrep
 
 
 e_header "Installing tools with pip"

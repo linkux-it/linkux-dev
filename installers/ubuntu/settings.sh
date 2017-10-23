@@ -43,6 +43,7 @@ alias codeit='. ./codeit.sh'
 
 export VISUAL=nvim
 export EDITOR="$VISUAL"
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
 
 ulimit -n 4096
 

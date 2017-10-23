@@ -23,7 +23,6 @@ brew tap neovim/neovim
 brew install ncurses
 brew install --HEAD universal-ctags
 brew install --HEAD neovim
-brew install ack
 brew install wget
 brew install git
 brew install reattach-to-user-namespace
@@ -31,11 +30,13 @@ brew install tmux
 brew install zsh
 brew install gnutls
 brew install task
+brew install timewarrior
 brew install python
 brew install fortune
 brew install cowsay
 brew install coreutils
 brew install rmtrash
+brew install ripgrep
 
 
 e_header "Installing tools with pip"
